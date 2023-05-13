@@ -18,5 +18,5 @@ jobs:
           HUGO_VERSION: 0.111.3
           TARGET_REPO: rootsec1/rootsec1.github.io
           TARGET_BRANCH: master
-          TOKEN: ${{ secrets.TOKEN }}
+          TOKEN: ${{ secrets.ACCESS_TOKEN }}
           CNAME: rootsec1.github.io
