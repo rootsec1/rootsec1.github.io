@@ -7,4 +7,4 @@ personal blog
 - Clone the repo: `git clone git@github.com:rootsec1/blog-hugo.git`
 - Change dir: `cd blog-hugo`
 - Pull submodules: `git submodule update --init --recursive`
-- Start hugo server hugo server -D
+- Start hugo server (include drafts optionally using `-D`): `hugo server -D`
