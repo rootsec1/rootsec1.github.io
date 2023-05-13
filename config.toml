@@ -1,0 +1,72 @@
+baseURL = "https://rootsec1.github.io/"
+title = "rootsec1"
+theme = "hugo-coder"
+languageCode = "en-us"
+defaultcontentlanguage = "en"
+
+paginate = 20
+
+[markup.highlight]
+    style = "github-dark"
+
+[params]
+    author = "Abhishek Murthy"
+    info = "site reliability engineer obsessed with AI"
+    description = "Abhishek's blog"
+    keywords = "blog,developer,personal"
+    avatarurl = "https://i.ibb.co/KF91vCW/avatar-copy.png"
+    enableTwemoji = true
+    colorScheme = "auto"
+    hidecolorschemetoggle = false
+    footerContent = "If you're so smart, why are you unhappy?"
+    dateFormat = "January 2, 2006"
+
+[taxonomies]
+    category = "categories"
+    series = "series"
+    tag = "tags"
+    author = "authors"
+
+# Social links
+[[params.social]]
+    name = "Github"
+    icon = "fa fa-github fa-2x"
+    weight = 1
+    url = "https://github.com/rootsec1/"
+[[params.social]]
+    name = "LinkedIn"
+    icon = "fa fa-linkedin fa-2x"
+    weight = 2
+    url = "https://www.linkedin.com/in/abhishekwl/"
+[[params.social]]
+    name = "BlinkIt"
+    icon = "fa fa-globe fa-2x"
+    weight = 3
+    url = "https://blinkit.com/blog/first-12-months-blinkit-abhishek-m"
+[[params.social]]
+    name = "Twitter"
+    icon = "fa fa-twitter fa-2x"
+    weight = 4
+    url = "https://twitter.com/_rootsec1"
+
+# Menu links
+[[menu.main]]
+    name = "about"
+    weight = 1
+    url = "about/"
+[[menu.main]]
+    name = "tech"
+    weight = 2
+    url  = "tech/"
+[[menu.main]]
+    name = "experiments"
+    weight = 3
+    url  = "experiments/"
+[[menu.main]]
+    name = "achievements"
+    weight = 4
+    url  = "achievements"
+[[menu.main]]
+    name = "random"
+    weight = 5
+    url  = "random/"
