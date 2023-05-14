@@ -12,7 +12,7 @@ paginate = 20
 
 [params]
     author = "Abhishek Murthy"
-    info = "site reliability engineer obsessed with AI"
+    info = "infrastructure engineer obsessed with AI"
     description = "Abhishek's blog"
     keywords = "blog,developer,personal"
     avatarurl = "https://i.ibb.co/KF91vCW/avatar-copy.png"
