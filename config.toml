@@ -3,6 +3,7 @@ title = "rootsec1"
 theme = "hugo-coder"
 languageCode = "en-us"
 defaultcontentlanguage = "en"
+contentDir = "content"
 
 paginate = 20
 
