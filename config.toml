@@ -68,10 +68,6 @@ paginate = 20
     weight = 3
     url  = "experiments/"
 [[menu.main]]
-    name = "achievements"
-    weight = 4
-    url  = "achievements"
-[[menu.main]]
     name = "random"
     weight = 5
     url  = "random/"
