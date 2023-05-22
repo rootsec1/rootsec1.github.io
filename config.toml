@@ -13,7 +13,7 @@ paginate = 20
 
 [params]
     author = "Abhishek Murthy"
-    info = "infrastructure engineer obsessed with AI"
+    info = "software engineer (backend + infra) obsessed with security."
     description = "Abhishek's blog"
     keywords = "blog,developer,personal"
     avatarurl = "/images/avatar.png"
