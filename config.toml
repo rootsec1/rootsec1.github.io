@@ -64,10 +64,6 @@ paginate = 20
     weight = 2
     url  = "posts/"
 [[menu.main]]
-    name = "experiments"
-    weight = 3
-    url  = "experiments/"
-[[menu.main]]
-    name = "random"
+    name = "my bookmarks"
     weight = 5
-    url  = "random/"
+    url  = "bookmarks/"
