@@ -10,9 +10,7 @@ externalLink = ""
 series = []
 +++
 
-[link to backend-server codebase](https://github.com/rootsec1/decentralized_storage)
-
-[link to android-app codebase](https://github.com/rootsec1/decentralized_storage_android)
+[link to repo](https://github.com/rootsec1/D_Cloud)
 
 IPFS (InterPlanetary File System) is a distributed file system that enables decentralized storage and retrieval of data. In this blog post, we will explore how to build and deploy a decentralized app (DApp) using IPFS. We will cover uploading, listing, downloading, and updating files using multiple devices. Let's dive in!
 
