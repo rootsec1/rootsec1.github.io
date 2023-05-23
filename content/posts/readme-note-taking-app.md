@@ -1,5 +1,5 @@
 +++ 
-date = 2020-03-22T01:05:03+05:30
+date = 2021-07-22T01:05:03+05:30
 title = "An un-opinionated minimal web client to use a single .txt file"
 description = "Minimalist note taking app built on Firebase and React"
 slug = ""

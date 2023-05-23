@@ -6,7 +6,7 @@ defaultcontentlanguage = "en"
 contentDir = "content"
 pluralizelisttitles = false
 
-paginate = 20
+paginate = 50
 
 [markup.highlight]
     style = "github-dark"
