@@ -1,0 +1,12 @@
+<li>
+  <span class="date"
+    >{{ .Date | time.Format (.Site.Params.dateFormat | default "January 2, 2006"
+    ) }}</span
+  >
+  <a
+    class="title"
+    href="{{ .Params.externalLink | default .RelPermalink }}"
+    target="_blank"
+    >{{ .Title }}</a
+  >
+</li>

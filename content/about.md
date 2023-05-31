@@ -13,7 +13,7 @@ author = "Abhishek Murthy"
 \
 Hey, I am **Abhishek**
 
-I am a software engineer by trade. I love to experiment and play around with tech. I've dabbled in numerous backend servers, mobile & web apps, infrastructure tools, bug bounty programs, security exploits, ML models, and more. I am passionate about self-driving car tech, robotics and building AGI.
+I am a software engineer by trade. I love to experiment and play around with tech. I've dabbled with building numerous backend servers, mobile & web apps, infrastructure tools, bug bounty programs, security exploits, ML models, and more. I am passionate about self-driving car tech, robotics and building AGI.
 
 Currently, I am building the tech for my startup [ticketdude](https://ticketdude.app/). Before starting up, I also worked as an SDE-2 at [blinkit](https://blinkit.com/) (built supply chain tech to enable 10-minute delivery in India) which later got acquired by [zomato](https://www.zomato.com/) (India's DoorDash). During my time there, I worked with multiple teams including Inventory, StoreOps, and Infrastructure. I eventually led the tech team for all things finance while I was there. More on that [here](https://blinkit.com/blog/first-12-months-blinkit-abhishek-m).
 

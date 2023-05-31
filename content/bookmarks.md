@@ -7,6 +7,7 @@ Just a random collection of things I've liked, bookmarked and/or followed
 
 #### links
 
+- [Minecraft on the Web leveraging WebGPU](https://classic.minecraft.net/)
 - [Julia Evans blog](https://jvns.ca/)
 - [Material Design 3 spec sheet](https://m3.material.io/components)
 - [How they SRE](https://github.com/upgundecha/howtheysre)
@@ -30,4 +31,5 @@ Just a random collection of things I've liked, bookmarked and/or followed
 
 {{< youtube keCwRdbwNQY >}}\
 {{< youtube PTg3RZPXgLg >}}\
-{{< youtube KTrgRYa2wbI >}}
+{{< youtube KTrgRYa2wbI >}}\
+{{< youtube 2TofunAI6fU >}}

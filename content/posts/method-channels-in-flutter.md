@@ -1,5 +1,5 @@
 +++ 
-date = 2020-05-11T21:38:48+05:30
+date = 2021-10-21T21:38:48+05:30
 title = "Exploring Method Channels in Flutter"
 description = "Method channels serve as a communication mechanism between Flutter and the native platform, allowing bidirectional method invocations. With method channels, Flutter can call methods in native code and vice versa. This opens up possibilities for integrating platform-specific functionalities seamlessly."
 slug = ""
