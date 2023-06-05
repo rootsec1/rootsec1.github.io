@@ -54,6 +54,11 @@ paginate = 50
     icon = "fa fa-twitter fa-2x"
     weight = 4
     url = "https://twitter.com/_rootsec1"
+[[params.social]]
+    name = "Instagram"
+    icon = "fa fa-instagram fa-2x"
+    weight = 5
+    url = "https://www.instagram.com/abhishek__murthy/"
 
 # Menu links
 [[menu.main]]
