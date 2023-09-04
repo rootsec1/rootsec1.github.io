@@ -14,7 +14,7 @@ paginate = 50
 
 [params]
     author = "Abhishek Murthy"
-    info = "software engineer (backend + infra) obsessed with security."
+    info = "software engineer (backend + infra) obsessed with AI"
     description = "Abhishek's blog"
     keywords = "blog,developer,personal"
     avatarurl = "/images/avatar.png"
@@ -37,26 +37,37 @@ paginate = 50
     name = "Github"
     icon = "fa fa-github fa-2x"
     weight = 1
+    target = "_blank"
     url = "https://github.com/rootsec1/"
 [[params.social]]
     name = "LinkedIn"
     icon = "fa fa-linkedin fa-2x"
     weight = 2
+    target = "_blank"
     url = "https://www.linkedin.com/in/abhishekwl/"
+[[params.social]]
+    name = "Resume"
+    icon = "fa fa-file fa-2x"
+    weight = 2
+    target = "_blank"
+    url = "https://docs.google.com/document/d/1ZgLlGuxz6JmbEeP5OQkiCMp_udzILUbr/edit?usp=sharing&ouid=101240617709956130886&rtpof=true&sd=true"
 [[params.social]]
     name = "BlinkIt"
     icon = "fa fa-globe fa-2x"
     weight = 3
+    target = "_blank"
     url = "https://blinkit.com/blog/first-12-months-blinkit-abhishek-m"
 [[params.social]]
     name = "Twitter"
     icon = "fa fa-twitter fa-2x"
     weight = 4
+    target = "_blank"
     url = "https://twitter.com/_rootsec1"
 [[params.social]]
     name = "Instagram"
     icon = "fa fa-instagram fa-2x"
     weight = 5
+    target = "_blank"
     url = "https://www.instagram.com/abhishek__murthy/"
 
 # Menu links
