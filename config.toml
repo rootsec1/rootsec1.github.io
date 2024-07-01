@@ -50,7 +50,7 @@ paginate = 50
     icon = "fa fa-file fa-2x"
     weight = 2
     target = "_blank"
-    url = "https://docs.google.com/document/d/1ZgLlGuxz6JmbEeP5OQkiCMp_udzILUbr/edit?usp=sharing&ouid=101240617709956130886&rtpof=true&sd=true"
+    url = "https://drive.google.com/file/d/1kcCNioVaAqSn-fR0K4elpUir0MChuXYk/view?usp=sharing"
 [[params.social]]
     name = "BlinkIt"
     icon = "fa fa-globe fa-2x"
