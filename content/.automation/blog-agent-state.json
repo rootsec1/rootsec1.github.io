@@ -1,0 +1,45 @@
+{
+  "lastSuccessfulRunAt": "2026-05-23T21:02:29-04:00",
+  "sourceCursors": {
+    "blogRepoCommit": "3d464f7",
+    "githubActivityUpdatedAfter": "2026-05-23T19:32:02Z",
+    "localActivityScannedUntil": "2026-05-23T21:02:29-04:00"
+  },
+  "recentTopics": [
+    {
+      "slug": "incremental-agent-workflows-context",
+      "title": "Designing incremental agent workflows that do not leak context"
+    }
+  ],
+  "lastGeneratedPost": {
+    "path": "content/posts/designing-incremental-agent-workflows-that-do-not-leak-context.md",
+    "slug": "incremental-agent-workflows-context",
+    "title": "Designing incremental agent workflows that do not leak context",
+    "topicSummary": "Incremental long-running workflow design with checkpoints, privacy filtering, public verification, visual review, and publish-after-validation state advancement.",
+    "branch": "blog/incremental-workflows-context",
+    "pullRequestUrl": "https://github.com/rootsec1/rootsec1.github.io/pull/2"
+  },
+  "lastRunSources": [
+    "blog_repo",
+    "accessible_git_activity",
+    "accessible_github_activity",
+    "local_activity_index",
+    "style_posts"
+  ],
+  "skippedSensitiveSourceCategories": [
+    "raw_private_text",
+    "private_identifiers",
+    "secrets",
+    "customer_data",
+    "internal_urls"
+  ],
+  "publicReferencesUsed": [
+    "https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html",
+    "https://docs.github.com/en/webhooks/using-webhooks/handling-webhook-deliveries",
+    "https://www.w3.org/TR/trace-context/",
+    "https://opentelemetry.io/docs/concepts/context-propagation/",
+    "https://docs.aws.amazon.com/durable-execution/patterns/best-practices/determinism/",
+    "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+    "https://genai.owasp.org/llmrisk/llm02-sensitive-information-disclosure/"
+  ]
+}
