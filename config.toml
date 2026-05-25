@@ -7,6 +7,8 @@ contentDir = "content"
 pluralizelisttitles = false
 googleAnalytics = "G-2NZGH53V36"
 
+paginate = 30
+
 [pagination]
     pagerSize = 30
 
@@ -26,6 +28,7 @@ googleAnalytics = "G-2NZGH53V36"
     favicon_16 = "/images/favicon-16x16.png"
     favicon_32 = "/images/favicon-32x32.png"
     touchIcon = "/images/apple-touch-icon.png"
+    customCSS = ["css/pagination.css"]
 
 [taxonomies]
     category = "categories"
