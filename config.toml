@@ -7,7 +7,8 @@ contentDir = "content"
 pluralizelisttitles = false
 googleAnalytics = "G-2NZGH53V36"
 
-paginate = 50
+[pagination]
+    pagerSize = 30
 
 [markup.highlight]
     style = "github-dark"
