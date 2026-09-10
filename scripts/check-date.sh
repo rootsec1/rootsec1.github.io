@@ -29,10 +29,10 @@ JS
   agent-browser wait --url '**/miss-dee/yes/' >/dev/null
   agent-browser eval "if (!document.body.classList.contains('celebration') || !document.querySelector('h1').textContent.includes('Miss Dee')) throw new Error('Missing celebration');" >/dev/null
 done
-agent-browser open "$base/ritu/decision/" >/dev/null
+agent-browser open "$base/miss-dee/decision/" >/dev/null
 agent-browser wait --url '**/miss-dee/' >/dev/null
-agent-browser eval "if (!document.getElementById('yesButton')) throw new Error('Legacy invitation failed');" >/dev/null
-agent-browser open "$base/ritu/decision/yes/" >/dev/null
+agent-browser eval "if (!document.getElementById('yesButton')) throw new Error('Alternate invitation failed');" >/dev/null
+agent-browser open "$base/miss-dee/decision/yes/" >/dev/null
 agent-browser wait --url '**/miss-dee/yes/' >/dev/null
-agent-browser eval "if (!document.body.classList.contains('celebration')) throw new Error('Legacy celebration failed');" >/dev/null
-echo 'PASS: mobile/desktop layout, images, touch/mouse/keyboard activation, Yes navigation, and legacy redirects.'
+agent-browser eval "if (!document.body.classList.contains('celebration')) throw new Error('Alternate celebration failed');" >/dev/null
+echo 'PASS: mobile/desktop layout, images, touch/mouse/keyboard activation, Yes navigation, and alternate-path redirects.'
