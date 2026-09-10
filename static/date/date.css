@@ -142,9 +142,14 @@ h1 .period {
   touch-action: manipulation;
 }
 .no-button.is-dodging {
-  position: absolute;
-  right: 0;
-  top: 68px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  margin: 0;
+  box-shadow: 0 5px 15px #29282020;
+  transition: transform 480ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
 }
 .small-note {
   font-size: 10px;
@@ -162,7 +167,7 @@ h1 .period {
   position: relative;
   min-height: 510px;
 }
-.smash-art {
+.rage-art {
   width: 94%;
   position: absolute;
   top: 12px;
@@ -434,7 +439,7 @@ footer span:last-child {
     margin: 0 auto;
     min-height: 450px;
   }
-  .smash-art {
+  .rage-art {
     top: 0;
     width: 100%;
   }

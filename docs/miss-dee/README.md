@@ -2,7 +2,7 @@
 
 The invitation is at `/miss-dee/`, with its celebration at `/miss-dee/yes/`. Hugo also redirects the alternate `/miss-dee/decision/` and `/miss-dee/decision/yes/` URLs. The dedicated `date` layout avoids nesting documents inside the blog template. No analytics, external fonts, runtime image requests, or new project dependencies are needed.
 
-The No button alternates between two positions inside its answer area for mouse hover, touch, and keyboard activation. It never submits a rejection or covers Yes. The Yes link works without JavaScript. Confetti respects reduced motion and removes itself when its animation finishes. This static site does not send or store an RSVP.
+The No button glides to varied positions inside the viewport when the mouse approaches, on touch, and on keyboard activation. Its path stays clear of Yes, and scrolling or resizing returns it to the answer area. Reduced motion disables the glide. It never submits a rejection or covers Yes. The Yes link works without JavaScript. Confetti respects reduced motion and removes itself when its animation finishes. This static site does not send or store an RSVP.
 
 ## Images
 
