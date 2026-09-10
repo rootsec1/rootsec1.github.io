@@ -9,22 +9,47 @@ for width in 320 390 430 1280; do
   agent-browser set viewport "$width" 844 >/dev/null
   agent-browser open "$base/miss-dee/" >/dev/null
   agent-browser eval --stdin <<'JS'
+(async () => {
 const assert = (value, message) => { if (!value) throw new Error(message); };
+const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 assert(document.documentElement.scrollWidth <= innerWidth, 'Horizontal overflow');
 assert(document.title.includes('Miss Dee'), 'Wrong recipient');
+assert(!/smash/i.test(document.body.textContent), 'Old wording remains');
 assert([...document.images].every(image => image.complete && image.naturalWidth > 0), 'Broken image');
 const no = document.getElementById('noButton');
 const yes = document.getElementById('yesButton');
-for (let i = 0; i < 8; i++) {
-  no.dispatchEvent(new PointerEvent(i % 2 ? 'pointerenter' : 'pointerdown', {pointerType: i % 2 ? 'mouse' : 'touch', cancelable: true}));
-  const n = no.getBoundingClientRect(), y = yes.getBoundingClientRect();
-  assert(n.left >= 0 && n.right <= innerWidth, 'No button escaped the viewport');
-  assert(n.right <= y.left || n.left >= y.right || n.top >= y.bottom || n.bottom <= y.top, 'No button covers Yes');
+const positions = new Set();
+for (let i = 0; i < 5; i++) {
+  const start = no.getBoundingClientRect();
+  if (i % 2) {
+    document.dispatchEvent(new PointerEvent('pointermove', {pointerType: 'mouse', clientX: start.left - 10, clientY: start.top + 20}));
+  } else {
+    no.dispatchEvent(new PointerEvent('pointerdown', {pointerType: 'touch', cancelable: true}));
+  }
+  await wait(90);
+  const middle = no.getBoundingClientRect();
+  assert(Math.hypot(middle.x - start.x, middle.y - start.y) > 1, 'Button did not animate');
+  for (let frame = 0; frame < 10; frame++) {
+    const n = no.getBoundingClientRect(), y = yes.getBoundingClientRect();
+    assert(n.left >= 0 && n.right <= innerWidth && n.top >= 0 && n.bottom <= innerHeight, 'No button escaped the viewport');
+    assert(n.right <= y.left || n.left >= y.right || n.top >= y.bottom || n.bottom <= y.top, 'No button crosses Yes');
+    await wait(45);
+  }
+  const end = no.getBoundingClientRect();
+  assert(Math.hypot(end.x - middle.x, end.y - middle.y) > 1, 'Button snapped instead of gliding');
+  positions.add(`${Math.round(end.x)},${Math.round(end.y)}`);
 }
+assert(positions.size >= 4, 'Not enough varied destinations');
+window.dispatchEvent(new Event('resize'));
+assert(!no.classList.contains('is-dodging'), 'Resize did not reset position');
 no.click();
-assert(document.getElementById('no-note').textContent !== 'The “No” button has commitment issues. Try it.', 'No does not dodge');
+await wait(550);
+assert(no.classList.contains('is-dodging'), 'Keyboard activation does not dodge');
 assert(location.pathname === '/miss-dee/', 'No navigated');
+window.dispatchEvent(new Event('scroll'));
+assert(!no.classList.contains('is-dodging'), 'Scroll did not reset position');
 yes.click();
+})();
 JS
   agent-browser wait --url '**/miss-dee/yes/' >/dev/null
   agent-browser eval "if (!document.body.classList.contains('celebration') || !document.querySelector('h1').textContent.includes('Miss Dee')) throw new Error('Missing celebration');" >/dev/null
