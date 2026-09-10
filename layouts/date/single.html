@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f1e7">
+  <meta name="robots" content="noindex, nofollow">
+  <title>{{ .Title }}</title>
+  <meta name="description" content="A little chaos. A cute date. An invitation just for Miss Dee.">
+  <link rel="stylesheet" href="{{ "date/date.css" | relURL }}">
+  <script src="{{ "date/date.js" | relURL }}" defer></script>
+</head>
+<body{{ if .Params.celebration }} class="celebration"{{ end }}>
+  <div class="page">
+    <header class="masthead"><a href="{{ "miss-dee/" | relURL }}" aria-label="Back to the invitation">a date with a little <span>damage.</span></a><span class="edition">JUST FOR MISS DEE ↗</span></header>
+    <main>
+      <section class="hero" aria-labelledby="invite-title">
+        <div class="invitation">
+          <p class="eyebrow"><span class="dot"></span> {{ if .Params.celebration }}THE CUTEST PLOT TWIST{{ else }}AN EXTREMELY SERIOUS INVITATION{{ end }}</p>
+          {{ if .Params.celebration }}
+          <h1 id="invite-title">It's a date,<br><span>Miss Dee!</span></h1>
+          <p class="intro">You bring that smile. I'll bring my best attempt at looking cool in safety goggles.</p>
+          <div class="confirmed"><span aria-hidden="true">♡</span> TWO TICKETS TO A LITTLE CHAOS</div>
+          <p class="small-note">Send me a “let's smash” and we'll pick a day.</p>
+          {{ else }}
+          <h1 id="invite-title">Miss Dee,<br>let's <span>break</span><br>the ice<span class="period">.</span></h1>
+          <p class="handwritten">and a few plates, maybe?</p>
+          <p class="intro">You. Me. A rage room.<br>A little smashing, a lot of laughing, and a very cute excuse to take you out.</p>
+          <div class="answer-area">
+            <a class="yes-button" id="yesButton" href="{{ "miss-dee/yes/" | relURL }}">Yes, let's smash <span aria-hidden="true">↗</span></a>
+            <button class="no-button" id="noButton" type="button" aria-describedby="no-note">Nope</button>
+          </div>
+          <p class="small-note" id="no-note" aria-live="polite">The “No” button has commitment issues. Try it.</p>
+          {{ end }}
+        </div>
+        <div class="collage" role="group" aria-label="Our date mood board">
+          <div class="burst" aria-hidden="true"><span>{{ if .Params.celebration }}IT'S<br>A YES!{{ else }}CUTE DATE.<br>BAD DAY<br>FOR PLATES.{{ end }}</span></div>
+          <div class="smash-art" aria-hidden="true">
+            <svg viewBox="0 0 420 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M48 223L15 242M80 102L61 58M299 68L321 27M359 134L404 116" stroke="#292820" stroke-width="5" stroke-linecap="round"/>
+              <path d="M123 139C86 169 92 239 129 263L184 217L169 178L196 151L176 128Z" fill="#faf6ed" stroke="#292820" stroke-width="4"/>
+              <path d="M213 126L194 153L209 178L194 218L150 277C214 307 279 279 297 227C315 176 276 128 213 126Z" fill="#faf6ed" stroke="#292820" stroke-width="4"/>
+              <path d="M141 165C116 188 121 218 137 234M226 155C271 172 283 233 234 260" stroke="#c8c0ad" stroke-width="3"/>
+              <path d="M189 240C154 216 167 190 186 207C201 179 230 199 214 222L189 240Z" fill="#e76650"/>
+              <g transform="rotate(37 243 120)"><rect x="231" y="68" width="24" height="177" rx="9" fill="#b393be" stroke="#292820" stroke-width="4"/><rect x="178" y="42" width="131" height="65" rx="12" fill="#e76650" stroke="#292820" stroke-width="4"/><path d="M199 45V104M287 45V104" stroke="#292820" stroke-width="4"/></g>
+              <path d="M62 286L87 267L94 297Z" fill="#b393be" stroke="#292820" stroke-width="3"/><path d="M334 252L355 230L368 261Z" fill="#e76650" stroke="#292820" stroke-width="3"/>
+            </svg>
+          </div>
+          <figure class="meme"><div class="tape" aria-hidden="true"></div><img src="{{ "date/ravi-kishan.webp" | relURL }}" width="480" height="360" alt="Ravi Kishan singing Koteshwara into a microphone"><figcaption>me mentally preparing to ask you out</figcaption></figure>
+          <span class="scribble" aria-hidden="true">big feelings. bigger hammer. ↗</span>
+        </div>
+      </section>
+      <div class="caution" aria-hidden="true"><span>HANDLE WITH CARE ♡</span><span>FEELINGS MAY OCCUR ↗</span><span>HANDLE WITH CARE ♡</span><span>FEELINGS MAY OCCUR ↗</span></div>
+      <section class="after" aria-labelledby="after-title">
+        <figure class="bench"><img src="{{ "date/bench.webp" | relURL }}" width="720" height="1280" loading="lazy" alt="A wooden bench beside a lamppost, surrounded by a green lawn and leafy trees, from your video"><figcaption>saved you a seat ♡</figcaption></figure>
+        <div class="after-copy"><p class="eyebrow">THE SOFTER SIDE OF THE PLAN</p><h2 id="after-title">First, we smash.<br>Then, we <em>sit.</em></h2><p>Once we've run out of things to break,<br>there's this bench. And hopefully, you next to me.</p><div class="itinerary"><span>01 / RAGE ROOM</span><span>02 / A LITTLE WALK</span><span>03 / ABSOLUTELY NO RUSH</span></div><p class="handwritten">chaos with you sounds pretty good.</p></div>
+      </section>
+    </main>
+    <footer><span>MADE WITH NERVES & VERY GOOD INTENTIONS</span><span>for Miss Dee, obviously. ♡</span></footer>
+  </div>
+</body>
+</html>
