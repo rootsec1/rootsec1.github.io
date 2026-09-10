@@ -553,3 +553,300 @@ footer span:last-child {
     transform: none;
   }
 }
+/* The invitation reads like a little field-trip scrapbook. */
+body {
+  background-image: radial-gradient(#8f806319 0.65px, transparent 0.65px);
+  background-size: 5px 5px;
+}
+.masthead a {
+  max-width: 350px;
+}
+.invitation .handwritten {
+  font-size: 20px;
+}
+.invitation .intro {
+  max-width: 390px;
+}
+.scribble {
+  font-size: 14px;
+  max-width: 290px;
+  text-align: right;
+}
+.date-ticket {
+  position: relative;
+  margin: 46px 0 0;
+  background: #e8eadb;
+  border: 1px solid #bac1a6;
+  border-radius: 9px;
+  box-shadow: 5px 6px 0 #2928200c;
+}
+.ticket-heading {
+  position: relative;
+  padding: 32px 38px 24px;
+  border-bottom: 1px dashed #a3ab91;
+}
+.ticket-heading h2,
+.little-details h2 {
+  font:
+    400 42px/1.1 Georgia,
+    serif;
+  letter-spacing: -1.5px;
+  margin: 13px 0 0;
+}
+.ticket-heading h2 em,
+.little-details h2 em {
+  color: #536144;
+}
+.ticket-stamp {
+  position: absolute;
+  right: 38px;
+  top: 34px;
+  display: grid;
+  place-content: center;
+  width: 91px;
+  height: 91px;
+  border: 2px solid #536144;
+  outline: 1px solid #536144;
+  outline-offset: -6px;
+  border-radius: 50%;
+  transform: rotate(13deg);
+  text-align: center;
+  font:
+    700 11px/1.5 "Courier New",
+    monospace;
+  letter-spacing: 1px;
+  color: #536144;
+}
+.date-stops {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 28px 38px;
+  margin: 0;
+  gap: 30px;
+  list-style: none;
+}
+.stop-number {
+  display: inline-grid;
+  place-content: center;
+  width: 31px;
+  height: 31px;
+  border: 1px solid #536144;
+  border-radius: 50%;
+  font:
+    11px "Courier New",
+    monospace;
+  color: #536144;
+}
+.date-stops h3 {
+  font:
+    400 23px/1.2 Georgia,
+    serif;
+  margin: 17px 0 10px;
+  letter-spacing: -0.5px;
+}
+.date-stops p {
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0;
+}
+.ticket-footer {
+  padding: 17px 38px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px dashed #a3ab91;
+  font:
+    9px/1.6 "Courier New",
+    monospace;
+  letter-spacing: 0.7px;
+}
+.after {
+  padding-top: 76px;
+  padding-bottom: 76px;
+}
+.after-copy .eyebrow {
+  color: #536144;
+}
+.after-copy .handwritten small {
+  font-size: 13px;
+  color: #625e54;
+}
+.bench {
+  position: relative;
+}
+.bench::before {
+  content: "";
+  position: absolute;
+  width: 92px;
+  height: 26px;
+  top: -12px;
+  left: calc(50% - 46px);
+  background: #d9ccacb8;
+  transform: rotate(5deg);
+}
+.little-details {
+  border-top: 1px solid var(--line);
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+.details-hint {
+  font:
+    italic 14px/1.7 Georgia,
+    serif;
+  color: #625e54;
+  margin-top: 22px;
+}
+.folded-notes {
+  align-self: center;
+}
+.folded-notes details {
+  border-bottom: 1px solid var(--line);
+}
+.folded-notes summary {
+  min-height: 64px;
+  padding: 21px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  list-style: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+}
+.folded-notes summary::-webkit-details-marker {
+  display: none;
+}
+.folded-notes summary span {
+  font:
+    25px/1 Georgia,
+    serif;
+  color: var(--coral);
+  transition: transform 0.25s ease;
+}
+.folded-notes details[open] summary span {
+  transform: rotate(45deg);
+}
+.folded-notes details[open] {
+  background: #e7d8ed45;
+}
+.folded-notes details p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0 15px 22px 0;
+}
+.closing-note {
+  font:
+    italic 25px/1.5 Georgia,
+    serif;
+  text-align: center;
+  padding: 22px 0 38px;
+  margin: 0;
+}
+.closing-note span {
+  color: var(--coral);
+}
+@media (max-width: 700px) {
+  .masthead a {
+    font-size: 11px;
+    max-width: 190px;
+    line-height: 1.5;
+  }
+  .masthead a span {
+    display: block;
+  }
+  .invitation .handwritten {
+    font-size: 18px;
+  }
+  .scribble {
+    font-size: 12px;
+    bottom: -10px;
+    max-width: 250px;
+  }
+  .date-ticket {
+    margin-top: 30px;
+  }
+  .ticket-heading {
+    padding: 23px 21px;
+  }
+  .ticket-heading h2 {
+    font-size: 31px;
+    max-width: 215px;
+  }
+  .ticket-heading .eyebrow {
+    max-width: 190px;
+  }
+  .ticket-stamp {
+    width: 65px;
+    height: 65px;
+    right: 13px;
+    top: -17px;
+    font-size: 8px;
+    background: #e8eadb;
+  }
+  .date-stops {
+    grid-template-columns: 1fr;
+    padding: 25px 21px;
+    gap: 25px;
+  }
+  .date-stops li {
+    display: flex;
+    gap: 15px;
+  }
+  .stop-number {
+    flex-shrink: 0;
+  }
+  .date-stops h3 {
+    margin: 1px 0 8px;
+    font-size: 23px;
+  }
+  .date-stops p {
+    font-size: 12px;
+  }
+  .ticket-footer {
+    padding: 16px 21px;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 8px;
+  }
+  .after {
+    padding: 43px 0 48px;
+  }
+  .after h2 {
+    font-size: 46px;
+  }
+  .after-copy .handwritten {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .little-details {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 31px 0;
+  }
+  .little-details h2 {
+    font-size: 39px;
+  }
+  .details-hint {
+    font-size: 12px;
+    margin: 16px 0 0;
+  }
+  .folded-notes summary {
+    font-size: 13px;
+  }
+  .folded-notes details p {
+    font-size: 13px;
+  }
+  .closing-note {
+    font-size: 22px;
+    padding: 14px 10px 33px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .folded-notes summary span {
+    transition: none;
+  }
+}
