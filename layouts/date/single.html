@@ -6,31 +6,31 @@
   <meta name="theme-color" content="#f6f1e7">
   <meta name="robots" content="noindex, nofollow">
   <title>{{ .Title }}</title>
-  <meta name="description" content="A little chaos. A cute date. An invitation just for Miss Dee.">
+  <meta name="description" content="A rage-room date, an ice cream detour, and some very important bench time. Just for Miss Dee.">
   <link rel="stylesheet" href="{{ "date/date.css" | relURL }}">
   <script src="{{ "date/date.js" | relURL }}" defer></script>
 </head>
 <body{{ if .Params.celebration }} class="celebration"{{ end }}>
   <div class="page">
-    <header class="masthead"><a href="{{ "miss-dee/" | relURL }}" aria-label="Back to the invitation">a date with a little <span>damage.</span></a><span class="edition">JUST FOR MISS DEE ↗</span></header>
+    <header class="masthead"><a href="{{ "miss-dee/" | relURL }}" aria-label="Back to the invitation">the bench girl <span>&amp; the bench-press guy.</span></a><span class="edition">JUST FOR MISS DEE ↗</span></header>
     <main>
       <section class="hero" aria-labelledby="invite-title">
         <div class="invitation">
-          <p class="eyebrow"><span class="dot"></span> {{ if .Params.celebration }}THE CUTEST PLOT TWIST{{ else }}AN EXTREMELY SERIOUS INVITATION{{ end }}</p>
+          <p class="eyebrow"><span class="dot"></span> {{ if .Params.celebration }}STAGE 03 / LIVE REACTIONS, FINALLY{{ else }}STAGE 03 / THE IN-PERSON EPISODE{{ end }}</p>
           {{ if .Params.celebration }}
           <h1 id="invite-title">It's a date,<br><span>Miss Dee!</span></h1>
-          <p class="intro">You bring that smile. I'll bring my best attempt at looking cool in safety goggles.</p>
-          <div class="confirmed"><span aria-hidden="true">♡</span> TWO TICKETS TO A LITTLE CHAOS</div>
-          <p class="small-note">Send me a “let's go” and we'll pick a day.</p>
+          <p class="intro">The bench-press guy has officially secured bench time. I'll try to respond to this with something better than “ok.”</p>
+          <div class="confirmed"><span aria-hidden="true">♡</span> ONE VERY HAPPY “YO” OVER HERE</div>
+          <p class="small-note">Send me your verdict and we'll pick a day. I still owe you a live reaction.</p>
           {{ else }}
-          <h1 id="invite-title">Miss Dee,<br>let's <span>break</span><br>the ice<span class="period">.</span></h1>
-          <p class="handwritten">and a few plates, maybe?</p>
-          <p class="intro">You. Me. A rage room.<br>A few broken plates, a lot of laughing, and a very cute excuse to take you out.</p>
+          <h1 id="invite-title">Miss Dee,<br>let's take<br>this <span>offline.</span></h1>
+          <p class="handwritten">same jokes. actual giggles. safety goggles.</p>
+          <p class="intro">We've done the memes and the voice notes.<br>Now I want the live reactions. A rage-room date, an ice cream detour, and some very important bench time. You in?</p>
           <div class="answer-area">
             <a class="yes-button" id="yesButton" href="{{ "miss-dee/yes/" | relURL }}">Yes, let's go <span aria-hidden="true">↗</span></a>
             <button class="no-button" id="noButton" type="button" aria-describedby="no-note">Nope</button>
           </div>
-          <p class="small-note" id="no-note" aria-live="polite">The “No” button has commitment issues. Try it.</p>
+          <p class="small-note" id="no-note" aria-live="polite">“Will say no soon,” you said. The button has other plans.</p>
           {{ end }}
         </div>
         <div class="collage" role="group" aria-label="Our date mood board">
@@ -46,17 +46,35 @@
               <path d="M62 286L87 267L94 297Z" fill="#b393be" stroke="#292820" stroke-width="3"/><path d="M334 252L355 230L368 261Z" fill="#e76650" stroke="#292820" stroke-width="3"/>
             </svg>
           </div>
-          <figure class="meme"><div class="tape" aria-hidden="true"></div><img src="{{ "date/ravi-kishan.webp" | relURL }}" width="480" height="360" alt="Ravi Kishan singing Koteshwara into a microphone"><figcaption>me mentally preparing to ask you out</figcaption></figure>
-          <span class="scribble" aria-hidden="true">big feelings. bigger hammer. ↗</span>
+          <figure class="meme"><div class="tape" aria-hidden="true"></div><img src="{{ "date/ravi-kishan.webp" | relURL }}" width="480" height="360" alt="Ravi Kishan singing Koteshwara into a microphone"><figcaption>my brain composing a normal invitation</figcaption></figure>
+          <span class="scribble" aria-hidden="true">yes, I have interests apart from Ravi Kishan. ↗</span>
         </div>
       </section>
-      <div class="caution" aria-hidden="true"><span>HANDLE WITH CARE ♡</span><span>FEELINGS MAY OCCUR ↗</span><span>HANDLE WITH CARE ♡</span><span>FEELINGS MAY OCCUR ↗</span></div>
-      <section class="after" aria-labelledby="after-title">
-        <figure class="bench"><img src="{{ "date/bench.webp" | relURL }}" width="720" height="1280" loading="lazy" alt="A wooden bench beside a lamppost, surrounded by a green lawn and leafy trees, from your video"><figcaption>saved you a seat ♡</figcaption></figure>
-        <div class="after-copy"><p class="eyebrow">THE SOFTER SIDE OF THE PLAN</p><h2 id="after-title">First, the rage room.<br>Then, we <em>sit.</em></h2><p>Once we've run out of things to break,<br>there's this bench. And hopefully, you next to me.</p><div class="itinerary"><span>01 / RAGE ROOM</span><span>02 / A LITTLE WALK</span><span>03 / ABSOLUTELY NO RUSH</span></div><p class="handwritten">chaos with you sounds pretty good.</p></div>
+      <div class="caution" aria-hidden="true"><span>LIVE REACTIONS ONLY ♡</span><span>LEAF-PHOTO STOPS EXPECTED ↗</span><span>LIVE REACTIONS ONLY ♡</span><span>LEAF-PHOTO STOPS EXPECTED ↗</span></div>
+      <section class="date-ticket" aria-labelledby="ticket-title">
+        <div class="ticket-heading"><p class="eyebrow">A HIGHLY UNOFFICIAL FIELD TRIP</p><h2 id="ticket-title">Two people.<br><em>Excellent side quests.</em></h2><span class="ticket-stamp">WORTH A<br>STICKER?</span></div>
+        <ol class="date-stops">
+          <li><span class="stop-number">01</span><div><h3>The rage room</h3><p>You bring the commentary. I'll bring my best safety-goggle look. The plates have had a good run.</p></div></li>
+          <li><span class="stop-number">02</span><div><h3>The ice cream detour</h3><p>Caramel, if we're following the AMC plot. The bear is not invited.</p></div></li>
+          <li><span class="stop-number">03</span><div><h3>Your department: benches</h3><p>You judge the view. I finally learn what a bench is for when you aren't lifting weights.</p></div></li>
+        </ol>
+        <div class="ticket-footer"><span>ADMIT TWO / MISS DEE + ABHISHEK</span><span>DATE: WE'LL PICK TOGETHER</span></div>
       </section>
+      <section class="after" aria-labelledby="after-title">
+        <figure class="bench"><img src="{{ "date/bench.webp" | relURL }}" width="720" height="1280" loading="lazy" alt="A wooden bench beside a lamppost, surrounded by a green lawn and leafy trees, from your video"><figcaption>the original bench lore ♡</figcaption></figure>
+        <div class="after-copy"><p class="eyebrow">YOUR VERY CONVINCING BENCH PROPAGANDA</p><h2 id="after-title">Okay, I get<br>the <em>bench thing.</em></h2><p>The grass really is greener on your side. You sent me this view and somehow made sitting on a bench sound like a very good plan.<br><br>I'd like to try your kind of bench day. Walk, talk, stop for a leaf photo. Repeat as needed.</p><p class="handwritten">you take the photos. I'll stop saying “gg.”<br><small>okay, no promises on the second part.</small></p></div>
+      </section>
+      <section class="little-details" aria-labelledby="details-title">
+        <div><p class="eyebrow">BECAUSE YOU ASK THE GOOD QUESTIONS</p><h2 id="details-title">A few things<br>to <em>clear up.</em></h2><p class="details-hint">Tap for extremely important information. ↗</p></div>
+        <div class="folded-notes">
+          <details><summary>The wardrobe situation<span aria-hidden="true">+</span></summary><p>I have 12 identical black T-shirts. One of them is about to have a very eventful day. Please appreciate the decision-making involved.</p></details>
+          <details><summary>Is this interview prep?<span aria-hidden="true">+</span></summary><p>No homework. You already corrected me: it's effort. This is mine. You just show up as you, with all the questions and commentary.</p></details>
+          <details><summary>Am I actually laughing?<span aria-hidden="true">+</span></summary><p>Yes, madam. Actual giggles. You keep making an ordinary day funnier, and I'd really like to spend one with you.</p></details>
+        </div>
+      </section>
+      <p class="closing-note">{{ if .Params.celebration }}See you for the next episode, Miss Dee.{{ else }}Enough typing. I'd like to hear you laugh.{{ end }} <span aria-hidden="true">♡</span></p>
     </main>
-    <footer><span>MADE WITH NERVES & VERY GOOD INTENTIONS</span><span>for Miss Dee, obviously. ♡</span></footer>
+    <footer><span>EFFORT, YO. NOT INTERVIEW PREP.</span><span>from your bench-press guy. ♡</span></footer>
   </div>
 </body>
 </html>

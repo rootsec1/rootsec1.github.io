@@ -15,7 +15,8 @@ const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 assert(document.documentElement.scrollWidth <= innerWidth, 'Horizontal overflow');
 assert(document.title.includes('Miss Dee'), 'Wrong recipient');
 assert(!/smash/i.test(document.body.textContent), 'Old wording remains');
-assert([...document.images].every(image => image.complete && image.naturalWidth > 0), 'Broken image');
+await Promise.all([...document.images].map(image => { image.loading = 'eager'; return image.decode(); }));
+assert([...document.images].every(image => image.naturalWidth > 0), 'Broken image');
 const no = document.getElementById('noButton');
 const yes = document.getElementById('yesButton');
 const positions = new Set();
@@ -32,7 +33,7 @@ for (let i = 0; i < 5; i++) {
   for (let frame = 0; frame < 10; frame++) {
     const n = no.getBoundingClientRect(), y = yes.getBoundingClientRect();
     assert(n.left >= 0 && n.right <= innerWidth && n.top >= 0 && n.bottom <= innerHeight, 'No button escaped the viewport');
-    assert(n.right <= y.left || n.left >= y.right || n.top >= y.bottom || n.bottom <= y.top, 'No button crosses Yes');
+    assert(n.right <= y.left || n.left >= y.right || n.top >= y.bottom || n.bottom <= y.top, `No button crosses Yes: ${JSON.stringify({width:innerWidth, i, start:start.toJSON(), no:n.toJSON(), yes:y.toJSON()})}`);
     await wait(45);
   }
   const end = no.getBoundingClientRect();
@@ -48,6 +49,13 @@ assert(no.classList.contains('is-dodging'), 'Keyboard activation does not dodge'
 assert(location.pathname === '/miss-dee/', 'No navigated');
 window.dispatchEvent(new Event('scroll'));
 assert(!no.classList.contains('is-dodging'), 'Scroll did not reset position');
+for (const note of document.querySelectorAll('details')) {
+  note.querySelector('summary').click();
+  assert(note.open, 'Personal note did not expand');
+  assert(document.documentElement.scrollWidth <= innerWidth, 'Expanded note overflows');
+  note.querySelector('summary').click();
+  assert(!note.open, 'Personal note did not close');
+}
 yes.click();
 })();
 JS

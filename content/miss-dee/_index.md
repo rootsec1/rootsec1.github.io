@@ -1,5 +1,5 @@
 ---
-title: "Miss Dee, let's make a little chaos"
+title: "Miss Dee, let's take this offline"
 type: date
 layout: single
 url: /miss-dee/

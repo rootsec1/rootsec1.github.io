@@ -3,10 +3,10 @@ if (noButton) {
   let attempts = 0;
   let lastDodge = -Infinity;
   const messages = [
-    "Oops. It got shy.",
-    "Nope has left the conversation.",
-    "Even the button wants us to go.",
-    "Still running. Very little stamina, though.",
+    "Never let them know your next move.",
+    "Nope went to photograph a leaf.",
+    "Currently hiding under a rock.",
+    "Off to an AMC screening. Try later.",
   ];
   const dodge = (event) => {
     event.preventDefault();
@@ -38,12 +38,14 @@ if (noButton) {
     if (!target) return;
     lastDodge = performance.now();
     if (!noButton.classList.contains("is-dodging")) {
+      noButton.style.transition = "none";
       noButton.style.width = `${start.width}px`;
       noButton.style.height = `${start.height}px`;
       noButton.style.transform = `translate3d(${start.left}px, ${start.top}px, 0)`;
       noButton.classList.add("is-dodging");
       // Establish the initial position before starting the CSS transition.
       noButton.getBoundingClientRect();
+      noButton.style.removeProperty("transition");
     }
     noButton.style.transform = `translate3d(${target.x}px, ${target.y}px, 0)`;
     document.getElementById("no-note").textContent =
