@@ -257,8 +257,8 @@
       "name": "Album filter",
       "kind": "chip",
       "refersTo": "album-filter-selected",
-      "description": "Camera-roll filter. Selection uses aria-pressed and a wine fill.",
-      "html": "<button class=\"ds-filter\" type=\"button\" aria-pressed=\"true\">All moments</button><button class=\"ds-filter\" type=\"button\" aria-pressed=\"false\">Photos</button>",
+      "description": "Camera-roll filter by subject or little films. All 103 items appear by default. Selection uses aria-pressed and a wine fill.",
+      "html": "<button class=\"ds-filter\" type=\"button\" aria-pressed=\"true\">Everything 103</button><button class=\"ds-filter\" type=\"button\" aria-pressed=\"false\">Faces &amp; reactions 16</button>",
       "css": ".ds-filter{background:transparent;border:0;border-radius:3px;min-height:44px;padding:10px 16px;font:400 12px/1.65 var(--sans,\"DM Sans\",sans-serif);color:var(--wine,#4c2333);cursor:pointer;transition:background .2s}.ds-filter[aria-pressed=\"true\"]{background:var(--wine,#4c2333);color:var(--paper,#f7f3eb)}.ds-filter:focus-visible{outline:3px solid #b67a27;outline-offset:5px}@media(hover:hover){.ds-filter:not([aria-pressed=\"true\"]):hover{background:#ead5d6}}@media(prefers-reduced-motion:reduce){.ds-filter{transition:none}}"
     },
     {
@@ -275,7 +275,7 @@
     "overview": "An ivory and rose photographic scrapbook for /miss-dee/ and its compatibility pages. Maroon frames the collection, forest green separates listening and trivia, and real portraits lead the opening. The blog retains its own identity. The user authorized this direction after rejecting the sparse premiere; AMC remains a shared joke within the album.",
     "keyCharacteristics": [
       "Real portrait collage followed by three featured films and five voice notes.",
-      "A 38-item camera roll contains 32 photos and six more films, with filters and a full-size photo dialog.",
+      "All 103 camera-roll items appear by default: 96 still images, six films, and one silent animated sticker. Subject filters and a full-size photo dialog with Previous and Next controls support browsing.",
       "Optional photo pairs, trivia, scene choices, and stamps; the letter remains available."
     ],
     "rules": [

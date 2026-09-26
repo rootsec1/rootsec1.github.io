@@ -159,17 +159,17 @@ players.forEach((player) => {
 
 const archiveItems = [...document.querySelectorAll(".archive-item")];
 const mediaFilters = [...document.querySelectorAll("[data-media-filter]")];
-const moreMedia = document.getElementById("show-more-media");
 let mediaFilter = "all";
-let visibleMedia = 8;
 function renderArchive() {
-  const eligible = archiveItems.filter(
-    (item) => mediaFilter === "all" || item.dataset.mediaKind === mediaFilter,
-  );
-  const visible = new Set(eligible.slice(0, visibleMedia));
+  let count = 0;
   archiveItems.forEach((item) => {
-    item.hidden = !visible.has(item);
+    item.hidden = !(
+      mediaFilter === "all" ||
+      item.dataset.mediaKind === mediaFilter ||
+      item.dataset.chapter === mediaFilter
+    );
     if (item.hidden) item.querySelector("video")?.pause();
+    else count += 1;
   });
   mediaFilters.forEach((button) =>
     button.setAttribute(
@@ -178,43 +178,59 @@ function renderArchive() {
     ),
   );
   document.getElementById("album-count").textContent =
-    `${Math.min(visibleMedia, eligible.length)} of ${eligible.length} moments`;
-  moreMedia.hidden = visibleMedia >= eligible.length;
+    `${count} moments. All here, no extra pages.`;
 }
 mediaFilters.forEach((button) =>
   button.addEventListener("click", () => {
     mediaFilter = button.dataset.mediaFilter;
-    visibleMedia = 8;
     renderArchive();
   }),
 );
-moreMedia.addEventListener("click", () => {
-  const firstNew = archiveItems.filter(
-    (item) => mediaFilter === "all" || item.dataset.mediaKind === mediaFilter,
-  )[visibleMedia];
-  visibleMedia += 8;
-  renderArchive();
-  const target = firstNew.querySelector("a, video");
-  target.focus({ preventScroll: true });
-});
 renderArchive();
 
 const viewer = document.getElementById("photo-viewer");
 const viewerImage = document.getElementById("viewer-image");
+let viewerPhotos = [];
+let viewerIndex = 0;
+const previousPhoto = document.getElementById("viewer-previous");
+const nextPhoto = document.getElementById("viewer-next");
+function showPhoto(index) {
+  viewerIndex = index;
+  const link = viewerPhotos[index];
+  viewerImage.src = link.href;
+  viewerImage.alt = link.querySelector("img").alt;
+  document.getElementById("viewer-title").textContent = link.dataset.title;
+  document.getElementById("viewer-caption").textContent = link.dataset.caption;
+  document.getElementById("viewer-position").textContent =
+    `${index + 1} of ${viewerPhotos.length}`;
+  previousPhoto.disabled = index === 0;
+  nextPhoto.disabled = index === viewerPhotos.length - 1;
+}
 document.querySelectorAll("[data-photo]").forEach((link) =>
   link.addEventListener("click", (event) => {
     if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
       return;
     event.preventDefault();
-    viewerImage.src = link.href;
-    viewerImage.alt = link.querySelector("img").alt;
-    document.getElementById("viewer-title").textContent = link.dataset.title;
-    document.getElementById("viewer-caption").textContent =
-      link.dataset.caption;
+    viewerPhotos = archiveItems
+      .filter((item) => !item.hidden)
+      .map((item) => item.querySelector("[data-photo]"))
+      .filter(Boolean);
+    showPhoto(viewerPhotos.indexOf(link));
     players.forEach((player) => player.pause());
     viewer.showModal();
   }),
 );
+previousPhoto.addEventListener("click", () => showPhoto(viewerIndex - 1));
+nextPhoto.addEventListener("click", () => showPhoto(viewerIndex + 1));
+viewer.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowLeft" && !previousPhoto.disabled) {
+    event.preventDefault();
+    previousPhoto.click();
+  } else if (event.key === "ArrowRight" && !nextPhoto.disabled) {
+    event.preventDefault();
+    nextPhoto.click();
+  }
+});
 viewer.addEventListener("click", (event) => {
   if (event.target === viewer) viewer.close();
 });

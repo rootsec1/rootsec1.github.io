@@ -24,7 +24,7 @@
       <p class="opening-line">3.9 years in the making.<br><span data-relative-day>Tomorrow</span>, we finally meet.</p>
       <p class="album-dedication">For you, Miss Dee. A little collection of the things we kept sending each other, until talking to you became part of my day.</p>
       <a class="button dark" href="#films">Let's press play {{ partial "date-icon.html" "down" }}</a>
-      <a class="listen-link" href="#voices">Or start with your voice</a>
+      <a class="listen-link" href="#camera-roll">Browse all {{ len .Site.Data.dee_media.archive }} camera-roll moments</a>
     </div>
     <div class="portrait-collage" aria-label="A few familiar faces and favourite little things">
       <figure class="portrait portrait-dee"><img src="{{ "date/media/968.webp" | relURL }}" alt="Miss Dee, holding a pen and looking to the side" width="506" height="1100" fetchpriority="high"><figcaption>the girl with one more question</figcaption></figure>
@@ -48,10 +48,15 @@
   </div></section>
 
   <section class="section camera-roll" id="camera-roll" aria-labelledby="roll-title">
-    <div class="section-intro"><h2 id="roll-title">“Thought of you.”<br><em>Then sent it.</em></h2><p>The horses. The flowers. The extremely familiar lunch. The small updates that turned into a whole month of us.</p></div>
-    <div class="album-toolbar js-only"><div class="album-filters" role="group" aria-label="Filter the camera roll"><button type="button" data-media-filter="all" aria-pressed="true">All moments</button><button type="button" data-media-filter="photo" aria-pressed="false">Photos</button><button type="button" data-media-filter="video" aria-pressed="false">Little films</button></div><span id="album-count" aria-live="polite"></span></div>
-    <div class="archive-grid">{{ range .Site.Data.dee_media.archive }}<article class="archive-item archive-{{ .kind }}" data-media-kind="{{ .kind }}">{{ partial "date-media.html" . }}<div class="archive-caption">{{ if eq .kind "video" }}<span class="media-duration">{{ .duration }}-second film · original sound</span>{{ end }}<h3>{{ .title }}</h3><p>{{ .caption }}</p></div></article>{{ end }}</div>
-    <div class="album-more js-only"><button class="button dark" type="button" id="show-more-media">A few more memories {{ partial "date-icon.html" "down" }}</button><p>Nothing here needs finishing in one sitting.</p></div>
+    <div class="section-intro"><h2 id="roll-title">“Thought of you.”<br><em>Then sent it.</em></h2><p>The homemade stickers. The pastel-shirt investigation. The same lunch, several times. All {{ len .Site.Data.dee_media.archive }} moments are here. Pick a little side plot, or wander through the lot.</p></div>
+    <div class="album-toolbar js-only"><div class="album-filters" role="group" aria-label="Filter the camera roll">
+      <button type="button" data-media-filter="all" aria-pressed="true">Everything <span>{{ len .Site.Data.dee_media.archive }}</span></button>
+      {{ range .Site.Data.dee_media.chapters }}<button type="button" data-media-filter="{{ .id }}" aria-pressed="false">{{ .title }} <span>{{ len (where $.Site.Data.dee_media.archive "chapter" .id) }}</span></button>{{ end }}
+      <button type="button" data-media-filter="video" aria-pressed="false">Little films <span>{{ len (where .Site.Data.dee_media.archive "kind" "video") }}</span></button>
+    </div><p id="album-count" aria-live="polite"></p></div>
+    <p class="album-hint js-only">Tap a photo to open it, then use Previous and Next to turn the pages.</p>
+    <div class="archive-grid">{{ range .Site.Data.dee_media.archive }}<article class="archive-item archive-{{ .kind }}{{ if eq .fit "contain" }} archive-contained{{ end }}" data-media-kind="{{ .kind }}" data-chapter="{{ .chapter }}">{{ partial "date-media.html" . }}<div class="archive-caption">{{ if eq .kind "video" }}<span class="media-duration">{{ .duration }}-second {{ if .silent }}animated sticker · silent{{ else }}film · original sound{{ end }}</span>{{ end }}<h3>{{ .title }}</h3><p>{{ .caption }}</p></div></article>{{ end }}</div>
+    <p class="album-end">That's our September so far. <a href="#play">Fancy a game?</a> Or <a href="#letter">open your note.</a></p>
     <details class="deleted-scene"><summary>And obviously, this man made the album.<span>{{ partial "date-icon.html" "plus" }}</span></summary><div class="ravi-scene"><img src="{{ "date/ravi-kishan.webp" | relURL }}" alt="Ravi Kishan singing Koteshwara" width="480" height="360" loading="lazy"><div><h3>Ravi Kishan. Naturally.</h3><p>I introduced one song. You sang it. Your friend sang it. An aunty thought someone had become devotional.</p><p>Your distribution network is getting out of hand.</p></div></div></details>
   </section>
 
@@ -97,7 +102,7 @@
     <p class="post-credits">P.S. The bench has been informed. It's taking this very maturely.</p></div>
   </section>
 </main>
-<dialog class="photo-viewer" id="photo-viewer" aria-labelledby="viewer-title"><form method="dialog"><button class="viewer-close" aria-label="Close full-size photo">Close {{ partial "date-icon.html" "plus" }}</button></form><img id="viewer-image" alt=""><div class="viewer-copy"><h2 id="viewer-title"></h2><p id="viewer-caption"></p></div></dialog>
+<dialog class="photo-viewer" id="photo-viewer" aria-labelledby="viewer-title"><form method="dialog"><button class="viewer-close" aria-label="Close full-size photo">Close {{ partial "date-icon.html" "plus" }}</button></form><img id="viewer-image" alt=""><nav class="viewer-navigation" aria-label="Browse full-size photos"><button type="button" id="viewer-previous">Previous</button><span id="viewer-position" aria-live="polite"></span><button type="button" id="viewer-next">Next {{ partial "date-icon.html" "right" }}</button></nav><div class="viewer-copy"><h2 id="viewer-title"></h2><p id="viewer-caption"></p></div></dialog>
 <footer class="page-footer"><span>Made with effort. And a suspicious amount of attention.</span><a href="#main">Back to our collection {{ partial "date-icon.html" "up" }}</a></footer>
 </body>
 </html>

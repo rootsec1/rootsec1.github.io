@@ -79,23 +79,39 @@ assert(document.getElementById('stamp-note').textContent.includes('All four'), '
 document.getElementById('reset-pairs').click();
 assert(tiles.every(t => !t.disabled), 'Matched game replay failed');
 const archive = [...document.querySelectorAll('.archive-item')];
-assert(archive.length === 38 && archive.filter(i => !i.hidden).length === 8, 'Initial archive count');
+assert(archive.length === 103 && archive.every(i => !i.hidden), 'Full collection not visible initially');
 document.querySelector('[data-media-filter="video"]').click();
-assert(archive.filter(i => !i.hidden).length === 6 && archive.filter(i => !i.hidden).every(i => i.dataset.mediaKind === 'video'), 'Video filtering');
-assert(document.getElementById('show-more-media').hidden, 'Show more visible after all videos');
-document.querySelector('[data-media-filter="photo"]').click();
-while (!document.getElementById('show-more-media').hidden) document.getElementById('show-more-media').click();
-assert(archive.filter(i => !i.hidden).length === 32, 'Photo pagination lost items');
-const photo = document.querySelector('[data-photo]');
+assert(archive.filter(i => !i.hidden).length === 7 && archive.filter(i => !i.hidden).every(i => i.dataset.mediaKind === 'video'), 'Video filtering');
+for (const filter of document.querySelectorAll('[data-media-filter]')) {
+  filter.click();
+  const visible = archive.filter(i => !i.hidden);
+  assert(visible.length === Number(filter.querySelector('span').textContent), 'Filter count differs from visible collection');
+  assert(filter.getAttribute('aria-pressed') === 'true', 'Selected chapter not announced');
+  assert(document.documentElement.scrollWidth <= innerWidth, 'Chapter buttons overflow');
+}
+document.querySelector('[data-media-filter="us"]').click();
+const photo = document.querySelector('.archive-item:not([hidden]) [data-photo]');
 photo.focus(); photo.click();
-assert(document.getElementById('photo-viewer').open, 'Full-size photo viewer did not open');
-await document.getElementById('viewer-image').decode();
+const viewer = document.getElementById('photo-viewer');
+const image = document.getElementById('viewer-image');
+assert(viewer.open, 'Full-size photo viewer did not open');
+await image.decode();
+const original = image.src;
+assert(document.getElementById('viewer-previous').disabled, 'Previous enabled at first photo');
+document.getElementById('viewer-next').click();
+await image.decode();
+assert(image.src !== original, 'Next photo did not change');
+viewer.dispatchEvent(new KeyboardEvent('keydown', {key: 'ArrowLeft', bubbles: true}));
+assert(image.src === original, 'Keyboard previous photo did not return');
+while (!document.getElementById('viewer-next').disabled) document.getElementById('viewer-next').click();
+assert(document.getElementById('viewer-position').textContent === `${archive.filter(i => !i.hidden && i.dataset.mediaKind === 'photo').length} of ${archive.filter(i => !i.hidden && i.dataset.mediaKind === 'photo').length}`, 'Viewer did not stay within selected chapter');
+await image.decode();
 assert(document.documentElement.scrollWidth <= innerWidth, 'Full-size viewer overflows');
 document.querySelector('.viewer-close').click();
-assert(!document.getElementById('photo-viewer').open, 'Viewer close failed');
+assert(!viewer.open && document.activeElement === photo, 'Viewer close or focus restoration failed');
 document.querySelector('[data-media-filter="all"]').click();
-assert(archive.filter(i => !i.hidden).length === 8, 'All filter did not reset pagination');
-assert(document.querySelectorAll('audio').length === 5 && document.querySelectorAll('video').length === 9, 'Missing recordings');
+assert(archive.every(i => !i.hidden), 'All filter hides entries');
+assert(document.querySelectorAll('audio').length === 5 && document.querySelectorAll('video').length === 10, 'Missing recordings');
 assert([...document.querySelectorAll('audio,video')].every(p => !p.autoplay && p.preload === 'none'), 'Unexpected autoplay or preload');
 assert([...document.querySelectorAll('video')].every(v => v.querySelector('track[kind="captions"]')), 'Missing caption track');
 
@@ -155,6 +171,6 @@ agent-browser eval --stdin <<'JS'
   const response=await fetch(track.src);
   if(!response.ok || !(await response.text()).startsWith('WEBVTT')) throw Error('Missing captions');
  }
- return 'PASS: no recordings preloaded; 9 videos and 5 voice notes decode/play; one player at a time; caption files load';
+ return 'PASS: no recordings preloaded; 10 videos and 5 voice notes decode/play; one player at a time; caption files load';
 })();
 JS

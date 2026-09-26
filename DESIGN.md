@@ -84,7 +84,7 @@ This system applies to `/miss-dee/` and its compatibility pages. The Hugo blog r
 An ivory and rose scrapbook brings both people, their photographs, narrated films, and voice notes into the foreground. Maroon frames the collection; forest green separates the listening room and trivia. The user authorized this direction after rejecting the sparse premiere. AMC remains a shared joke within the album.
 
 - Real portraits overlap as photographic prints beside the opening greeting.
-- Three featured films and five voice notes lead into 38 camera-roll items, comprising 32 photos and six more films.
+- Three featured films and five voice notes lead into 103 camera-roll items, comprising 96 still images, six more films, and one silent animated sticker. The collection contains 111 assets in total.
 - Photo pairs, trivia, scene choices, and stamps are optional. The personal letter remains available throughout.
 
 ## Colors
@@ -119,9 +119,11 @@ Paper controls and pair tiles use a 3px radius; quiz, featured video frames, and
 
 Dark buttons have a 52px minimum height, wine background, and paper text. Hover raises them 2px and lightens the wine; pressing scales them to 0.97. Disabled quiz progression uses muted colors. The mobile opening button is 45px high. Text links, filters, audio-context summaries, and dialog close controls provide at least 44px targets. Focus outlines use 3px gold with a 5px offset.
 
-Native audio and video controls load recordings on demand with `preload="none"`. Videos preserve their sound, use `playsinline`, have caption tracks, and never autoplay. Starting one player pauses all others. Playback errors offer a direct recording link. Voice notes include native disclosures for words and context.
+Native audio and video controls load recordings on demand with `preload="none"`. The nine original films preserve their sound; the animated reaction sticker is silent. Videos use `playsinline`, have caption tracks, and never autoplay. Starting one player pauses all others. Playback errors offer a direct recording link. Voice notes include native disclosures for words and context.
 
-The camera roll uses photo links and inline video. All moments, Photos, and Little films filters use `aria-pressed`; eight eligible items appear per batch. The live count updates with filtering, hidden videos pause, and revealing another batch moves focus to its first item. Photo links open a native full-size dialog with a title, caption, and meaningful alternative text. Opening it pauses media. Escape, the close button, and the backdrop dismiss it; modified clicks retain normal link behavior.
+The camera roll uses photo links and inline video. All 103 items appear by default, without pagination or a reveal-more control. Filters use `aria-pressed` and show their counts: Everything 103, Faces & reactions 16, Outside together-ish 20, Lunch correspondence 24, Little daily updates 26, Our watchlist 17, and Little films 7. The live count updates with filtering, and hidden videos pause. Screenshots and stickers use `object-fit: contain` to keep their full contents visible.
+
+Photo links open a native full-size dialog with a title, caption, meaningful alternative text, and a position count. Previous and Next buttons and the left and right arrow keys move through photos within the active filter; controls disable at the first and last photo. Opening the dialog pauses media. Escape, the close button, and the backdrop dismiss it and restore focus to the photo link that opened it. Modified clicks retain normal link behavior.
 
 The photo-pair game shuffles four pairs of real photographs. Turning a tile updates its accessible label and pressed state. Matching tiles remain visible and become disabled; mismatches turn back after a short reading delay. Reset clears pending work and reshuffles. Live status describes progress. Trivia uses native radios and fieldsets; scene choices update a local ticket summary. None of these interactions gates the letter or sends choices elsewhere.
 
