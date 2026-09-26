@@ -1,23 +1,19 @@
-# Miss Dee: opening night
+# Miss Dee: the living scrapbook
 
-Mode: Experience. User selected a playful AMC premiere and direct implementation from the supplied material, with a “see you tomorrow” reveal. AMC is their dream-cinema joke, not a claim of affiliation or a venue booking.
-
-The first screen is an intimate film poster, with the actual lakeside bench as its imagery, maroon cinema framing, large literary typography, and a clear next step. Use ivory playbill pages, forest green scenery, gold ticket accents, and self-hosted Cormorant Garamond / DM Sans. The photos and jokes do the work, not decorative UI cards.
-
-Visitor path: poster → opening credits and memories → optional lore quiz → choose the day's opening scene → lily intermission and thoughtful questions → director's note and premiere ticket. Three optional keepsake stamps reward participation without locking any content. No timer, forced score, external sharing, RSVP transmission, or sexual copy. Games work with touch and keyboard. In reduced motion, all content and game results remain available without motion.
-
-Preserve /miss-dee/ and compatibility paths. September 27, 2026 is the first meeting; chapter four is hopeful, not promised. Do not expose exact travel logistics or the private message export. Keep theatre graphics geometric and put actual media and a botanical illustration in the image slots.
+Mode: Experience. The user rejected the low media coverage of the premiere and authorized the most appropriate theme. Build directly from the supplied material. Keep the first-meeting letter, flexible NYC plan, and mobile emphasis.
 
 ## Direction contract
 
-THESIS: Her imaginary dream cinema gets its first real-world premiere. Shared evidence, affectionate jokes, and a flexible day carry the experience.
+THESIS: Let the actual month speak: both faces, her narrated walks, their language practice, the recurring lunches, and the small things they sent each other. The prior four-photo, muted-video treatment failed the brief.
 
-OWN-WORLD: Maroon cinema framing, ivory playbill pages, forest-green trivia, rose correspondence, gold tickets. Cormorant Garamond display and DM Sans body. Actual photographs fill the poster and horizontal memory reel.
+OWN-WORLD: An ivory and rose photographic scrapbook, maroon lettering and binding, forest-green listening room, real photo prints and full-colour video. Retain the self-hosted serif/sans pairing. AMC becomes one shared joke within the album, rather than the whole page's identity.
 
-STORY: Arrive at the premiere, revisit the lore, play optional trivia, choose possible scenes, pause for flowers, read the note. No answer is transmitted, no game gates the ending.
+STORY: See the two people immediately; play three narrated films; hear the voice notes; browse a substantial contextualized camera roll; play with real-photo pairs and lore; imagine tomorrow; read the letter. Keep source media intact in meaning. No autoplay, one playback at a time, and mobile downloads on demand.
 
-FIRST VIEWPORT: Desktop pairs a large left-aligned greeting with a tilted photographic bench poster. On mobile, greeting and opening-credits action precede the poster in one continuous cinema opening. Signature interaction: build a personal scene ticket from flexible day choices; stamps acknowledge participation. Motion: a settling poster, tactile choices, and a gently unfolding letter, all reduced-motion aware.
+FIRST VIEWPORT: An intimate greeting beside an overlapping collage of actual portraits and nature photographs. A direct link to films and listening, with visible media counts. On mobile, title and portraits share the opening screen; the first playable film follows the collage.
 
-FORM: Playful AMC premiere, explicitly selected by the user over botanical chapter book. Code-led, no mockup approval requested. Seed assigned6 informed exploration; the user's chosen form is authoritative.
+FORM: Living scrapbook with a listening room and browsable media collection. User authorized theme choice after rejecting the premiere's limited media coverage. Code-led implementation, no mockup round. Inherited exploration seed: assigned6, recorded in the prior committed brief. This revision keeps that visual system and reorganizes it around the media under the user's renewed design authority; no new seed roll or quality-board comparison was performed.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+
+Retain /miss-dee/ and compatibility paths. September 27, 2026 is the first meeting. Games remain optional. No sexual copy, exact travel details, financial/work screenshots, contact numbers or raw message export. Preserve useful context around selected clips and audio; don't publish unreliable automatic transcripts as exact quotations. Reduced motion and script-free reading remain supported.

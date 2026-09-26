@@ -8,9 +8,9 @@ function collectStamp(name) {
   label.classList.add("collected");
   label.setAttribute("aria-label", `${label.textContent}, collected`);
   document.getElementById("stamp-note").textContent =
-    stamps.size === 3
-      ? "All three collected. Strong sticker-sheet energy, madam."
-      : `${stamps.size} of 3 little stamps collected. The ending is always open.`;
+    stamps.size === document.querySelectorAll("[data-stamp-label]").length
+      ? "All four collected. Your sticker privileges are extensive."
+      : `${stamps.size} of 4 little stamps collected. The ending is always open.`;
 }
 
 const today = new Intl.DateTimeFormat("en-CA", {
@@ -129,4 +129,171 @@ letter.addEventListener("toggle", () => {
     { duration: 500, easing: "cubic-bezier(.16,1,.3,1)" },
   );
 });
+
+// Native players share one playback owner: starting one pauses the others.
+const players = [...document.querySelectorAll("video, audio")];
+players.forEach((player) => {
+  player.addEventListener("play", () => {
+    players.forEach((other) => {
+      if (other !== player) other.pause();
+    });
+  });
+  player.addEventListener(
+    "error",
+    () => {
+      let message = player.parentElement.querySelector(".media-error");
+      if (!message) {
+        message = document.createElement("p");
+        message.className = "media-error";
+        message.setAttribute("role", "status");
+        const link = document.createElement("a");
+        link.href = player.querySelector("source").src;
+        link.textContent = "Open this recording directly";
+        message.append("This recording could not load. ", link);
+        player.after(message);
+      }
+    },
+    true,
+  );
+});
+
+const archiveItems = [...document.querySelectorAll(".archive-item")];
+const mediaFilters = [...document.querySelectorAll("[data-media-filter]")];
+const moreMedia = document.getElementById("show-more-media");
+let mediaFilter = "all";
+let visibleMedia = 8;
+function renderArchive() {
+  const eligible = archiveItems.filter(
+    (item) => mediaFilter === "all" || item.dataset.mediaKind === mediaFilter,
+  );
+  const visible = new Set(eligible.slice(0, visibleMedia));
+  archiveItems.forEach((item) => {
+    item.hidden = !visible.has(item);
+    if (item.hidden) item.querySelector("video")?.pause();
+  });
+  mediaFilters.forEach((button) =>
+    button.setAttribute(
+      "aria-pressed",
+      String(button.dataset.mediaFilter === mediaFilter),
+    ),
+  );
+  document.getElementById("album-count").textContent =
+    `${Math.min(visibleMedia, eligible.length)} of ${eligible.length} moments`;
+  moreMedia.hidden = visibleMedia >= eligible.length;
+}
+mediaFilters.forEach((button) =>
+  button.addEventListener("click", () => {
+    mediaFilter = button.dataset.mediaFilter;
+    visibleMedia = 8;
+    renderArchive();
+  }),
+);
+moreMedia.addEventListener("click", () => {
+  const firstNew = archiveItems.filter(
+    (item) => mediaFilter === "all" || item.dataset.mediaKind === mediaFilter,
+  )[visibleMedia];
+  visibleMedia += 8;
+  renderArchive();
+  const target = firstNew.querySelector("a, video");
+  target.focus({ preventScroll: true });
+});
+renderArchive();
+
+const viewer = document.getElementById("photo-viewer");
+const viewerImage = document.getElementById("viewer-image");
+document.querySelectorAll("[data-photo]").forEach((link) =>
+  link.addEventListener("click", (event) => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
+      return;
+    event.preventDefault();
+    viewerImage.src = link.href;
+    viewerImage.alt = link.querySelector("img").alt;
+    document.getElementById("viewer-title").textContent = link.dataset.title;
+    document.getElementById("viewer-caption").textContent =
+      link.dataset.caption;
+    players.forEach((player) => player.pause());
+    viewer.showModal();
+  }),
+);
+viewer.addEventListener("click", (event) => {
+  if (event.target === viewer) viewer.close();
+});
+
+const pairTiles = [...document.querySelectorAll(".pair-tile")];
+const matchStatus = document.getElementById("match-status");
+let firstTile = null;
+let pairTimer;
+let matchedPairs = 0;
+let pairLocked = false;
+function turnTile(tile, open) {
+  tile.classList.toggle("is-flipped", open);
+  tile.setAttribute("aria-pressed", String(open));
+  tile.querySelector("img").setAttribute("aria-hidden", String(!open));
+  tile.setAttribute(
+    "aria-label",
+    open
+      ? tile.querySelector("img").alt
+      : `Photo ${tile.dataset.position}, face down`,
+  );
+}
+function resetPairs() {
+  clearTimeout(pairTimer);
+  firstTile = null;
+  pairLocked = false;
+  matchedPairs = 0;
+  for (let i = pairTiles.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pairTiles[i], pairTiles[j]] = [pairTiles[j], pairTiles[i]];
+  }
+  pairTiles.forEach((tile, index) => {
+    tile.parentElement.append(tile);
+    tile.dataset.position = index + 1;
+    tile.disabled = false;
+    tile.classList.remove("is-matched");
+    turnTile(tile, false);
+  });
+  matchStatus.textContent = "Turn over two photos. Find their twins.";
+}
+pairTiles.forEach((tile) =>
+  tile.addEventListener("click", () => {
+    if (pairLocked || tile === firstTile || tile.disabled) return;
+    turnTile(tile, true);
+    if (!firstTile) {
+      firstTile = tile;
+      return;
+    }
+    const previous = firstTile;
+    firstTile = null;
+    if (previous.dataset.pair === tile.dataset.pair) {
+      [previous, tile].forEach((item) => {
+        item.disabled = true;
+        item.classList.add("is-matched");
+        item.setAttribute(
+          "aria-label",
+          `${item.querySelector("img").alt}, matched`,
+        );
+      });
+      matchedPairs += 1;
+      matchStatus.textContent =
+        matchedPairs === 4
+          ? "All four. You really do remember the little things."
+          : `${matchedPairs} of 4 pairs. Excellent attention to the evidence.`;
+      if (matchedPairs === 4) collectStamp("match");
+    } else {
+      pairLocked = true;
+      matchStatus.textContent =
+        "A convincing theory. Two different photos, though.";
+      pairTimer = setTimeout(
+        () => {
+          turnTile(previous, false);
+          turnTile(tile, false);
+          pairLocked = false;
+        },
+        reducedMotion.matches ? 1300 : 1000,
+      );
+    }
+  }),
+);
+document.getElementById("reset-pairs").addEventListener("click", resetPairs);
+resetPairs();
 document.documentElement.classList.add("has-js");

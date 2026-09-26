@@ -1,6 +1,6 @@
 ---
-name: Miss Dee's midnight cinema
-description: A personal dream-cinema premiere, scoped to /miss-dee/ and its compatibility pages.
+name: Miss Dee's living scrapbook
+description: A personal photo, film, and voice-note collection for /miss-dee/ and its compatibility pages.
 colors:
   wine: "#4c2333"
   wine-deep: "#351824"
@@ -14,7 +14,7 @@ colors:
 typography:
   display:
     fontFamily: "Cormorant, Georgia, serif"
-    fontSize: "clamp(68px, 7.6vw, 96px)"
+    fontSize: "clamp(65px, 7.2vw, 96px)"
     fontWeight: 500
     lineHeight: 1
     letterSpacing: "-0.025em"
@@ -50,12 +50,6 @@ spacing:
   gutter-desktop: "40px"
   paired-columns: "70px"
 components:
-  button-light:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.wine}"
-    rounded: "{rounded.paper}"
-    padding: "13px 22px"
-    typography: "{typography.button}"
   button-dark:
     backgroundColor: "{colors.wine}"
     textColor: "{colors.paper}"
@@ -72,67 +66,76 @@ components:
     textColor: "{colors.wine}"
     rounded: "{rounded.paper}"
     padding: "32px 36px"
+  album-filter-selected:
+    backgroundColor: "{colors.wine}"
+    textColor: "{colors.paper}"
+    rounded: "{rounded.paper}"
+    padding: "10px 16px"
 ---
 
-# Design System: Miss Dee's midnight cinema
+# Design System: Miss Dee's living scrapbook
 
 ## Overview
 
-**Creative North Star: "Miss Dee's midnight cinema"**
+**Creative North Star: "Miss Dee's living scrapbook"**
 
-This system applies only to the standalone `/miss-dee/` keepsake and pages that use its date layout. It does not change the Hugo blog's identity. The source of truth is `static/date/date.css`, with behavior in `static/date/date.js` and markup in `layouts/date/single.html`.
+This system applies to `/miss-dee/` and its compatibility pages. The Hugo blog retains its own identity. The current implementation lives in `static/date/date.css`, `static/date/date.js`, `layouts/date/single.html`, and `layouts/partials/date-media.html`. `data/dee_media.yaml` owns the media collection.
 
-The approved AMC dream-cinema world uses maroon framing, ivory playbill pages, actual camera-roll photographs, and paper tickets. AMC refers to the shared dream joke. It does not imply cinema affiliation or a booking. Literary headings and restrained paper tilts support the playful, personal copy.
+An ivory and rose scrapbook brings both people, their photographs, narrated films, and voice notes into the foreground. Maroon frames the collection; forest green separates the listening room and trivia. The user authorized this direction after rejecting the sparse premiere. AMC remains a shared joke within the album.
 
-**Key Characteristics:**
-
-- Large serif greetings and headings, paired with compact sans-serif prose.
-- Actual photographs in a premiere poster and horizontal memory reel.
-- Optional quiz, scene choices, and keepsake stamps; the letter is always available.
+- Real portraits overlap as photographic prints beside the opening greeting.
+- Three featured films and five voice notes lead into 38 camera-roll items, comprising 32 photos and six more films.
+- Photo pairs, trivia, scene choices, and stamps are optional. The personal letter remains available throughout.
 
 ## Colors
 
-Primary wine supplies the opening, finale, text accents, and dark buttons. Wine-deep separates the credits strip. Secondary pink marks correspondence and italic emphasis; green contains the trivia section. Tertiary gold marks earned stamps and the star sticker. Neutral paper carries reading areas, ink carries body text, muted carries supporting copy, and line separates rows. The frontmatter records the CSS custom properties without inventing a palette scale.
+Wine supplies headings, the album spine, finale, selected filters, and dark buttons. Wine-deep backs video frames. Pink supports correspondence and stamps; green contains listening and trivia. Gold marks earned stamps and the star sticker. Paper carries reading areas, ink carries body text, muted carries supporting copy, and line separates rows. The frontmatter records the shared CSS colors; component-specific tints remain in the stylesheet.
 
 ## Typography
 
-Self-hosted Cormorant Garamond uses the CSS family name `Cormorant`, with regular and italic files at weight 500. DM Sans supplies the body at weight 400. Both use `font-display: swap`. Files live in `static/date/fonts/`.
+Self-hosted Cormorant Garamond uses the CSS family name `Cormorant`, with regular and italic files at weight 500. DM Sans supplies body text at weight 400. Both use `font-display: swap`; files live in `static/date/fonts/`.
 
-The frontmatter records the base heading hierarchy. The mobile greeting is 66px with a 0.91 line height, falling to 56px below 360px. The mobile section baseline is 46px, with deliberate per-section overrides. Finale headings are 72px on desktop, 52px on mobile, and 45px below 360px. Memory titles are 28px on desktop and 29px on mobile. Body text is 16px globally and 15px on mobile; most supporting paragraphs use 12 to 14px. Paragraphs default to a 70ch maximum. Italic serif text carries personal asides and signoffs.
+The frontmatter records the active desktop greeting and base heading hierarchy. The greeting becomes 68px at 900px, 62px with a 0.9 line height at 600px, and 53px below 360px. Film titles use 31px; voice titles use 28px. Camera-roll titles use 27px, then 24px on mobile. Body text is 16px globally and 15px on mobile; supporting copy usually uses 11 to 14px. Paragraphs default to a 70ch maximum. Italic serif text carries captions, asides, and signoffs.
 
-**The Heading First Rule.** Lead the opening and scene ticket with their title; place date, location, and ticket metadata beneath it. Small uppercase cinema labels are contextual metadata, not a reusable eyebrow-heading pattern.
+Lead the greeting and scene ticket with their title. Place contextual metadata beneath it.
 
 ## Layout
 
-Desktop sections cap at 1180px with 94px vertical and 40px horizontal padding. Paired content commonly uses two columns with a 70px gap. The opening uses a 1.1:1 split; scene choices use 1.25:1. At 800px and below, sections reduce to 72px by 28px and paired gaps to 32px. At 600px and below, paired content stacks and sections use 62px by 24px. Below 360px, side gutters reduce to 20px. Above 1500px, opening gutters align with the main container.
+The opening caps at 1320px, with a 1:1.2 text-to-collage split, 50px gap, and 64px 50px 72px padding. Main sections cap at 1180px with 94px 40px padding. At 800px, sections reduce to 72px 28px; at 600px, to 62px 24px. Below 360px, side gutters reduce to 20px.
 
-Mobile preserves the greeting and opening action before the poster. The reel remains horizontally scrollable, with scroll snapping and a glimpse of the next memory: items use a 78% basis and 230px minimum width on mobile. The four chapter links remain in one row. The letter wraps its summary controls on small screens. The finale's inner reading width caps at 750px.
+The three featured films occupy equal columns on desktop and stack at 600px. The listening room uses a 0.85:1.15 split and a 90px gap, reducing to 45px at 900px and stacking at 600px. Its decorative sticker photograph hides on mobile. The archive has three columns, then two at 900px; mobile videos span both columns. Photo pairs stay in a four-column grid.
+
+On mobile the greeting precedes a compact portrait collage, followed by the media counts and films. Five chapter anchors stay in one row and stick to the top while scrolling. The full-size photo dialog uses `min(90vw, 800px)` width, expanding to 94vw on mobile. The letter wraps its summary controls on small screens.
 
 ## Elevation & Depth
 
-Most reading areas are flat and separated by background color or fine rules. The photographic poster, memory prints, and question card use soft shadows, recorded in the sidecar. The poster tilts 3 degrees, the scene ticket 2 degrees, and the question card minus 2 degrees. Earned stamps rotate slightly. Ticket notches and the inset letter seal give paper objects their shape; there are no floating dashboard panels.
+Reading areas use flat backgrounds and fine rules. Portrait prints have a soft shadow and individual tilts of minus 7, 8, and 5 degrees. The scene ticket tilts 2 degrees and the question card minus 2 degrees. The photo dialog has a deeper shadow and dark backdrop. Matching pairs gain a green outline. Shadow values live in the sidecar.
 
 ## Shapes
 
-Paper controls, correspondence, and tickets use the small paper radius; the quiz uses its slightly larger radius. Photographic print frames remain square. Circular radio indicators, seals, and ticket cutouts are reserved for their physical roles. Dashed borders describe ticket perforations and stamps. Reuse the geometric inline SVG icons in `layouts/partials/date-icon.html` for controls; decorative lettering on the seal is text.
+Paper controls and pair tiles use a 3px radius; quiz, featured video frames, and the photo dialog use 4px. Photo prints remain square. Circular radio indicators, photo-expand controls, seals, and ticket cutouts have specific roles. Dashed borders describe ticket perforations and stamps. Reuse geometric inline SVG controls from `layouts/partials/date-icon.html`.
 
 ## Components
 
-Buttons use the frontmatter variants, a 52px minimum height, and generous inline spacing. Hover-capable devices raise them 2px; the light button turns pink and the dark button changes to a lighter wine. Pressed buttons scale to 0.97. Disabled quiz progression uses muted colors until an answer is selected. Text buttons and header links keep a 44px minimum height; mobile opening buttons use 49px.
+Dark buttons have a 52px minimum height, wine background, and paper text. Hover raises them 2px and lightens the wine; pressing scales them to 0.97. Disabled quiz progression uses muted colors. The mobile opening button is 45px high. Text links, filters, audio-context summaries, and dialog close controls provide at least 44px targets. Focus outlines use 3px gold with a 5px offset.
 
-Quiz answers use native radios and fieldsets. Selected answers gain a pink fill, wine border, filled radio, and SVG check. Scene choices use `aria-pressed` buttons, with a tinted row and checked circular indicator. Their live ticket summary updates without submitting or saving choices. Quiz feedback, the question deck, and stamp counts use polite announcements. Quiz progression moves focus to the next answer or replay button.
+Native audio and video controls load recordings on demand with `preload="none"`. Videos preserve their sound, use `playsinline`, have caption tracks, and never autoplay. Starting one player pauses all others. Playback errors offer a direct recording link. Voice notes include native disclosures for words and context.
 
-Chapter navigation uses native anchors. Details elements hold the supporting scenes, director's notes, and letter; their summaries remain keyboard operable without JavaScript. A skip link and gold focus outlines support navigation. Images have meaningful alternative text. The silent bench clip uses native controls and does not autoplay. Without JavaScript, personal content and the letter remain available, quiz answers have a reading fallback, and scene ideas remain visible.
+The camera roll uses photo links and inline video. All moments, Photos, and Little films filters use `aria-pressed`; eight eligible items appear per batch. The live count updates with filtering, hidden videos pause, and revealing another batch moves focus to its first item. Photo links open a native full-size dialog with a title, caption, and meaningful alternative text. Opening it pauses media. Escape, the close button, and the backdrop dismiss it; modified clicks retain normal link behavior.
 
-The poster settles over 1.1 seconds. Buttons and choices use short state transitions; the letter reveals over 500ms. Reduced motion disables CSS transitions, animation, and smooth scrolling, and skips the scripted letter animation. Static paper tilts remain. Optional stamps never unlock the ending. Date-sensitive wording uses the New York date, with the chosen "See you tomorrow" reveal before the meeting.
+The photo-pair game shuffles four pairs of real photographs. Turning a tile updates its accessible label and pressed state. Matching tiles remain visible and become disabled; mismatches turn back after a short reading delay. Reset clears pending work and reshuffles. Live status describes progress. Trivia uses native radios and fieldsets; scene choices update a local ticket summary. None of these interactions gates the letter or sends choices elsewhere.
 
-**The Real Frames Rule.** Use the selected scenic photographs as photographs; preserve their relationship to the personal story. The lakeside poster comes from the supplied bench video. Memory images are `bench.webp`, `flower-detour.webp`, `sunset.webp`, and `cow.webp`; the lily image is a generated botanical illustration. The Ravi Kishan image is an existing YouTube thumbnail. Each shipping raster has an adjacent `<filename>.json` with `prompt` describing its source or generation and `createdAt`. Keep that distinction and provenance when replacing assets. Originals and private-message exports stay outside the repository.
+Without JavaScript, the full archive and native players remain available, photos link directly to their full-size files, and pairs show their photographs with an explanatory fallback. Native disclosures keep the letter and supporting notes usable. Quiz answers have a reading fallback and scene ideas remain visible.
+
+Portraits arrive over 1.1 seconds; photos enlarge slightly on hover, pairs turn over 400ms, and the letter reveals over 500ms. Reduced motion disables animation, transitions, and smooth scrolling, and skips the scripted letter reveal. Static paper tilts remain. Date-sensitive copy uses the New York date and the chosen "See you tomorrow" wording before the meeting.
+
+Keep actual photographs and recordings connected to their captions. The lily is a generated botanical illustration; the Ravi Kishan image is an existing YouTube thumbnail. Each shipping raster has an adjacent `<filename>.json` with its source or generation description in `prompt` and a `createdAt` value. Preserve those distinctions. Raw originals and private-message exports stay outside the repository.
 
 ## Do's and Don'ts
 
-- Do scope these tokens and patterns to the Miss Dee keepsake.
-- Do preserve the actual photographs, native controls, mobile reading order, and optional interactions.
-- Do keep the letter accessible regardless of quiz answers or collected stamps.
+- Do preserve the substantial media collection, original sound, native controls, and mobile reading order.
+- Do keep interactions optional and the letter accessible without game completion.
+- Do maintain source provenance when replacing media.
 - Don't apply this identity to the unrelated Hugo blog.
+- Don't autoplay recordings or allow competing players.
 - Don't turn flexible scene ideas into bookings or promised outcomes.
-- Don't replace control SVGs with text glyphs or make decorative metadata the leading heading treatment.

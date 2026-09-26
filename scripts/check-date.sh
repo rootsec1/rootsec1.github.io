@@ -12,7 +12,7 @@ for width in 320 390 430 1280; do
 const assert = (condition, message) => { if (!condition) throw new Error(message); };
 const tick = () => new Promise(resolve => setTimeout(resolve, 50));
 await document.fonts.ready;
-await Promise.all([...document.images].map(image => { image.loading = 'eager'; return image.decode(); }));
+await Promise.all([...document.images].filter(image => image.id !== "viewer-image").map(image => { image.loading = 'eager'; return image.decode(); }));
 assert(document.documentElement.scrollWidth <= innerWidth, 'Horizontal overflow');
 assert(document.title.includes('Miss Dee'), 'Wrong recipient');
 assert(!/smash|ritu|ice cream/i.test(document.body.textContent), 'Obsolete copy');
@@ -58,11 +58,50 @@ for (const note of document.querySelectorAll('details')) {
  note.querySelector('summary').click();
 }
 assert(document.querySelectorAll('.collected').length === 3, 'Missing keepsake stamps');
-assert(document.getElementById('stamp-note').textContent.includes('All three'), 'Final stamp state missing');
+assert(document.getElementById('stamp-note').textContent.includes('3 of 4'), 'Final stamp state missing');
 assert(!localStorage.length && !sessionStorage.length, 'Unexpected persistent state');
+
+const tiles = [...document.querySelectorAll('.pair-tile')];
+const first = tiles[0], wrong = tiles.find(t => t.dataset.pair !== first.dataset.pair);
+first.click(); wrong.click();
+assert(first.classList.contains('is-flipped') && wrong.classList.contains('is-flipped'), 'Mismatch not shown');
+document.getElementById('reset-pairs').click();
+assert(tiles.every(t => !t.classList.contains('is-flipped')), 'Reset during mismatch failed');
+for (const id of new Set(tiles.map(t => t.dataset.pair))) {
+  const pair = tiles.filter(t => t.dataset.pair === id);
+  pair[0].click(); pair[0].click();
+  assert(!pair[0].disabled, 'Same tile incorrectly matched itself');
+  pair[1].click();
+  assert(pair.every(t => t.disabled && t.classList.contains('is-matched')), 'Pair did not match');
+}
+assert(document.querySelectorAll('.collected').length === 4, 'Photo-game stamp missing');
+assert(document.getElementById('stamp-note').textContent.includes('All four'), 'Complete stamps message');
+document.getElementById('reset-pairs').click();
+assert(tiles.every(t => !t.disabled), 'Matched game replay failed');
+const archive = [...document.querySelectorAll('.archive-item')];
+assert(archive.length === 38 && archive.filter(i => !i.hidden).length === 8, 'Initial archive count');
+document.querySelector('[data-media-filter="video"]').click();
+assert(archive.filter(i => !i.hidden).length === 6 && archive.filter(i => !i.hidden).every(i => i.dataset.mediaKind === 'video'), 'Video filtering');
+assert(document.getElementById('show-more-media').hidden, 'Show more visible after all videos');
+document.querySelector('[data-media-filter="photo"]').click();
+while (!document.getElementById('show-more-media').hidden) document.getElementById('show-more-media').click();
+assert(archive.filter(i => !i.hidden).length === 32, 'Photo pagination lost items');
+const photo = document.querySelector('[data-photo]');
+photo.focus(); photo.click();
+assert(document.getElementById('photo-viewer').open, 'Full-size photo viewer did not open');
+await document.getElementById('viewer-image').decode();
+assert(document.documentElement.scrollWidth <= innerWidth, 'Full-size viewer overflows');
+document.querySelector('.viewer-close').click();
+assert(!document.getElementById('photo-viewer').open, 'Viewer close failed');
+document.querySelector('[data-media-filter="all"]').click();
+assert(archive.filter(i => !i.hidden).length === 8, 'All filter did not reset pagination');
+assert(document.querySelectorAll('audio').length === 5 && document.querySelectorAll('video').length === 9, 'Missing recordings');
+assert([...document.querySelectorAll('audio,video')].every(p => !p.autoplay && p.preload === 'none'), 'Unexpected autoplay or preload');
+assert([...document.querySelectorAll('video')].every(v => v.querySelector('track[kind="captions"]')), 'Missing caption track');
+
 const video = document.querySelector('video');
 assert(!video.autoplay && video.preload === 'none', 'Video downloads or plays automatically');
-return `PASS ${innerWidth}px: images, layout, quiz correct/wrong/replay, selections, question cycle, letter, stamps`;
+return `PASS ${innerWidth}px: images, layout, quiz correct/wrong/replay, selections, question cycle, letter, stamps, media filters, full-size viewer, photo pairs`;
 })();
 JS
 done
@@ -73,8 +112,8 @@ agent-browser wait --url '**/miss-dee/yes/' >/dev/null
 agent-browser eval "if (!document.getElementById('letter').open) throw new Error('Legacy reveal failed');" >/dev/null
 agent-browser set media reduced-motion >/dev/null
 agent-browser open "$base/miss-dee/" >/dev/null
-agent-browser eval "if (getComputedStyle(document.querySelector('.premiere-poster')).animationName !== 'none') throw new Error('Reduced motion failed'); document.querySelector('#letter summary').click();" >/dev/null
-printf '%s\n' 'PASS: compatibility redirects, direct letter, reduced-motion poster.'
+agent-browser eval "if (getComputedStyle(document.querySelector('.portrait')).animationName !== 'none') throw new Error('Reduced motion failed'); document.querySelector('#letter summary').click();" >/dev/null
+printf '%s\n' 'PASS: compatibility redirects, direct letter, reduced-motion collage.'
 agent-browser eval --stdin <<'JS'
 (async () => {
  const html = await (await fetch('/miss-dee/')).text();
@@ -85,6 +124,7 @@ agent-browser eval --stdin <<'JS'
  await load(html.replace(/<script[^>]*>[\s\S]*?<\/script>/g, ''));
  let doc = iframe.contentDocument;
  if (doc.documentElement.classList.contains('has-js')) throw Error('Fallback incorrectly enhanced');
+ if ([...doc.querySelectorAll('.archive-item')].some(i => i.hidden)) throw Error('Fallback hides media');
  if ([...doc.querySelectorAll('.quiz-question')].some(q => q.hidden)) throw Error('Fallback hides questions');
  doc.querySelector('#letter summary').click();
  if (!doc.querySelector('#letter').open) throw Error('No-JS letter failed');
@@ -95,5 +135,26 @@ agent-browser eval --stdin <<'JS'
  }
  iframe.remove();
  return 'PASS: no-JS reading and letter; New York midnight date rollover';
+})();
+JS
+
+agent-browser open "$base/miss-dee/" >/dev/null
+agent-browser eval "if(performance.getEntriesByType('resource').some(r=>/\\.(mp4|m4a)(\\?|$)/.test(r.name))) throw Error('Recording downloaded before playback');" >/dev/null
+agent-browser click '.album-intro .button' >/dev/null
+agent-browser eval --stdin <<'JS'
+(async()=>{
+ const recordings=[...document.querySelectorAll('audio,video')];
+ for(const player of recordings){
+  player.muted=true;
+  await player.play();
+  if(!(player.duration>0 && player.readyState>=2)) throw Error('Undecodable recording');
+  if(recordings.filter(p=>!p.paused).length!==1) throw Error('Overlapping playback');
+ }
+ recordings.forEach(p=>p.pause());
+ for (const track of document.querySelectorAll('track')) {
+  const response=await fetch(track.src);
+  if(!response.ok || !(await response.text()).startsWith('WEBVTT')) throw Error('Missing captions');
+ }
+ return 'PASS: no recordings preloaded; 9 videos and 5 voice notes decode/play; one player at a time; caption files load';
 })();
 JS

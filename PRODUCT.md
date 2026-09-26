@@ -20,7 +20,7 @@ A standalone Hugo page at /miss-dee/ within an existing GitHub Pages blog. Keep 
 
 ## Capabilities and Constraints
 
-Mobile-first, rich personal content, optional games, small purposeful animations, and real media. The rage room is optional, and NYC plans remain flexible. No sexual wording. No RSVP transmission, analytics, private-message export, contact information, addresses, or sensitive disclosures in the public site. Games must not gate the personal message. Respect reduced motion and support touch and keyboard input.
+Mobile-first living scrapbook with substantial real photos, narrated videos, and voice notes. The user rejected a sparse, text-led premiere treatment and authorized a theme that fits the media. Optional games and small purposeful animations support the material. The rage room is optional, and NYC plans remain flexible. No sexual wording. No RSVP transmission, analytics, private-message export, contact information, addresses, or sensitive disclosures in the public site. Games must not gate the personal message. Respect reduced motion and support touch and keyboard input.
 
 ## Evidence on Hand
 
