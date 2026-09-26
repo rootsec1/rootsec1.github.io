@@ -1,6 +1,6 @@
 {{ if eq .kind "photo" }}
 <a class="photo-link" href="{{ printf "date/%s" .source | relURL }}" data-photo aria-label="View {{ .title }} full size" data-title="{{ .title }}" data-caption="{{ .caption }}">
-  <img src="{{ printf "date/%s" .thumbnail | relURL }}" srcset="{{ printf "date/%s" .thumbnail | relURL }} 480w, {{ printf "date/%s" .source | relURL }} {{ .width }}w" sizes="(max-width: 600px) 45vw, (max-width: 900px) 45vw, 30vw" width="{{ .width }}" height="{{ .height }}" loading="lazy" decoding="async" alt="{{ .alt }}">
+  <img src="{{ printf "date/%s" .thumbnail | relURL }}" {{ if lt .thumbnail_width .width }}srcset="{{ printf "date/%s" .thumbnail | relURL }} {{ .thumbnail_width }}w, {{ printf "date/%s" .source | relURL }} {{ .width }}w"{{ end }} sizes="(max-width: 600px) 85vw, 42vw" width="{{ .width }}" height="{{ .height }}" loading="lazy" decoding="async" alt="{{ .alt }}">
   <span class="photo-expand">{{ partial "date-icon.html" "diagonal" }}</span>
 </a>
 {{ else if eq .kind "video" }}

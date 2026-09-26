@@ -1,0 +1,375 @@
+chapters:
+  - label: Chapter 1
+    title: A suspiciously good beginning.
+    short: The beginning
+    dates: September 2–11
+    intro:
+      It began with a hello, a late treadmill session, and a question about the music. An entirely reasonable
+      start. We did not remain entirely reasonable.
+    closing: Somewhere between the goodnights and the next morning, there was always one more thing to tell you.
+    scenes:
+      - id: hello
+        title: A hello. Then another question.
+        date: September 2–3
+        paragraphs:
+          - I introduced myself. You clarified when I was allowed to know your name. A promising start for someone whose
+            information-security policy appeared to cover basic introductions.
+          - By that night, I was on a treadmill and you had been on a two-hour walk. You asked which banger was playing.
+            The answer was an anime playlist with rather more confidence than either of us had earned.
+          - Then came the little evening updates. A drink, a window, something to watch. Nobody was doing anything especially
+            remarkable. I still wanted to know about your day.
+        media:
+          - "719"
+          - "720"
+          - "722"
+          - "734"
+        collection: The first evening updates
+        aside: Two-hour walks and late gym sessions. We were already running different schedules.
+      - id: first-bench
+        title: The bench was here first.
+        date: September 3
+        paragraphs:
+          - You sent the view and introduced the bench. I understood immediately that this was an established relationship.
+            I would need to be respectful of the seating arrangements.
+          - There were trees, water, and the kind of quiet you can almost hear through a phone. The full park background
+            belongs here. It is part of why you sent it.
+          - By the end of that evening, dreams had become trips to AMC. A bench and a fictional cinema. We were beginning
+            to develop local institutions.
+        media:
+          - "736"
+          - "738"
+          - "740"
+        collection: The rest of that walk
+        quote:
+          text: My bench.
+          by: Your introduction. Succinct. Territorial.
+      - id: fellows
+        title: Four seconds. Several fellows.
+        date: September 5–6
+        paragraphs:
+          - Our first weekend acquired a sunset, poker updates, a comedy show, and a very specific hand gesture. Small
+            dispatches, with replies attached.
+          - Then you sent the tongue-twister. Four seconds at a pace I can only describe as unnecessarily competent.
+            I compared it to rap and awarded 8.5 out of 10.
+          - Imagine volunteering to judge someone this competitive. The confidence of the man.
+        media:
+          - "757"
+          - "751"
+          - "752"
+          - "753"
+          - "755"
+          - "756"
+        collection: That first weekend
+        aside: The original voice note is right here. My marking scheme remains questionable.
+      - id: ribbons
+        title: The ribbon escaped the keyboard.
+        date: September 7–9
+        paragraphs:
+          - You found an actual bow in a bathroom and said this must be how I felt when you used the ribbon emoji. The
+            joke had become a physical object. There was photographic evidence.
+          - A leaf made it into the conversation too. Green, gold, and worth stopping for. Then flowers, a playground
+            slide, something sweet, and the familiar declaration that someone would, in fact, win.
+          - The updates were getting wonderfully specific. I was learning what made you stop and look.
+        media:
+          - "771"
+          - "765"
+          - "769"
+          - "770"
+          - "774"
+          - "775"
+        collection: The things that caught an eye
+        aside: The ribbon has been given a respectful place on the cover. Its influence is considerable.
+      - id: lunch
+        title: The lunch bowl makes its entrance.
+        date: September 10–11
+        paragraphs:
+          - An elephant mural. A bowl of food. Groceries. The exact contents of another bowl of food. We were covering
+            a surprising amount of everyday territory.
+          - This is the part I like keeping. The ordinary photographs are the record of us finding small reasons to
+            interrupt each other. Here is what I am eating. Here is what I saw. What are you up to?
+          - I could probably have offered more variety in the lunch department. At least the consistency made me identifiable.
+        media:
+          - "787"
+          - "790"
+          - "796"
+          - "797"
+        collection: The original meal correspondence
+  - label: Chapter 2
+    title: The little things become the thing.
+    short: The little things
+    dates: September 12–18
+    intro:
+      By the middle of the month, we had narrators, pronunciation standards, a growing cast of animals, and
+      a surprisingly serious dispute about colour.
+    closing: I called it prep. You called it effort. That is a better word. I kept it.
+    scenes:
+      - id: benchmark
+        title: A very good benchmark.
+        date: September 12
+        paragraphs:
+          - The bench theory returned with a director’s commentary. A wooded deck, autumn colours, a very pleased reveal.
+            You were giving me the tour from your side of the screen.
+          - I remember the scene, but I especially like that you narrated it. The hesitation, the tiny reactions, the
+            satisfaction of finding a good place. A photograph would have missed some of that.
+          - Please leave the sound on for this one. The commentary is the point.
+        media:
+          - "800"
+          - "801"
+          - "804"
+          - "806"
+        collection: Further evidence for the bench theory
+      - id: cutlery
+        title: My contribution to cinema.
+        date: September 12
+        paragraphs:
+          - You gave me scenery. I responded with a review of a cutlery packet. A different sort of filmmaker, admittedly.
+          - The lunch photos continued, and so did the gym updates. Not everything needs a grand explanation. Sometimes
+            the reason to send something is that the other person will understand why it is funny.
+          - By now, I was fairly sure you would.
+        media:
+          - "807"
+          - "802"
+          - "798"
+          - "805"
+          - "808"
+        collection: Lunch, with supporting documentation
+      - id: pronunciation
+        title: No grace marks, apparently.
+        date: September 12–13
+        paragraphs:
+          - Kannada became a practical exercise. You tried the phrase, tried again, and wanted to know whether the praise
+            was real. Grace marks were not acceptable.
+          - Then it was my turn to ask for medium-level Telugu. You supplied an entire situation involving a woman who
+            would not listen and a mother who might receive a call. Very efficient curriculum design.
+          - These are the actual recordings. I like hearing the effort. I also like that neither of us was especially
+            interested in pretending not to care about getting it right.
+        media:
+          - "814"
+          - "809"
+          - "824"
+        collection: The pronunciation department
+        quote:
+          text: Effort absolutely counted.
+          by: The grading policy, revised.
+      - id: dispatches
+        title: The daily dispatches.
+        date: September 13–16
+        paragraphs:
+          - A sunset after a run. The treadmill. One Diet Coke, then two. Food, a new accessory, snacks that were suspiciously
+            committed to protein. We had made room for an impressive number of small updates.
+          - You remembered the gym screenshot. I remembered the view. Somewhere in there, the routine started to include
+            the other person.
+          - I like that these pictures do not need to be extraordinary. They are recognisable. They tell me what a day
+            around you sounded like.
+        media:
+          - "834"
+          - "835"
+          - "837"
+          - "838"
+          - "844"
+          - "848"
+          - "849"
+          - "856"
+          - "866"
+          - "867"
+        collection: A few days, in little pieces
+      - id: song
+        title: An unexpected guest appearance.
+        date: September 14
+        paragraphs:
+          - I introduced one song. You sang it. Your friend sang it. An aunty thought someone had become devotional.
+            The distribution network was getting out of hand.
+          - Ravi Kishan deserves his place in the book. So does the very practical menu research taking place in approximately
+            the same universe. Our conversation had range.
+        media:
+          - "847"
+          - "846"
+        collection: The extremely varied research
+        ravi: true
+      - id: cast
+        title: A growing supporting cast.
+        date: September 16–17
+        paragraphs:
+          - The horses arrived. I was clearly entering a social circle with established favourites. The horse gets the
+            close-up here; it has earned a proper introduction.
+          - There were hand gestures, reaction faces, things to play, things to listen to, and more things to eat. Even
+            a facepalm could become a perfectly adequate reply.
+          - We had started collecting expressions and references that needed less explanation. I liked being able to
+            recognise them.
+        media:
+          - "873"
+          - "872"
+          - "874"
+          - "880"
+          - "881"
+          - "883"
+          - "885"
+          - "887"
+          - "895"
+        collection: The company we were keeping
+      - id: notice
+        title: The small things were being noticed.
+        date: September 18
+        paragraphs:
+          - Stickers became actual stickers. A tiny insect deserved a photograph. There was lunch, naturally, and artwork
+            worth sending.
+          - You have this habit of noticing the small thing and following it with a question. I do not think that is
+            a small quality. It changes what a conversation can become.
+          - "I wanted these beside one another because they feel related: attention, then the impulse to share what
+            it found."
+        media:
+          - "901"
+          - "898"
+          - "899"
+          - "902"
+          - "921"
+          - "922"
+        collection: Little things, accurately noticed
+      - id: pastels
+        title: A man encounters pastel.
+        date: September 18
+        paragraphs:
+          - I needed to pack. Somehow, this required a pronunciation attempt, several shirts, and more than one internet
+            search about what counts as pastel.
+          - You were substantially more useful than the search results. Beige, you said. Take the olive or blue as backup.
+            A practical answer, with a contingency plan. My usual black clothing had met a worthy opponent.
+          - The photos are the actual exhibits. I am preserving them because otherwise I might be tempted to describe
+            myself as naturally good at this.
+        media:
+          - "906"
+          - "914"
+          - "915"
+          - "916"
+          - "917"
+          - "918"
+          - "919"
+        collection: The wardrobe consultation
+        quote:
+          text: Beige!! But take the extra one olive/ blue
+          by: Your advice, September 18.
+  - label: Chapter 3
+    title: Somewhere, it became tomorrow.
+    short: Nearly tomorrow
+    dates: September 19–26
+    intro:
+      There was no single dramatic scene where the conversation changed. There were just more little reasons
+      to keep it going, until meeting stopped being an abstract idea.
+    closing: Three written chapters. Approximately 3.9 years. The next part deserves an actual hello.
+    scenes:
+      - id: jaden
+        title: First, an important clarification.
+        date: September 19–20
+        paragraphs:
+          - You sent the adoption update. I asked who Jaden was. Jaden was an older dog you had wanted to adopt. A useful
+            reminder to ask the full question before constructing the wrong plot.
+          - "Then came the ordinary weekend bits: something on YouTube, Friends on a laptop, something to eat beside
+            it. The big explanations and the small check-ins were sharing the same space."
+          - I like that you care. About your grandma, about people, about the older dog whose application you remembered.
+            It comes through between the jokes.
+        media:
+          - "925"
+          - "927"
+          - "928"
+        collection: A weekend, with context
+      - id: translation
+        title: A slightly clearer translation.
+        date: September 21
+        paragraphs:
+          - Google Translate had a modest attempt at “You are a likable guy.” Then the wording became rather clearer.
+            I do like you though.
+          - I am keeping those screenshots beside the entirely normal updates from that day. Food, protein, a casino
+            dispatch, fortune cookies. A very ordinary day, with one sentence I was happy to receive.
+          - The fortune said my intuition would lead the way. I will not be outsourcing all major decisions to a cookie,
+            but I appreciated the encouragement.
+        media:
+          - "934"
+          - "933"
+          - "932"
+          - "935"
+          - "936"
+          - "937"
+          - "938"
+        collection: The day around that sentence
+      - id: recognisable
+        title: An increasingly familiar face.
+        date: September 22–23
+        paragraphs:
+          - The man sending the same lunch bowl did occasionally send his face. There is evidence. There is also more
+            protein, more treadmill, and a reaction image for when words were doing too much.
+          - And then there was your face. The expression, the look to one side, the smile that had already become its
+            own reply.
+          - I am looking forward to the part where I hear the laugh while I see it. Where there is no typing indicator
+            between the joke and the reaction.
+        media:
+          - "977"
+          - "961"
+          - "956"
+          - "949"
+          - "952"
+          - "953"
+          - "964"
+          - "968"
+        collection: Familiar expressions, familiar habits
+      - id: flowers
+        title: Then I started photographing flowers.
+        date: September 24
+        paragraphs:
+          - I saw flowers on the way and took a picture. You asked for an explanation. Fair question. Taking pictures
+            of flowers had not previously been a major feature of my personality.
+          - I told you I had thought of the way you do it. You had bought flowers on your way home too. I asked whether
+            they were a pain to carry. An extremely impressive romantic instinct, clearly.
+          - There was Afreen Afreen in the conversation, another bench by the water, and some very serious cow correspondence.
+            I like this day. It feels like the small details were starting to carry a little more.
+        media:
+          - "983"
+          - "986"
+          - "985"
+          - "987"
+          - "988"
+          - "990"
+          - "991"
+        collection: The rest of that Thursday
+        quote:
+          text: V.pretty but explain!!!!!!
+          by: You were not accepting unexplained character development.
+      - id: watching
+        title: A film night, in installments.
+        date: September 24–25
+        paragraphs:
+          - First the screen. Then the next scene. Then another photograph of the screen. An impressively detailed record
+            of an evening on the sofa.
+          - If anyone needs to know what we were watching, the documentation is extensive. The lamp should probably
+            get a credit. It appears in almost every frame.
+          - "These stay together because that is how they make sense: the running commentary, not eight unrelated pictures
+            of a television."
+        media:
+          - "989"
+          - "992"
+          - "993"
+          - "996"
+          - "997"
+          - "998"
+          - "999"
+          - "1000"
+        collection: The watch-along, kept together
+      - id: tomorrow
+        title: A little room for the unwritten.
+        date: September 25–26
+        paragraphs:
+          - The latest pages still look like us. A LEGO display, a busy market, food worth reporting, weather with opinions,
+            a meme whose wording I immediately wanted to edit. Even my smile had become a sticker.
+          - We have joked about 3.9 years. The calendar has taken this remarkably well. Tomorrow, the person at the
+            other end of all these little updates will be here.
+          - I do not need the day to follow a perfect script. We can walk, find something to eat, look at art, change
+            our minds. I would just like to start with a real hello. Then find out what chapter four sounds like in
+            person.
+        media:
+          - "1022"
+          - "1002"
+          - "1003"
+          - "1004"
+          - "1006"
+          - "1012"
+          - "1017"
+        collection: The last pages before a real hello
+        aside: The next page can stay blank for a bit. We get to fill it together.

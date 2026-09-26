@@ -1,9 +1,11 @@
 ## verdict
 
-Resolved: DESIGN.md now records 103 default-visible gallery entries, all filter names and counts, and filter-scoped Previous/Next navigation with arrow keys, disabled boundaries, and focus restoration. Superseded pagination and reveal-more behavior are removed. No regressions arose from this documentation-only fix.
+1. Resolved: the mobile and desktop quiz completion captures show the completion heading without the decorative eyebrow. Source hides #quiz-position on completion and restores the actual question count in showRound. The no-JavaScript label now states the data-derived question total. The focused parent-run checks cover completion, replay, and restored progress; the regression assertions remain in scripts/check-date.sh.
+
+No regressions from this fix were found. This ship verdict covers the scored fix, not a new review of the whole page.
 
 ## remaining
 
-Clear. This ship verdict covers the scored documentation fix. The preceding visual review remains applicable to the unchanged implementation and its valid captures.
+Clear.
 
 disposition: ship

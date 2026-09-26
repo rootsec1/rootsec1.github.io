@@ -1,0 +1,7 @@
+{{ with .media }}
+<figure class="story-media media-{{ .kind }}{{ if $.lead }} lead-media{{ end }}{{ if eq .fit "contain" }} media-contained{{ end }}" data-media-id="{{ .id }}">
+  {{ partial "date-media.html" . }}
+  <figcaption><strong>{{ .title }}</strong>{{ if $.lead }}<p>{{ .caption }}</p>{{ end }}{{ with .duration }}<span class="media-duration">{{ . }} seconds{{ if eq $.media.kind "video" }} · original sound{{ end }}</span>{{ end }}</figcaption>
+  {{ with .context }}<details class="voice-context"><summary>Words &amp; context {{ partial "date-icon.html" "plus" }}</summary><p>{{ . }}</p></details>{{ end }}
+</figure>
+{{ end }}

@@ -1,49 +1,60 @@
-# Miss Dee's little collection
+# Miss Dee's September book
 
-`/miss-dee/` is a living scrapbook for the first NYC meeting on September 27, 2026. The user asked for substantially more of the supplied media after both the first premiere and the 46-item album felt sparse. The latter also hid everything after the first eight camera-roll entries. The revision puts real people and recordings first, while retaining the flexible plan, games, and ungated letter.
+`/miss-dee/` is a keepsake for the first NYC meeting on September 27, 2026. A forest-green book opens into three chapters and 19 dated scenes. Each scene places its prose beside the pictures, films and recordings from that exchange. On phones the prose comes first, followed by the related media. The long story starts closed; games, the flexible NYC plan, quiet notes and letter remain available outside it.
 
-The collection contains **96 photos and still images, nine videos with their original audio, one animated reaction sticker, and five voice notes**. Three narrated films lead, five recordings have a listening section, and the remaining 103 items form a browsable camera roll. The original bench appears as a playable film with its park background. Ravi Kishan still has his supporting appearance. Source context shapes each caption; the site does not reproduce the message export.
+The book contains **109 source attachments: 95 still images, nine videos with their original audio, and five voice notes**. Every selected attachment belongs to exactly one scene. The original bench films and Ravi Kishan's supporting appearance remain.
 
-## Structure and behavior
+## Content and behavior
 
-- `data/dee_media.yaml` owns the media catalogue, captions, dimensions, durations, and voice-note context. `data/miss_dee.yaml` owns trivia and plan/question content. `layouts/partials/date-media.html` is the shared renderer for photos, videos and audio.
-- Native videos and audio use `preload="none"` and never autoplay. Starting a recording pauses the others. Separate duration labels remain visible before native players load their metadata. Captions accompany the videos; multilingual voice notes have context/meaning summaries rather than unreliable word-for-word automatic transcripts.
-- Photos have responsive WebP thumbnails and larger versions. Native links open the larger image without JavaScript; JavaScript adds a native dialog with Escape/close behavior, focus restoration, Previous/Next buttons and arrow-key navigation within the selected subject. Screenshots and cut-out stickers fit inside their frames without cropping.
-- The camera roll shows all 103 entries immediately, with subject filters and a film filter displaying their counts. There is no pagination. The script-free page also shows the entire catalogue. Filtering pauses any video being hidden.
-- The photo-pair game uses four real pictures and supports mismatch, match and replay states. Its optional stamp joins the existing quiz, scene and notes stamps. No state is sent or persisted, and games never lock the letter.
-- The navigation stays available while scrolling. Reduced motion disables the entry, flip and state animations. All reading material, native media controls, and the letter work without JavaScript.
-- New York date handling changes “tomorrow” to “today” on September 27 and to keepsake wording afterward. Without JavaScript, the original pre-meeting wording remains.
+- `data/dee_media.yaml` owns the flat media catalogue, dimensions, captions, durations and voice-note context. `data/dee_story.yaml` assigns those IDs to dated scenes and supplies the narrative. `data/miss_dee.yaml` owns trivia, plans and questions.
+- `layouts/partials/date-media.html` renders photos, videos and audio. `date-story-media.html` adds their scene captions. A lead image or recording accompanies each scene; longer exchanges use a labelled horizontal strip for the rest.
+- Native video and audio controls never autoplay and use `preload="none"`. Starting one recording pauses the others. Chapter changes and closing the book pause playback. Video captions and separate duration labels accompany the recordings. Voice notes have contextual summaries rather than unreliable verbatim automatic transcripts.
+- Photos use responsive WebP files. Their viewer navigates only within the current scene, supports arrow keys and Escape, and restores focus. Without JavaScript, photo links open their image directly.
+- JavaScript shows one chapter at a time, with persistent contents and Previous/Next controls. Turning a chapter brings its heading into view. Without JavaScript, the native disclosure opens all chapters for continuous reading.
+- Matching photos, the lore quiz, plan choices and question deck retain their optional stamps. Nothing gates the letter. No state is stored or sent. Reduced motion disables the authored transitions.
+- New York date handling changes tomorrow to today on September 27 and to keepsake wording afterward. The script-free page keeps its original pre-meeting wording.
 
-`/miss-dee/yes/` opens the letter. Both `/miss-dee/decision/` compatibility redirects remain. The standalone date layout leaves the blog unchanged. The page is marked `noindex`, but the URL is public, not authenticated. There are no analytics, external runtime assets, or new runtime dependencies.
+`/miss-dee/yes/` opens the letter. The decision compatibility routes still redirect. The date layout leaves the blog unchanged. The page is marked `noindex`, uses self-hosted assets, and adds no runtime dependencies.
 
-## Source selection and preparation
+## Source selection and privacy crops
 
-The September source inventory contains 168 still images, four animated HEIC sequences, 12 videos and 11 available audio messages, plus other export payloads. Images were checked through contact sheets, videos through sampled frames and local speech transcription, and audio against local transcription and surrounding messages. The four HEIC sequences required FFmpeg extraction for inspection; they repeat the same running-away sticker, now represented once as attachment 876. Raw PDFs, archive contents, extracted chat, and transcripts stay outside the repository.
+The supplied September inventory contains 168 still images, four animated HEIC sequences, 12 videos and 11 available audio messages. Selection used contact sheets, sampled video frames, local transcription and the surrounding messages. The dated story also matches source images to their positions in the message PDF. Raw exports, extracted messages and local matching results stay outside this repository.
 
-The selected pictures include both people, homemade reaction stickers, horses, flowers, scenery, everyday food, clothing, art, the pastel-colour debate, translation attempts, music and watch-along updates. This expansion restores 64 still images and one animated sticker omitted by the previous selection. Clips preserve their original sound. The selection leaves out financial/work/contact screenshots, private relationship disclosures, a spoken phone number, unrelated third-party recordings, sexual jokes, and the explicitly unsent clip. Short, ambiguous multilingual automatic transcripts are not published as exact dialogue.
+The book keeps shared jokes, everyday updates, nature, horses, clothes, flowers, music and the watch-along sequence. It excludes financial/work/contact screenshots, private relationship disclosures, spoken contact information, unrelated third-party recordings, sexual jokes and the explicitly unsent clip.
 
-Media filenames retain source attachment IDs for provenance:
+The latest privacy changes remove attachment 879, the yellow-shirted stranger, and the full-body reaction animation 876. Attachments 872 and 873 now use horse-focused crops; 880 and 968 use face crops. The cropped files have new `-horse` or `-face` names, and their former wider files are removed from the current tree. Both thumbnails and full-size viewers use the crops. This does not rewrite earlier Git history.
 
-- Still images: 96, indexed by source attachment ID in `data/dee_media.yaml`. The five subjects contain 16 faces/reactions, 20 outdoor moments, 24 food updates, 26 daily updates and 17 watchlist entries, including the seven camera-roll video files.
-- Videos: 736, 738, 740, 800, 801, 804, 807, 834, 987. H.264/AAC MP4, up to 640px on the long edge, fast-start metadata. Original audio retained. English captions are edited for readability; quiet scenic clips have descriptive cues.
-- Animated sticker: 876, converted from the original silent HEIC sequence to H.264 MP4 for browser playback. This is the tenth video file; its label and caption identify it as a silent animation.
-- Voice notes: 757, 809, 814, 824, 906. AAC in M4A containers.
-- Original location/private metadata is removed. Adjacent WebP JSON sidecars record source provenance. The whole media directory is about 20 MB, but recordings load only when played and photographs load progressively.
-- `ravi-kishan.webp` remains the existing [Koteshwara video thumbnail](https://www.youtube.com/watch?v=AGwFkEbHIZA). `lilies.webp` remains the generated botanical illustration. Self-hosted Cormorant Garamond and DM Sans retain their OFL licenses.
+Videos 736, 738, 740, 800, 801, 804, 807, 834 and 987 use H.264/AAC MP4 with fast-start metadata and original sound. Voice notes 757, 809, 814, 824 and 906 use AAC in M4A containers. Image metadata is stripped; adjacent JSON files record source provenance and crop details. Recordings load only when played and images load progressively.
 
-## Verification
+`ravi-kishan.webp` is the existing [Koteshwara video thumbnail](https://www.youtube.com/watch?v=AGwFkEbHIZA). `lilies.webp` is the existing generated botanical illustration. Self-hosted Cormorant Garamond and DM Sans retain their OFL licenses.
+
+## Run and verify
 
 Use Hugo extended 0.111.3, matching the Pages workflow:
 
 ```sh
-hugo --gc --minify --baseURL http://127.0.0.1:1313/
-python3 -m http.server 1313 --directory public
-# In another terminal:
-bash scripts/check-date.sh
+hugo server --bind 127.0.0.1 --port 1313 --baseURL http://localhost:8080/ --appendPort=false --liveReloadPort 8080 --disableFastRender
 ```
 
-The browser check covers widths 320, 390, 430 and 1280; image decoding/overflow; quiz correct and incorrect answers/replay; plan and question controls; stamps; matching, mismatches and reset; all subject/film filter counts, whole-album visibility, photo Previous/Next and keyboard navigation; full-size photo viewing; no-JS reading; alternate routes; reduced motion; and New York date rollover. It also verifies no recording is fetched initially, then activates the page and plays all ten video files and five voice notes to check decoding and exclusive playback, and fetches every caption file. The browser closes on exit; stop the server after testing.
+From your laptop, forward the development server:
 
-The final mobile axe-core WCAG 2 A/AA and 2.1 AA scan reported zero violations. These checks use Chromium emulation, not a physical iPhone.
+```sh
+ssh -N -L 8080:127.0.0.1:1313 rootsec1@devbox.abhishekmurthy.com
+```
 
-[Mobile opening](mobile.png) · [Desktop opening](desktop.png) · [Voice notes](voices-mobile.png) · [Camera roll on mobile](album-mobile.png) · [Camera roll on desktop](album-desktop.png) · [Photo viewer](photo-viewer-mobile.png) · [Letter](yes-mobile.png)
+Visit `http://localhost:8080/miss-dee/`. Stop the server and tunnel when finished testing.
+
+For browser checks, build and serve with a matching base URL:
+
+```sh
+hugo --gc --minify --baseURL http://127.0.0.1:1314/
+python3 -m http.server 1314 --bind 127.0.0.1 --directory public
+# In another terminal:
+bash scripts/check-date.sh http://127.0.0.1:1314
+```
+
+The check covers widths 320, 390, 430 and 1280, image decoding, overflow, all games and controls, the closed book, chapter navigation, 109 unique media assignments, scene-scoped photo navigation, script-free reading, compatibility routes, reduced motion and New York date rollover. It checks that recordings do not load initially, plays all nine videos and five voice notes, verifies exclusive playback, and fetches every caption file. The browser closes on exit; stop the test server afterward.
+
+Mobile and desktop axe-core WCAG 2 A/AA and 2.1 AA scans reported zero violations. These checks use Chromium emulation, not a physical iPhone.
+
+[Mobile opening](mobile.png) · [Desktop opening](desktop.png) · [Open book](book-mobile.png) · [Mobile story](story-mobile.png) · [Desktop story](story-desktop.png) · [Voice notes](voices-mobile.png) · [Cropped photo viewer](photo-viewer-mobile.png) · [Letter](yes-mobile.png)
