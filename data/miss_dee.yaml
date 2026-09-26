@@ -1,0 +1,81 @@
+memories:
+  - title: "The bench had a head start."
+    image: "bench.webp"
+    alt: "The original bench, lamppost, and green park from your first video"
+    caption: "Your first co-star. I respect the seniority."
+    note: "You sent me a little patch of green. I said it looked peaceful. Somehow that turned into an entire bench department."
+  - title: "Then I started noticing."
+    image: "flower-detour.webp"
+    alt: "Bright flowers outside a shop, photographed on a walk"
+    caption: "A man who takes zero photos, taking flower photos."
+    note: "I saw flowers on my way and thought of you. You called it cute. Fine. The evidence is getting difficult to deny."
+  - title: "The sunset correspondent."
+    image: "sunset.webp"
+    alt: "An orange sunset fading into a blue evening sky"
+    caption: "Apparently every walk needs a visual report."
+    note: "The sunsets, the narration, the little things you stop for. I like getting to see the day from your side."
+  - title: "An unexpected supporting cast."
+    image: "cow.webp"
+    alt: "A shaggy brown Highland cow beside a wooded path"
+    caption: "The nature documentary keeps getting better."
+    note: "Benches, tree hugs, and giraffes drinking water. You did warn me about this entire department. I am now willingly subscribed."
+quiz:
+  - question: "In our timezone, one month is approximately…"
+    answers:
+      [
+        "One month. Be reasonable.",
+        "3.9 years, obviously.",
+        "One working day for Daryl.",
+      ]
+    correct: 1
+    feedback: "3.9 years. Excellent. The calendar has stopped arguing with us."
+  - question: "An AMC update from you usually means…"
+    answers:
+      [
+        "Another extremely specific dream.",
+        "A cinema loyalty discount.",
+        "A 90-minute aviation podcast.",
+      ]
+    correct: 0
+    feedback: "Your dream cinema. Bears, plot twists, an ever-expanding cast. The writers need supervision."
+  - question: "What counts as a real character arc here?"
+    answers:
+      [
+        "Me buying a thirteenth black T-shirt.",
+        "You retiring from questions.",
+        "Me stopping to photograph flowers.",
+      ]
+    correct: 2
+    feedback: "The flowers. A previously camera-resistant man now sees a bouquet and thinks of you. Suspicious development."
+  - question: "I called it prep. You corrected me. It is…"
+    answers:
+      [
+        "An unpaid internship.",
+        "Effort, idiot.",
+        "A technical screening round.",
+      ]
+    correct: 1
+    feedback: "Effort. Heard you the first time. Took approximately 3.9 years to build the supporting evidence."
+scenes:
+  - title: "A walk with no hurry"
+    detail: "Hudson air, a good view, and permission to stop for every interesting leaf."
+    line: "a slow walk with frequent leaf-related interruptions"
+  - title: "Your food recommendation"
+    detail: "The Hyderabadi place you remember by taste and visual route. I trust this navigation system."
+    line: "following your very specific food memory"
+  - title: "Art, books, a little wandering"
+    detail: "Your museum-and-library idea. I get the live commentary, you get to ask the good questions."
+    line: "art, books, and your running commentary"
+  - title: "A game, patiently explained"
+    detail: "We learn together. Competitive allegations will be addressed after the first round."
+    line: "a game with patient teaching and very mild trash talk"
+  - title: "The rage-room wildcard"
+    detail: "Still a possibility. The plates can wait until we decide what kind of day we're having."
+    line: "the entirely optional rage-room plot twist"
+questions:
+  - "What tiny thing made you stop and look this week? Show me like one of your narrated videos."
+  - "Which thought from Fluke has stayed with you, or changed the way you see an ordinary day?"
+  - "If your latest AMC dream had a title, what would be on the poster?"
+  - "What would your ideal unplanned afternoon look like, once nobody needs anything from you?"
+  - "What's a story you've been saving because it deserves a live reaction?"
+  - "Which part of your world should I try next? You get to teach; I promise to be teachable."
