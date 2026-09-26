@@ -1,0 +1,14 @@
+{{ if eq .kind "photo" }}
+<a class="photo-link" href="{{ printf "date/%s" .source | relURL }}" data-photo aria-label="View {{ .title }} full size" data-title="{{ .title }}" data-caption="{{ .caption }}">
+  <img src="{{ printf "date/%s" .thumbnail | relURL }}" srcset="{{ printf "date/%s" .thumbnail | relURL }} 480w, {{ printf "date/%s" .source | relURL }} {{ .width }}w" sizes="(max-width: 600px) 45vw, (max-width: 900px) 45vw, 30vw" width="{{ .width }}" height="{{ .height }}" loading="lazy" decoding="async" alt="{{ .alt }}">
+  <span class="photo-expand">{{ partial "date-icon.html" "diagonal" }}</span>
+</a>
+{{ else if eq .kind "video" }}
+<video controls playsinline preload="none" poster="{{ printf "date/%s" .thumbnail | relURL }}" width="{{ .width }}" height="{{ .height }}" aria-label="{{ .title }}">
+  <source src="{{ printf "date/%s" .source | relURL }}" type="video/mp4">
+  <track kind="captions" src="{{ printf "date/%s" .captions | relURL }}" srclang="en" label="English">
+  <a href="{{ printf "date/%s" .source | relURL }}">Watch {{ .title }}</a>
+</video>
+{{ else if eq .kind "audio" }}
+<audio controls preload="none" aria-label="{{ .title }}"><source src="{{ printf "date/%s" .source | relURL }}" type="audio/mp4"><a href="{{ printf "date/%s" .source | relURL }}">Listen to {{ .title }}</a></audio>
+{{ end }}

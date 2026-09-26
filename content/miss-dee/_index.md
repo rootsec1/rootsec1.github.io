@@ -1,5 +1,5 @@
 ---
-title: "Miss Dee & the Menace · Opening night"
+title: "Miss Dee & the Menace · Our little collection"
 type: date
 layout: single
 url: /miss-dee/

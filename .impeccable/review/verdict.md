@@ -1,7 +1,9 @@
-# Opening-night review — September 26, 2026
+# Living scrapbook review — September 26, 2026
 
-Independent code-led review of the user-selected AMC premiere against the surface contract and desktop/mobile captures found two consistency issues: Unicode UI icons and metadata above two headings. Both were corrected together using a shared SVG partial and moving metadata below the headings.
+A fresh independent review followed the user's rejection of the sparse media treatment. The reviewer opened all seven required captures: full desktop/mobile, both opening screens, the listening section, the camera roll, and the letter.
 
-The reviewer scored both fixes **resolved**, confirmed the five recaptured files were valid, and returned **ship**. This verdict covers the listed fixes; the original review had confirmed the cinema form, personal content, typography, material, story, and first-viewport composition.
+The reviewer found the real-media coverage, visible portraits, hierarchy, photographic styling, mobile adaptation, contextual captions, and ungated ending matched the revised request. No additional visual changes were requested.
 
-Functional, accessibility, and fallback verification is recorded in `docs/miss-dee/README.md` and reproducible with `scripts/check-date.sh`.
+Two documentation findings were resolved: the brief now accurately records the genuine inherited exploration seed and the absence of a new roll/quality-board comparison; DESIGN.md and its sidecar now describe the current scrapbook. The final disposition was **ship**, with approval covering those two scored fixes.
+
+There was no approved comp or external quality-board comparison for this direct, source-led revision. Functional and accessibility evidence is documented in `docs/miss-dee/README.md` and `scripts/check-date.sh`.
