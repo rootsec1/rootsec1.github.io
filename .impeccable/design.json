@@ -1,304 +1,351 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-26T17:55:06.441057+00:00",
-  "title": "Design System: Miss Dee's living scrapbook",
+  "generatedAt": "2026-09-26T18:34:25.644392+00:00",
+  "title": "Design System: Miss Dee, a September annotated",
   "extensions": {
     "colorMeta": {
-      "wine": {
+      "green": {
         "role": "primary",
-        "displayName": "Scrapbook wine",
+        "displayName": "Forest green",
         "tonalRamp": [
-          "oklch(15.0% 0.0652 356.74)",
-          "oklch(26.4% 0.0652 356.74)",
-          "oklch(37.9% 0.0652 356.74)",
-          "oklch(49.3% 0.0652 356.74)",
-          "oklch(60.7% 0.0652 356.74)",
-          "oklch(72.1% 0.0652 356.74)",
-          "oklch(83.6% 0.0652 356.74)",
-          "oklch(95.0% 0.0652 356.74)"
+          "oklch(15% 0.0386 169.2)",
+          "oklch(26% 0.0386 169.2)",
+          "oklch(38% 0.0386 169.2)",
+          "oklch(49% 0.0386 169.2)",
+          "oklch(61% 0.0386 169.2)",
+          "oklch(72% 0.0386 169.2)",
+          "oklch(84% 0.0386 169.2)",
+          "oklch(95% 0.0386 169.2)"
         ]
       },
-      "wine-deep": {
+      "green-deep": {
         "role": "primary",
-        "displayName": "Deep wine",
+        "displayName": "Deep forest",
         "tonalRamp": [
-          "oklch(15.0% 0.0493 354.96)",
-          "oklch(26.4% 0.0493 354.96)",
-          "oklch(37.9% 0.0493 354.96)",
-          "oklch(49.3% 0.0493 354.96)",
-          "oklch(60.7% 0.0493 354.96)",
-          "oklch(72.1% 0.0493 354.96)",
-          "oklch(83.6% 0.0493 354.96)",
-          "oklch(95.0% 0.0493 354.96)"
+          "oklch(15% 0.0320 168.8)",
+          "oklch(26% 0.0320 168.8)",
+          "oklch(38% 0.0320 168.8)",
+          "oklch(49% 0.0320 168.8)",
+          "oklch(61% 0.0320 168.8)",
+          "oklch(72% 0.0320 168.8)",
+          "oklch(84% 0.0320 168.8)",
+          "oklch(95% 0.0320 168.8)"
+        ]
+      },
+      "wine": {
+        "role": "secondary",
+        "displayName": "Maroon lily",
+        "tonalRamp": [
+          "oklch(15% 0.0809 359.3)",
+          "oklch(26% 0.0809 359.3)",
+          "oklch(38% 0.0809 359.3)",
+          "oklch(49% 0.0809 359.3)",
+          "oklch(61% 0.0809 359.3)",
+          "oklch(72% 0.0809 359.3)",
+          "oklch(84% 0.0809 359.3)",
+          "oklch(95% 0.0809 359.3)"
         ]
       },
       "paper": {
         "role": "neutral",
-        "displayName": "Album ivory",
+        "displayName": "Warm paper",
         "tonalRamp": [
-          "oklch(15.0% 0.0114 84.58)",
-          "oklch(26.4% 0.0114 84.58)",
-          "oklch(37.9% 0.0114 84.58)",
-          "oklch(49.3% 0.0114 84.58)",
-          "oklch(60.7% 0.0114 84.58)",
-          "oklch(72.1% 0.0114 84.58)",
-          "oklch(83.6% 0.0114 84.58)",
-          "oklch(95.0% 0.0114 84.58)"
+          "oklch(15% 0.0139 88.7)",
+          "oklch(26% 0.0139 88.7)",
+          "oklch(38% 0.0139 88.7)",
+          "oklch(49% 0.0139 88.7)",
+          "oklch(61% 0.0139 88.7)",
+          "oklch(72% 0.0139 88.7)",
+          "oklch(84% 0.0139 88.7)",
+          "oklch(95% 0.0139 88.7)"
+        ]
+      },
+      "sheet": {
+        "role": "neutral",
+        "displayName": "Ivory sheet",
+        "tonalRamp": [
+          "oklch(15% 0.0095 93.6)",
+          "oklch(26% 0.0095 93.6)",
+          "oklch(38% 0.0095 93.6)",
+          "oklch(49% 0.0095 93.6)",
+          "oklch(61% 0.0095 93.6)",
+          "oklch(72% 0.0095 93.6)",
+          "oklch(84% 0.0095 93.6)",
+          "oklch(95% 0.0095 93.6)"
         ]
       },
       "pink": {
         "role": "secondary",
-        "displayName": "Correspondence pink",
+        "displayName": "Petal pink",
         "tonalRamp": [
-          "oklch(15.0% 0.0398 10.14)",
-          "oklch(26.4% 0.0398 10.14)",
-          "oklch(37.9% 0.0398 10.14)",
-          "oklch(49.3% 0.0398 10.14)",
-          "oklch(60.7% 0.0398 10.14)",
-          "oklch(72.1% 0.0398 10.14)",
-          "oklch(83.6% 0.0398 10.14)",
-          "oklch(95.0% 0.0398 10.14)"
+          "oklch(15% 0.0211 21.2)",
+          "oklch(26% 0.0211 21.2)",
+          "oklch(38% 0.0211 21.2)",
+          "oklch(49% 0.0211 21.2)",
+          "oklch(61% 0.0211 21.2)",
+          "oklch(72% 0.0211 21.2)",
+          "oklch(84% 0.0211 21.2)",
+          "oklch(95% 0.0211 21.2)"
         ]
       },
       "ink": {
         "role": "neutral",
         "displayName": "Reading ink",
         "tonalRamp": [
-          "oklch(15.0% 0.0208 13.56)",
-          "oklch(26.4% 0.0208 13.56)",
-          "oklch(37.9% 0.0208 13.56)",
-          "oklch(49.3% 0.0208 13.56)",
-          "oklch(60.7% 0.0208 13.56)",
-          "oklch(72.1% 0.0208 13.56)",
-          "oklch(83.6% 0.0208 13.56)",
-          "oklch(95.0% 0.0208 13.56)"
+          "oklch(15% 0.0163 126.8)",
+          "oklch(26% 0.0163 126.8)",
+          "oklch(38% 0.0163 126.8)",
+          "oklch(49% 0.0163 126.8)",
+          "oklch(61% 0.0163 126.8)",
+          "oklch(72% 0.0163 126.8)",
+          "oklch(84% 0.0163 126.8)",
+          "oklch(95% 0.0163 126.8)"
         ]
       },
       "muted": {
         "role": "neutral",
-        "displayName": "Muted copy",
+        "displayName": "Muted olive",
         "tonalRamp": [
-          "oklch(15.0% 0.0276 14.90)",
-          "oklch(26.4% 0.0276 14.90)",
-          "oklch(37.9% 0.0276 14.90)",
-          "oklch(49.3% 0.0276 14.90)",
-          "oklch(60.7% 0.0276 14.90)",
-          "oklch(72.1% 0.0276 14.90)",
-          "oklch(83.6% 0.0276 14.90)",
-          "oklch(95.0% 0.0276 14.90)"
-        ]
-      },
-      "green": {
-        "role": "secondary",
-        "displayName": "Forest green",
-        "tonalRamp": [
-          "oklch(15.0% 0.0386 169.21)",
-          "oklch(26.4% 0.0386 169.21)",
-          "oklch(37.9% 0.0386 169.21)",
-          "oklch(49.3% 0.0386 169.21)",
-          "oklch(60.7% 0.0386 169.21)",
-          "oklch(72.1% 0.0386 169.21)",
-          "oklch(83.6% 0.0386 169.21)",
-          "oklch(95.0% 0.0386 169.21)"
+          "oklch(15% 0.0202 114.2)",
+          "oklch(26% 0.0202 114.2)",
+          "oklch(38% 0.0202 114.2)",
+          "oklch(49% 0.0202 114.2)",
+          "oklch(61% 0.0202 114.2)",
+          "oklch(72% 0.0202 114.2)",
+          "oklch(84% 0.0202 114.2)",
+          "oklch(95% 0.0202 114.2)"
         ]
       },
       "gold": {
         "role": "tertiary",
-        "displayName": "Stamp gold",
+        "displayName": "Cover gold",
         "tonalRamp": [
-          "oklch(15.0% 0.0873 83.41)",
-          "oklch(26.4% 0.0873 83.41)",
-          "oklch(37.9% 0.0873 83.41)",
-          "oklch(49.3% 0.0873 83.41)",
-          "oklch(60.7% 0.0873 83.41)",
-          "oklch(72.1% 0.0873 83.41)",
-          "oklch(83.6% 0.0873 83.41)",
-          "oklch(95.0% 0.0873 83.41)"
+          "oklch(15% 0.0682 85.3)",
+          "oklch(26% 0.0682 85.3)",
+          "oklch(38% 0.0682 85.3)",
+          "oklch(49% 0.0682 85.3)",
+          "oklch(61% 0.0682 85.3)",
+          "oklch(72% 0.0682 85.3)",
+          "oklch(84% 0.0682 85.3)",
+          "oklch(95% 0.0682 85.3)"
         ]
       },
       "line": {
         "role": "neutral",
         "displayName": "Paper divider",
         "tonalRamp": [
-          "oklch(15.0% 0.0205 45.23)",
-          "oklch(26.4% 0.0205 45.23)",
-          "oklch(37.9% 0.0205 45.23)",
-          "oklch(49.3% 0.0205 45.23)",
-          "oklch(60.7% 0.0205 45.23)",
-          "oklch(72.1% 0.0205 45.23)",
-          "oklch(83.6% 0.0205 45.23)",
-          "oklch(95.0% 0.0205 45.23)"
+          "oklch(15% 0.0244 101.7)",
+          "oklch(26% 0.0244 101.7)",
+          "oklch(38% 0.0244 101.7)",
+          "oklch(49% 0.0244 101.7)",
+          "oklch(61% 0.0244 101.7)",
+          "oklch(72% 0.0244 101.7)",
+          "oklch(84% 0.0244 101.7)",
+          "oklch(95% 0.0244 101.7)"
         ]
       }
     },
     "typographyMeta": {
       "display": {
-        "displayName": "Greeting",
-        "purpose": "Opening greeting. Desktop and responsive values are documented in DESIGN.md."
+        "displayName": "Display",
+        "purpose": "Opening invitation title."
       },
       "headline": {
-        "displayName": "Section heading",
-        "purpose": "Section baseline with explicit component and mobile overrides."
+        "displayName": "Headline",
+        "purpose": "Section headings outside the reader."
       },
-      "title": {
-        "displayName": "Title",
-        "purpose": "Base third-level heading."
+      "chapter": {
+        "displayName": "Chapter",
+        "purpose": "Chapter opening titles."
+      },
+      "scene": {
+        "displayName": "Scene",
+        "purpose": "Dated scene headings."
+      },
+      "narrative": {
+        "displayName": "Narrative",
+        "purpose": "The chronological story prose."
       },
       "body": {
-        "displayName": "Reading copy",
-        "purpose": "DM Sans body; smaller supporting copy follows component rules."
+        "displayName": "Body",
+        "purpose": "General interface and supporting prose."
       },
       "button": {
-        "displayName": "Action label",
-        "purpose": "Full-size button text."
+        "displayName": "Button",
+        "purpose": "Primary and secondary controls."
       }
     },
     "shadows": [
       {
-        "name": "portrait-print",
-        "value": "0 12px 25px #4c233318",
-        "purpose": "Lift the overlapping portrait prints."
+        "name": "cover",
+        "value": "14px 24px 46px #1d312433",
+        "purpose": "Closed botanical book."
       },
       {
-        "name": "question-card",
-        "value": "0 14px 30px #4c23330b",
-        "purpose": "Lift the rose conversation card."
+        "name": "cover-hover",
+        "value": "18px 30px 50px #1d312438",
+        "purpose": "Pointer hover on the invitation."
+      },
+      {
+        "name": "reader",
+        "value": "0 18px 42px #233f3510",
+        "purpose": "Ivory reader sheet."
       },
       {
         "name": "photo-viewer",
-        "value": "0 20px 60px #1a151733",
-        "purpose": "Separate the full-size photo dialog from its backdrop."
-      },
-      {
-        "name": "pair-hover",
-        "value": "0 4px 12px #4c233320",
-        "purpose": "Indicate an available pair tile on hover."
+        "value": "0 20px 60px #14251e44",
+        "purpose": "Modal image viewer."
       }
     ],
     "motion": [
       {
         "name": "ease",
         "value": "cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "Paper arrival and control transitions."
+        "purpose": "Cover and scripted reveals."
       },
       {
-        "name": "album-arrival",
-        "value": "1.1s",
-        "purpose": "Portraits translate from 14px to 0 and brighten from .92 to 1. Disabled for reduced motion."
+        "name": "cover",
+        "value": "800ms",
+        "purpose": "Cover straightening and hover shadow."
       },
       {
-        "name": "pair-turn",
-        "value": "400ms",
-        "purpose": "Turn photo tiles. Disabled for reduced motion."
+        "name": "chapter",
+        "value": "420ms",
+        "purpose": "Directional 12px horizontal reveal with subtle clipping."
       },
       {
-        "name": "letter-reveal",
+        "name": "letter",
         "value": "500ms",
-        "purpose": "Reveal the open letter. Skipped for reduced motion."
+        "purpose": "Opacity and minus 8px vertical reveal."
+      },
+      {
+        "name": "controls",
+        "value": "200ms",
+        "purpose": "Button background and color changes."
       }
     ],
     "breakpoints": [
       {
-        "name": "narrow-phone-max",
-        "value": "359px"
+        "name": "tablet",
+        "value": "1000px"
       },
       {
-        "name": "mobile-max",
-        "value": "600px"
+        "name": "mobile",
+        "value": "650px"
       },
       {
-        "name": "section-tablet-max",
-        "value": "800px"
-      },
-      {
-        "name": "album-tablet-max",
-        "value": "900px"
+        "name": "narrow",
+        "value": "360px"
       }
-    ]
+    ],
+    "focus": {
+      "outline": "3px solid #91652d",
+      "outlineOffset": "5px"
+    },
+    "reducedMotion": "Disable animation, transitions, smooth scrolling, and scripted reveals; keep immediate state changes.",
+    "tonalRampNote": "Synthesized OKLCH lightness ramps for preview only. DESIGN.md frontmatter owns the shipping color values."
   },
   "components": [
     {
       "name": "Dark button",
       "kind": "button",
       "refersTo": "button-dark",
-      "description": "Miss Dee keepsake action with native disabled, focus, hover, and pressed states.",
-      "html": "<button class=\"ds-button-dark\" type=\"button\">Next question<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></button>",
-      "css": ".ds-button-dark{display:inline-flex;gap:26px;align-items:center;justify-content:center;min-height:52px;padding:13px 22px;border:0;border-radius:3px;font:400 14px/1.65 var(--sans,\"DM Sans\",sans-serif);text-decoration:none;cursor:pointer;transition:background .2s,transform .35s var(--ease,cubic-bezier(.16,1,.3,1));background:var(--wine,#4c2333);color:var(--paper,#f7f3eb);}.ds-button-dark:focus-visible{outline:3px solid #b67a27;outline-offset:5px;}.ds-button-dark:disabled{background:#d7c9c2;color:#69585b;cursor:default;}.ds-button-dark:not(:disabled):active{transform:scale(.97);}@media(hover:hover){.ds-button-dark:not(:disabled):hover{background:#683348;transform:translateY(-2px);}}@media(prefers-reduced-motion:reduce){.ds-button-dark{transition:none;}}"
+      "description": "Primary chapter progression and game actions.",
+      "html": "<button class=\"ds-dark\">Next chapter <svg width=\"21\" height=\"21\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></button>",
+      "css": ".ds-dark{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:48px;padding:12px 22px;border:0;border-radius:3px;background:var(--green,#233f35);color:var(--paper,#f7f3e9);font:400 13px/1.5 var(--sans,\"DM Sans\",sans-serif);cursor:pointer;transition:background .2s,color .2s}.ds-dark:hover{background:var(--wine,#652f42)}.ds-dark:focus-visible{outline:3px solid #91652d;outline-offset:5px}.ds-dark:disabled{opacity:.5;cursor:default}@media(prefers-reduced-motion:reduce){.ds-dark{transition:none}}"
     },
     {
-      "name": "Quiz answer",
-      "kind": "input",
-      "description": "Native radio answer; selection uses fill, border, and an SVG check.",
-      "html": "<label class=\"ds-answer\"><input type=\"radio\" name=\"ds-quiz\"><span>3.9 years, obviously.</span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 12 4 4 8-8\"/></svg></label>",
-      "css": ".ds-answer{display:flex;align-items:center;gap:12px;min-height:54px;padding:12px;border:1px solid var(--line,#d9c9c2);border-radius:3px;background:var(--paper,#f7f3eb);color:var(--ink,#392b2c);font:400 13px/1.45 var(--sans,\"DM Sans\",sans-serif);cursor:pointer;transition:background .2s,border-color .2s}.ds-answer input{appearance:none;flex:0 0 17px;height:17px;margin:0;border:1px solid #94787f;border-radius:50%;cursor:pointer}.ds-answer:has(input:checked){background:#edd8d7;border-color:var(--wine,#4c2333)}.ds-answer input:checked{background:var(--wine,#4c2333);box-shadow:inset 0 0 0 3px #edd8d7}.ds-answer input:focus-visible{outline:3px solid #b67a27;outline-offset:5px;}.ds-answer svg{width:18px;height:18px;margin-left:auto;fill:none;stroke:var(--wine,#4c2333);stroke-width:1.5;opacity:0}.ds-answer input:checked~svg{opacity:1}@media(prefers-reduced-motion:reduce){.ds-answer{transition:none}}"
+      "name": "Text button",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "Underlined secondary controls.",
+      "html": "<button class=\"ds-text\">Previous chapter</button>",
+      "css": ".ds-text{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 0;border:0;background:transparent;color:var(--green,#233f35);font:400 13px/1.5 var(--sans,\"DM Sans\",sans-serif);text-decoration:underline;text-underline-offset:6px;cursor:pointer;transition:color .2s}.ds-text:hover{color:var(--wine,#652f42)}.ds-text:focus-visible{outline:3px solid #91652d;outline-offset:5px}.ds-text:disabled{opacity:.5;cursor:default}@media(prefers-reduced-motion:reduce){.ds-text{transition:none}}"
     },
     {
-      "name": "Chapter navigation",
-      "kind": "nav",
-      "description": "Five native chapter anchors; the page navigation sticks to the top during scrolling.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Explore the keepsake\"><a href=\"#films\">Watch</a><a href=\"#voices\">Listen</a><a href=\"#camera-roll\">Our camera roll</a><a href=\"#play\">Play</a><a href=\"#letter\">Your note</a></nav>",
-      "css": ".ds-nav{display:flex;justify-content:center;gap:48px;padding:0 20px;background:var(--paper,#f7f3eb);color:var(--ink,#392b2c);border-bottom:1px solid var(--line,#d9c9c2)}.ds-nav a{display:flex;align-items:center;min-height:64px;font:400 12px/1.65 var(--sans,\"DM Sans\",sans-serif);color:inherit;text-decoration:none}.ds-nav a:focus-visible{outline:3px solid #b67a27;outline-offset:5px;}@media(hover:hover){.ds-nav a:hover{color:#995365}}@media(max-width:800px){.ds-nav{gap:30px}}@media(max-width:600px){.ds-nav{gap:0;justify-content:space-between;padding:0 16px}.ds-nav a{font-size:10px;min-height:55px;padding:0 4px}}"
-    },
-    {
-      "name": "Keepsake stamps",
-      "kind": "chip",
-      "description": "Passive labels show optional participation. Collection adds gold and a small paper tilt; stamps do not gate content.",
-      "html": "<div class=\"ds-stamps\"><span>Lore enthusiast</span><span class=\"ds-collected\" aria-label=\"Scene co-writer, collected\">Scene co-writer</span></div>",
-      "css": ".ds-stamps{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;background:var(--wine,#4c2333);padding:16px}.ds-stamps span{padding:8px 12px;border:1px dashed #bc939d;color:#e3c3cc;border-radius:3px;font:400 10px/1.65 var(--sans,\"DM Sans\",sans-serif);transition:background .35s,transform .45s var(--ease,cubic-bezier(.16,1,.3,1))}.ds-stamps span.ds-collected{background:var(--gold,#e7c789);border-color:var(--gold,#e7c789);color:var(--wine,#4c2333);transform:rotate(-4deg)}.ds-stamps span.ds-collected:nth-child(2){transform:rotate(3deg)}@media(max-width:600px){.ds-stamps{gap:7px}.ds-stamps span{font-size:8px;padding:7px 8px}}@media(prefers-reduced-motion:reduce){.ds-stamps span{transition:none}}"
-    },
-    {
-      "name": "Director note",
+      "name": "Book cover",
       "kind": "custom",
-      "description": "Native disclosure with a rotating geometric plus; keeps content readable without JavaScript.",
-      "html": "<details class=\"ds-note\"><summary><span>A 15-mark answer is welcome here.</span><span><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg></span></summary><p>You do not need to make your thoughts smaller for me.</p></details>",
-      "css": ".ds-note{border-top:1px solid var(--line,#d9c9c2);border-bottom:1px solid var(--line,#d9c9c2);background:var(--paper,#f7f3eb)}.ds-note summary{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:80px;padding:20px 0;list-style:none;cursor:pointer;font:500 28px/1.65 var(--serif,Cormorant,Georgia,serif);color:var(--wine,#4c2333)}.ds-note summary::-webkit-details-marker{display:none}.ds-note summary>span:last-child{transition:transform .4s var(--ease,cubic-bezier(.16,1,.3,1))}.ds-note[open] summary>span:last-child{transform:rotate(45deg)}.ds-note summary:focus-visible{outline:3px solid #b67a27;outline-offset:5px;}.ds-note p{margin:0;padding-bottom:27px;max-width:68ch;color:var(--muted,#705b5c);font:400 14px/1.65 var(--sans,\"DM Sans\",sans-serif)}@media(hover:hover){.ds-note summary:hover{color:#995365}}@media(max-width:600px){.ds-note summary{font-size:25px;line-height:1.1;gap:22px}.ds-note p{font-size:13px;padding-bottom:24px}}@media(prefers-reduced-motion:reduce){.ds-note summary>span:last-child{transition:none}}"
+      "refersTo": "book-cover",
+      "description": "Binding, ribbon, and title treatment. The production cover also uses the existing lily illustration.",
+      "html": "<details class=\"ds-book\"><summary class=\"ds-cover\"><span class=\"ds-binding\"></span><span class=\"ds-cover-title\">3.9 years,<br><em>give or take.</em></span><span class=\"ds-byline\">MISS DEE &amp; THE MENACE</span><span class=\"ds-ribbon\"></span></summary><p class=\"ds-book-paper\">A September, annotated.</p></details>",
+      "css": ".ds-book{max-width:300px}.ds-cover{position:relative;display:flex;flex-direction:column;align-items:center;gap:30px;list-style:none;padding:34px 30px 31px 43px;background:var(--green,#233f35);color:var(--paper,#f7f3e9);border-radius:2px 7px 7px 2px;box-shadow:14px 24px 46px #1d312433;transform:rotate(3deg);cursor:pointer;transition:transform .8s cubic-bezier(.16,1,.3,1),box-shadow .8s cubic-bezier(.16,1,.3,1)}.ds-cover::-webkit-details-marker{display:none}.ds-cover:hover{transform:rotate(0) translateY(-5px);box-shadow:18px 30px 50px #1d312438}.ds-cover:focus-visible{outline:3px solid #91652d;outline-offset:5px}.ds-book[open] .ds-cover{transform:rotate(0)}.ds-binding{position:absolute;left:9px;top:0;height:100%;width:8px;border-left:1px solid #ffffff24;border-right:1px solid #00000040}.ds-cover-title{font:500 36px/.98 var(--serif,Cormorant,Georgia,serif);letter-spacing:-.025em;text-align:center;color:var(--gold,#dec797)}.ds-cover-title em{color:var(--paper,#f7f3e9)}.ds-byline{font:11px/1.7 var(--sans,\"DM Sans\",sans-serif);letter-spacing:.04em;text-align:center}.ds-ribbon{position:absolute;right:28px;top:0;width:18px;height:36px;background:var(--wine,#652f42);clip-path:polygon(0 0,100% 0,100% 100%,50% 76%,0 100%)}.ds-book-paper{padding:24px;background:var(--sheet,#fffdf6);color:var(--green,#233f35);font:500 24px/1.45 var(--serif,Cormorant,Georgia,serif)}@media(prefers-reduced-motion:reduce){.ds-cover{transition:none}}"
     },
     {
-      "name": "Album filter",
-      "kind": "chip",
-      "refersTo": "album-filter-selected",
-      "description": "Camera-roll filter. Selection uses aria-pressed and a wine fill.",
-      "html": "<button class=\"ds-filter\" type=\"button\" aria-pressed=\"true\">All moments</button><button class=\"ds-filter\" type=\"button\" aria-pressed=\"false\">Photos</button>",
-      "css": ".ds-filter{background:transparent;border:0;border-radius:3px;min-height:44px;padding:10px 16px;font:400 12px/1.65 var(--sans,\"DM Sans\",sans-serif);color:var(--wine,#4c2333);cursor:pointer;transition:background .2s}.ds-filter[aria-pressed=\"true\"]{background:var(--wine,#4c2333);color:var(--paper,#f7f3eb)}.ds-filter:focus-visible{outline:3px solid #b67a27;outline-offset:5px}@media(hover:hover){.ds-filter:not([aria-pressed=\"true\"]):hover{background:#ead5d6}}@media(prefers-reduced-motion:reduce){.ds-filter{transition:none}}"
+      "name": "Chapter selector",
+      "kind": "nav",
+      "refersTo": "chapter-selected",
+      "description": "Persistent three-column chapter navigation with the current chapter marked.",
+      "html": "<nav class=\"ds-chapters\" aria-label=\"Choose a chapter\"><button aria-current=\"page\"><span>Chapter 1</span>The beginning</button><button><span>Chapter 2</span>The little things</button><button><span>Chapter 3</span>Nearly tomorrow</button></nav>",
+      "css": ".ds-chapters{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:12px 0;border-top:1px solid var(--line,#d4d2c0);border-bottom:1px solid var(--line,#d4d2c0);background:var(--sheet,#fffdf6)}.ds-chapters button{display:flex;flex-direction:column;align-items:start;gap:4px;min-height:64px;padding:12px 18px;text-align:left;border:0;border-radius:2px;background:transparent;color:var(--green,#233f35);font:500 21px/1.2 var(--serif,Cormorant,Georgia,serif);cursor:pointer}.ds-chapters span{font:11px/1.5 var(--sans,\"DM Sans\",sans-serif);color:var(--muted,#626457)}.ds-chapters button[aria-current=\"page\"]{background:var(--green,#233f35);color:var(--paper,#f7f3e9)}.ds-chapters [aria-current=\"page\"] span{color:var(--gold,#dec797)}.ds-chapters button:not([aria-current=\"page\"]):hover{background:#e9edde}.ds-chapters button:focus-visible{outline:3px solid #91652d;outline-offset:5px}@media(max-width:650px){.ds-chapters{gap:5px;padding:8px 0}.ds-chapters button{font-size:18px;padding:10px 8px;min-height:83px;justify-content:center}}"
     },
     {
-      "name": "Conversation card",
+      "name": "Quiz choice",
+      "kind": "input",
+      "refersTo": "quiz",
+      "description": "Native radio selection on an ivory quiz sheet.",
+      "html": "<fieldset class=\"ds-quiz\"><legend>How long has it been?</legend><label><input type=\"radio\" name=\"ds-years\" checked><span>3.9 years</span></label><label><input type=\"radio\" name=\"ds-years\"><span>One September</span></label></fieldset>",
+      "css": ".ds-quiz{padding:35px;border:0;border-radius:3px;background:var(--sheet,#fffdf6);color:var(--ink,#34382f)}.ds-quiz legend{font:500 34px/1.1 var(--serif,Cormorant,Georgia,serif);color:var(--green,#233f35)}.ds-quiz label{display:flex;align-items:center;gap:12px;padding:13px 14px;margin-top:10px;border:1px solid var(--line,#d4d2c0);font:400 12px/1.7 var(--sans,\"DM Sans\",sans-serif);cursor:pointer}.ds-quiz input{width:16px;height:16px;margin:0;accent-color:var(--green,#233f35)}.ds-quiz label:has(input:checked){background:#e9edde;border-color:var(--green,#233f35)}.ds-quiz input:focus-visible{outline:3px solid #91652d;outline-offset:5px}"
+    },
+    {
+      "name": "Question card",
       "kind": "card",
       "refersTo": "question-card",
-      "description": "Rose paper for an optional conversation prompt.",
-      "html": "<article class=\"ds-question-card\"><p>What is a tiny thing that always makes your day better?</p></article>",
-      "css": ".ds-question-card{background:var(--pink,#efccd0);color:var(--wine,#4c2333);padding:32px 36px;min-height:310px;border-radius:3px;transform:rotate(-2deg);box-shadow:0 14px 30px #4c23330b;display:flex;flex-direction:column;align-items:flex-start}.ds-question-card p{font:500 32px/1.1 var(--serif,Cormorant,Georgia,serif);margin:30px 0 12px}"
+      "description": "A slightly tilted pink card for optional conversation prompts.",
+      "html": "<div class=\"ds-question\"><p>Your turn. One more question?</p><button>Give me another</button></div>",
+      "css": ".ds-question{padding:36px;background:var(--pink,#ead7d6);transform:rotate(-2deg)}.ds-question p{margin:0;font:500 29px/1.25 var(--serif,Cormorant,Georgia,serif);color:var(--wine,#652f42)}.ds-question button{min-height:48px;margin-top:30px;padding:10px 0;border:0;background:transparent;color:var(--wine,#652f42);font:400 13px/1.5 var(--sans,\"DM Sans\",sans-serif);text-decoration:underline;text-underline-offset:6px;cursor:pointer}.ds-question button:focus-visible{outline:3px solid #91652d;outline-offset:5px}"
+    },
+    {
+      "name": "Letter disclosure",
+      "kind": "custom",
+      "refersTo": "letter",
+      "description": "A native disclosure with a circular maroon seal.",
+      "html": "<details class=\"ds-letter\"><summary><span class=\"ds-seal\" aria-hidden=\"true\">D</span><span>A note for you, Miss Dee</span></summary><div class=\"ds-letter-paper\"><p>You called it effort, not prep. You were right. This is a little of mine.</p></div></details>",
+      "css": ".ds-letter{background:var(--sheet,#fffdf6);color:var(--green,#233f35)}.ds-letter summary{display:flex;align-items:center;gap:18px;padding:24px;list-style:none;font:500 28px/1.2 var(--serif,Cormorant,Georgia,serif);cursor:pointer}.ds-letter summary::-webkit-details-marker{display:none}.ds-letter summary:focus-visible{outline:3px solid #91652d;outline-offset:5px}.ds-seal{display:grid;place-items:center;width:38px;height:38px;flex-shrink:0;border:1px solid var(--wine,#652f42);border-radius:50%;color:var(--wine,#652f42);font:italic 25px/1 var(--serif,Cormorant,Georgia,serif)}.ds-letter-paper{padding:15px 40px 40px;border-top:1px solid var(--line,#d4d2c0);font:500 22px/1.6 var(--serif,Cormorant,Georgia,serif)}.ds-letter-paper p{margin-top:20px}"
+    },
+    {
+      "name": "Collected stamp",
+      "kind": "chip",
+      "description": "Optional progress markers on the green finale; these are not filters.",
+      "html": "<div class=\"ds-stamps\"><span>Little-things expert</span><span class=\"ds-collected\">Lore enthusiast</span></div>",
+      "css": ".ds-stamps{display:flex;gap:9px;flex-wrap:wrap;padding:18px;background:var(--green,#233f35)}.ds-stamps span{border:1px solid #a8b6a2;border-radius:2px;padding:8px 11px;font:400 11px/1.7 var(--sans,\"DM Sans\",sans-serif);color:#d2dccb}.ds-stamps .ds-collected{background:var(--gold,#dec797);color:var(--green,#233f35);border-color:var(--gold,#dec797)}"
     }
   ],
   "narrative": {
-    "northStar": "Miss Dee's living scrapbook",
-    "overview": "An ivory and rose photographic scrapbook for /miss-dee/ and its compatibility pages. Maroon frames the collection, forest green separates listening and trivia, and real portraits lead the opening. The blog retains its own identity. The user authorized this direction after rejecting the sparse premiere; AMC remains a shared joke within the album.",
+    "northStar": "A botanical correspondence book",
+    "overview": "Forest-green binding, ivory pages, and the existing maroon lily illustration introduce a personal account of September. Dated prose explains why each photograph, film, or voice note belongs. The long story starts inside a closed book; optional games, possible plans, quiet notes, and the letter remain outside it.\n\nThis system applies to `/miss-dee/` and its compatibility routes. The surrounding Hugo blog keeps its own identity. Source authority is `static/date/date.css`, `static/date/date.js`, `layouts/date/single.html`, the `date-media` and `date-story-media` partials, and the two `dee_media` and `dee_story` data files. `PRODUCT.md` records the product constraints; `.impeccable/miss-dee-brief.md` records the approved replacement direction.",
     "keyCharacteristics": [
-      "Real portrait collage followed by three featured films and five voice notes.",
-      "A 38-item camera roll contains 32 photos and six more films, with filters and a full-size photo dialog.",
-      "Optional photo pairs, trivia, scene choices, and stamps; the letter remains available."
+      "A native book disclosure keeps the long story closed until opened.",
+      "Three chronological chapters contain 19 scenes, each with prose, lead media, and the rest of that exchange.",
+      "Cormorant carries the story; DM Sans carries controls and annotations.",
+      "Botanical imagery and restrained paper depth connect the cover, reader, and personal letter.",
+      "Original recordings play on demand; games never gate the ending."
     ],
     "rules": [
       {
-        "name": "Media playback",
-        "body": "Native players use preload=\"none\" and never autoplay. Starting a recording pauses all other players. Preserve original sound and video captions.",
-        "section": "components"
+        "name": "The reading contrast rule",
+        "body": "Keep narrative text in ink or green on paper or sheet. Use muted text for annotations and maroon for short emphasis.",
+        "section": "colors"
       },
       {
-        "name": "Source provenance",
-        "body": "Each shipping raster keeps an adjacent JSON record describing its source or generation. Preserve the distinction between real media, the generated lily illustration, and the existing Ravi Kishan thumbnail. Raw originals and private exports stay outside the repository.",
-        "section": "components"
+        "name": "The prose first rule",
+        "body": "Give the narrative serif the reading space. Keep dates, controls, and media counts in the smaller sans-serif voice.",
+        "section": "typography"
       }
     ],
     "dos": [
-      "Do preserve the substantial media collection and mobile reading order.",
-      "Do keep the letter and native media usable without game completion.",
-      "Do preserve reduced-motion behavior, keyboard access, and no-JavaScript fallbacks."
+      "Do connect every story image and recording to its dated scene and surrounding prose.",
+      "Do keep the book closed initially and retain the native disclosure fallback.",
+      "Do preserve the original recordings, their sound, and playback controls.",
+      "Do keep games, flexible plans, notes, and the personal letter available outside the book.",
+      "Do use approved face and horse crops in both full-size files and thumbnails.",
+      "Do maintain image provenance when replacing assets."
     ],
     "donts": [
-      "Don't apply this identity to the Hugo blog.",
+      "Don't restore the random gallery, category filters, or removed private compositions.",
       "Don't autoplay recordings or allow competing players.",
-      "Don't turn flexible scene ideas into bookings or promised outcomes."
+      "Don't gate the story or letter on completing games.",
+      "Don't turn uncertain dates, flexible plans, or chapter four into factual promises.",
+      "Don't apply this identity to the unrelated Hugo blog."
     ]
   }
 }

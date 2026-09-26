@@ -39,6 +39,7 @@ const complete = document.getElementById("quiz-complete");
 let round = 0;
 function showRound() {
   rounds.forEach((field, index) => (field.hidden = index !== round));
+  quizPosition.hidden = false;
   quizPosition.textContent = `QUESTION ${round + 1} OF ${rounds.length}`;
   feedback.textContent = "Choose an answer. Your reputation is mostly safe.";
   next.disabled = !rounds[round].querySelector("input:checked");
@@ -58,7 +59,7 @@ next.addEventListener("click", () => {
     rounds[round].hidden = true;
     next.hidden = true;
     feedback.hidden = true;
-    quizPosition.textContent = "THE CRITICS ARE DELIGHTED";
+    quizPosition.hidden = true;
     complete.hidden = false;
     collectStamp("quiz");
     complete.querySelector("button").focus({ preventScroll: true });
@@ -157,64 +158,124 @@ players.forEach((player) => {
   );
 });
 
-const archiveItems = [...document.querySelectorAll(".archive-item")];
-const mediaFilters = [...document.querySelectorAll("[data-media-filter]")];
-const moreMedia = document.getElementById("show-more-media");
-let mediaFilter = "all";
-let visibleMedia = 8;
-function renderArchive() {
-  const eligible = archiveItems.filter(
-    (item) => mediaFilter === "all" || item.dataset.mediaKind === mediaFilter,
-  );
-  const visible = new Set(eligible.slice(0, visibleMedia));
-  archiveItems.forEach((item) => {
-    item.hidden = !visible.has(item);
-    if (item.hidden) item.querySelector("video")?.pause();
+const story = document.getElementById("story");
+const pages = [...document.querySelectorAll(".book-page")];
+const chapterButtons = [...document.querySelectorAll("[data-book-chapter]")];
+const previousChapter = document.getElementById("previous-chapter");
+const nextChapter = document.getElementById("next-chapter");
+let chapter = 0;
+function showChapter(index, moveToPage = false) {
+  const direction = index < chapter ? -1 : 1;
+  chapter = index;
+  pages.forEach((page, i) => {
+    page.hidden = i !== chapter;
   });
-  mediaFilters.forEach((button) =>
-    button.setAttribute(
-      "aria-pressed",
-      String(button.dataset.mediaFilter === mediaFilter),
-    ),
-  );
-  document.getElementById("album-count").textContent =
-    `${Math.min(visibleMedia, eligible.length)} of ${eligible.length} moments`;
-  moreMedia.hidden = visibleMedia >= eligible.length;
+  chapterButtons.forEach((button, i) => {
+    if (i === chapter) button.setAttribute("aria-current", "page");
+    else button.removeAttribute("aria-current");
+  });
+  previousChapter.disabled = chapter === 0;
+  nextChapter.disabled = chapter === pages.length - 1;
+  document.getElementById("reader-position").textContent =
+    `Chapter ${chapter + 1} of ${pages.length}`;
+  players.forEach((player) => player.pause());
+  if (moveToPage) {
+    const heading = pages[chapter].querySelector("h2");
+    heading.focus({ preventScroll: true });
+    heading.scrollIntoView({
+      behavior: reducedMotion.matches ? "instant" : "smooth",
+      block: "start",
+    });
+    if (!reducedMotion.matches)
+      pages[chapter].animate(
+        [
+          {
+            opacity: 0.65,
+            transform: `translateX(${direction * 12}px)`,
+            clipPath: "inset(0 1% 0 0)",
+          },
+          {
+            opacity: 1,
+            transform: "translateX(0)",
+            clipPath: "inset(0 0 0 0)",
+          },
+        ],
+        { duration: 420, easing: "cubic-bezier(.16,1,.3,1)" },
+      );
+  }
 }
-mediaFilters.forEach((button) =>
-  button.addEventListener("click", () => {
-    mediaFilter = button.dataset.mediaFilter;
-    visibleMedia = 8;
-    renderArchive();
-  }),
+chapterButtons.forEach((button) =>
+  button.addEventListener("click", () =>
+    showChapter(Number(button.dataset.bookChapter), true),
+  ),
 );
-moreMedia.addEventListener("click", () => {
-  const firstNew = archiveItems.filter(
-    (item) => mediaFilter === "all" || item.dataset.mediaKind === mediaFilter,
-  )[visibleMedia];
-  visibleMedia += 8;
-  renderArchive();
-  const target = firstNew.querySelector("a, video");
-  target.focus({ preventScroll: true });
+previousChapter.addEventListener("click", () => showChapter(chapter - 1, true));
+nextChapter.addEventListener("click", () => showChapter(chapter + 1, true));
+showChapter(0);
+story.addEventListener("toggle", () => {
+  document.getElementById("book-action").textContent = story.open
+    ? "Close our story"
+    : "Open our story";
+  if (!story.open) {
+    players.forEach((player) => player.pause());
+    return;
+  }
+  document.getElementById("reader").scrollIntoView({
+    behavior: reducedMotion.matches ? "instant" : "smooth",
+    block: "start",
+  });
 });
-renderArchive();
+document.getElementById("close-story").addEventListener("click", () => {
+  story.open = false;
+  story.querySelector("summary").focus({ preventScroll: true });
+  story.scrollIntoView({
+    behavior: reducedMotion.matches ? "instant" : "smooth",
+  });
+});
 
 const viewer = document.getElementById("photo-viewer");
 const viewerImage = document.getElementById("viewer-image");
+let viewerPhotos = [];
+let viewerIndex = 0;
+const previousPhoto = document.getElementById("viewer-previous");
+const nextPhoto = document.getElementById("viewer-next");
+function showPhoto(index) {
+  viewerIndex = index;
+  const link = viewerPhotos[index];
+  viewerImage.src = link.href;
+  viewerImage.alt = link.querySelector("img").alt;
+  document.getElementById("viewer-title").textContent = link.dataset.title;
+  document.getElementById("viewer-caption").textContent = link.dataset.caption;
+  document.getElementById("viewer-position").textContent =
+    `${index + 1} of ${viewerPhotos.length}`;
+  previousPhoto.disabled = index === 0;
+  nextPhoto.disabled = index === viewerPhotos.length - 1;
+}
 document.querySelectorAll("[data-photo]").forEach((link) =>
   link.addEventListener("click", (event) => {
     if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
       return;
     event.preventDefault();
-    viewerImage.src = link.href;
-    viewerImage.alt = link.querySelector("img").alt;
-    document.getElementById("viewer-title").textContent = link.dataset.title;
-    document.getElementById("viewer-caption").textContent =
-      link.dataset.caption;
+    const scene = link.closest(".story-scene");
+    viewerPhotos = [...scene.querySelectorAll("[data-photo]")];
+    document.getElementById("viewer-context").textContent =
+      scene.querySelector("h3").textContent;
+    showPhoto(viewerPhotos.indexOf(link));
     players.forEach((player) => player.pause());
     viewer.showModal();
   }),
 );
+previousPhoto.addEventListener("click", () => showPhoto(viewerIndex - 1));
+nextPhoto.addEventListener("click", () => showPhoto(viewerIndex + 1));
+viewer.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowLeft" && !previousPhoto.disabled) {
+    event.preventDefault();
+    previousPhoto.click();
+  } else if (event.key === "ArrowRight" && !nextPhoto.disabled) {
+    event.preventDefault();
+    nextPhoto.click();
+  }
+});
 viewer.addEventListener("click", (event) => {
   if (event.target === viewer) viewer.close();
 });

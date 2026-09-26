@@ -20,7 +20,7 @@ A standalone Hugo page at /miss-dee/ within an existing GitHub Pages blog. Keep 
 
 ## Capabilities and Constraints
 
-Mobile-first living scrapbook with substantial real photos, narrated videos, and voice notes. The user rejected a sparse, text-led premiere treatment and authorized a theme that fits the media. Optional games and small purposeful animations support the material. The rage room is optional, and NYC plans remain flexible. No sexual wording. No RSVP transmission, analytics, private-message export, contact information, addresses, or sensitive disclosures in the public site. Games must not gate the personal message. Respect reduced motion and support touch and keyboard input.
+Mobile-first botanical storybook with real photos, narrated videos, and voice notes integrated into dated scenes. The user rejected both sparse media and a random full-gallery list. The long story stays closed until opened. Her images must be face crops or horse-only crops in the actual files; remove the yellow-shirt person and the full-body animated sticker. Optional games and small purposeful animations support the material. The rage room is optional, and NYC plans remain flexible. No sexual wording. No RSVP transmission, analytics, private-message export, contact information, addresses, or sensitive disclosures in the public site. Games must not gate the personal message. Respect reduced motion and support touch and keyboard input.
 
 ## Evidence on Hand
 

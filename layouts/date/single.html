@@ -3,64 +3,46 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#4c2333">
+  <meta name="theme-color" content="#233f35">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Our September in photos, little films, and voice notes. A keepsake for Miss Dee.">
-  <title>Miss Dee &amp; the Menace · Our little collection</title>
+  <meta name="description" content="A botanical book of our September, with photographs in the margins and a chapter still to write.">
+  <title>Miss Dee · A September, annotated</title>
   <link rel="preload" href="{{ "date/fonts/cormorant.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ "date/date.css" | relURL }}">
   <script src="{{ "date/date.js" | relURL }}" defer></script>
 </head>
 <body data-meeting-date="2026-09-27">
 <a class="skip-link" href="#main">Skip to the story</a>
-<header class="album-header">
-  <a class="wordmark" href="{{ "miss-dee/" | relURL }}">Miss Dee <em>&amp; the Menace</em><span class="wordmark-star">{{ partial "date-icon.html" "star" }}</span></a>
-  <a class="header-ticket" href="#letter">A little note for you {{ partial "date-icon.html" "diagonal" }}</a>
-</header>
+<header class="book-header"><a class="wordmark" href="{{ "miss-dee/" | relURL }}">For Miss Dee<span>A September, annotated.</span></a><a href="#letter">A little note for you {{ partial "date-icon.html" "diagonal" }}</a></header>
 <main id="main">
-  <section class="album-opening" aria-labelledby="opening-title">
-    <div class="album-intro">
-      <h1 id="opening-title">Look what<br><em>we started.</em></h1>
-      <p class="opening-line">3.9 years in the making.<br><span data-relative-day>Tomorrow</span>, we finally meet.</p>
-      <p class="album-dedication">For you, Miss Dee. A little collection of the things we kept sending each other, until talking to you became part of my day.</p>
-      <a class="button dark" href="#films">Let's press play {{ partial "date-icon.html" "down" }}</a>
-      <a class="listen-link" href="#voices">Or start with your voice</a>
+  <details class="storybook" id="story">
+    <summary class="book-invitation">
+      <span class="invitation-copy"><span class="opening-title" role="heading" aria-level="1">Some things<br>deserve<br><em>keeping.</em></span><span class="opening-line">3.9 years in the making.<br><span data-relative-day>Tomorrow</span>, we finally meet.</span><span class="dedication">For the girl who notices the leaves, asks one more question, and somehow made an ordinary month feel like a very long story.</span><span class="book-cta"><span id="book-action">Open our story</span> {{ partial "date-icon.html" "right" }}</span><span class="invitation-note">Photos in the margins. Your voice on the page.<br>Take your time. The ending isn't a test.</span></span>
+      <span class="book-cover"><span class="cover-binding" aria-hidden="true"></span><span class="cover-title">3.9 years,<br><em>give or take.</em></span><span class="cover-art"><img src="{{ "date/lilies.webp" | relURL }}" alt="Deep maroon lilies with pale pink edges, tied with a ribbon" width="700" height="1050" fetchpriority="high"></span><span class="cover-byline">MISS DEE &amp; THE MENACE</span><span class="cover-edition">One September. An unreasonable amount of lore.</span><span class="book-ribbon" aria-hidden="true"></span></span>
+    </summary>
+    <div class="book-reader" id="reader">
+      <div class="reader-heading"><div><h2>A September,<br><em>annotated.</em></h2><p>The things we sent. The conversations around them.<br>And what I found myself looking forward to.</p></div><button class="text-button js-only" id="close-story" type="button">Close the book {{ partial "date-icon.html" "plus" }}</button></div>
+      <nav class="book-contents js-only" aria-label="Choose a chapter">{{ range $i, $chapter := .Site.Data.dee_story.chapters }}<button type="button" data-book-chapter="{{ $i }}" aria-controls="story-chapter-{{ $i }}"><span>{{ .label }}</span>{{ .short }}</button>{{ end }}</nav>
+      {{ range $i, $chapter := .Site.Data.dee_story.chapters }}
+      <article class="book-page" id="story-chapter-{{ $i }}" aria-labelledby="chapter-title-{{ $i }}">
+        <header class="chapter-opening"><h2 id="chapter-title-{{ $i }}" tabindex="-1">{{ .title }}</h2><p class="chapter-dates">{{ .label }} · {{ .dates }}</p><p class="chapter-preface">{{ .intro }}</p></header>
+        {{ range .scenes }}<section class="story-scene" aria-labelledby="scene-{{ .id }}"><div class="story-prose"><h3 id="scene-{{ .id }}">{{ .title }}</h3><p class="scene-date">{{ .date }}</p>{{ range .paragraphs }}<p>{{ . }}</p>{{ end }}{{ with .quote }}<blockquote><p>{{ .text }}</p><cite>{{ .by }}</cite></blockquote>{{ end }}{{ with .aside }}<p class="margin-note">{{ . }}</p>{{ end }}{{ if .ravi }}<figure class="ravi-margin"><img src="{{ "date/ravi-kishan.webp" | relURL }}" alt="Ravi Kishan singing Koteshwara" width="480" height="360" loading="lazy"><figcaption>The man. The song. The distribution network.</figcaption></figure>{{ end }}</div>
+        <div class="scene-evidence">{{ range first 1 .media }}{{ partial "date-story-media.html" (dict "media" (index $.Site.Data.dee_media.items .) "lead" true) }}{{ end }}{{ if gt (len .media) 1 }}<p class="strip-label">{{ .collection }} <span>{{ sub (len .media) 1 }} more {{ partial "date-icon.html" "right" }}</span></p><div class="scene-strip" tabindex="0" role="region" aria-label="{{ .collection }}. Scroll for more media.">{{ range after 1 .media }}{{ partial "date-story-media.html" (dict "media" (index $.Site.Data.dee_media.items .) "lead" false) }}{{ end }}</div>{{ end }}</div>
+        </section>{{ end }}
+        <p class="chapter-closing">{{ .closing }}</p>
+      </article>{{ end }}
+      <div class="reader-navigation js-only"><button class="text-button" id="previous-chapter" type="button">Previous chapter</button><span id="reader-position" aria-live="polite"></span><button class="button dark" id="next-chapter" type="button">Next chapter {{ partial "date-icon.html" "right" }}</button></div>
+      <div class="reader-afterword"><p>The next chapter has no photographs yet.</p><a href="#scenes">Let's leave some room for tomorrow {{ partial "date-icon.html" "down" }}</a></div>
     </div>
-    <div class="portrait-collage" aria-label="A few familiar faces and favourite little things">
-      <figure class="portrait portrait-dee"><img src="{{ "date/media/968.webp" | relURL }}" alt="Miss Dee, holding a pen and looking to the side" width="506" height="1100" fetchpriority="high"><figcaption>the girl with one more question</figcaption></figure>
-      <figure class="portrait portrait-menace"><img src="{{ "date/media/961.webp" | relURL }}" alt="Abhishek smiling" width="826" height="1100"><figcaption>her allegedly absolute menace</figcaption></figure>
-      <figure class="portrait portrait-leaf"><img src="{{ "date/media/771-small.webp" | relURL }}" alt="One of the colourful leaves from your camera roll" width="450" height="600"><figcaption>important leaf correspondence</figcaption></figure>
-      <span class="collage-note">one month.<br><em>several fictional years.</em></span>
-    </div>
-  </section>
-  <div class="album-spine"><p>{{ .Site.Data.dee_media.counts.photos }} photos <span>·</span> {{ .Site.Data.dee_media.counts.videos }} little films <span>·</span> {{ .Site.Data.dee_media.counts.audio }} voice notes</p><span>Our September, kept here.</span></div>
-  <nav class="chapter-nav" aria-label="Explore the keepsake"><a href="#films">Watch</a><a href="#voices">Listen</a><a href="#camera-roll">Our camera roll</a><a href="#play">Play</a><a href="#letter">Your note</a></nav>
-
-  <section class="section films-section" id="films" aria-labelledby="films-title">
-    <div class="section-intro"><h2 id="films-title">The little films.<br><em>With the commentary.</em></h2><p>You narrate trees and excellent benches.<br>I narrate a cutlery packet.<br>Somehow, this works.</p></div>
-    <div class="featured-films">{{ range .Site.Data.dee_media.featured }}<article class="film"><div class="film-player">{{ partial "date-media.html" . }}</div><p class="media-duration">{{ .duration }} seconds · sound on, if you like</p><h3>{{ .title }}</h3><p>{{ .caption }}</p></article>{{ end }}</div>
-    <p class="media-help">Tap a film to play. Your volume, your pace. More little films are waiting in the camera roll.</p>
-  </section>
-
-  <section class="listening-room" id="voices" aria-labelledby="voices-title"><div class="section listening-inner">
-    <div class="listening-intro"><h2 id="voices-title">And then<br><em>there was<br>your voice.</em></h2><p>Textbook Kannada. Medium-level Telugu. A tongue-twister delivered at a deeply unreasonable speed.</p><p>I remember the effort.<br>I also kept the evidence.</p><figure class="voice-photo"><img src="{{ "date/media/901-small.webp" | relURL }}" width="450" height="600" loading="lazy" alt="Your hand full of colourful star stickers"><figcaption>Real stickers. For actual effort.</figcaption></figure></div>
-    <div class="voice-list">{{ range .Site.Data.dee_media.voices }}<article class="voice-note"><div class="voice-heading"><h3>{{ .title }}</h3><span>{{ .duration }}s</span></div><p>{{ .caption }}</p>{{ partial "date-media.html" . }}<details class="voice-context"><summary>Words &amp; context {{ partial "date-icon.html" "plus" }}</summary><p>{{ .context }}</p></details></article>{{ end }}</div>
-  </div></section>
-
-  <section class="section camera-roll" id="camera-roll" aria-labelledby="roll-title">
-    <div class="section-intro"><h2 id="roll-title">“Thought of you.”<br><em>Then sent it.</em></h2><p>The horses. The flowers. The extremely familiar lunch. The small updates that turned into a whole month of us.</p></div>
-    <div class="album-toolbar js-only"><div class="album-filters" role="group" aria-label="Filter the camera roll"><button type="button" data-media-filter="all" aria-pressed="true">All moments</button><button type="button" data-media-filter="photo" aria-pressed="false">Photos</button><button type="button" data-media-filter="video" aria-pressed="false">Little films</button></div><span id="album-count" aria-live="polite"></span></div>
-    <div class="archive-grid">{{ range .Site.Data.dee_media.archive }}<article class="archive-item archive-{{ .kind }}" data-media-kind="{{ .kind }}">{{ partial "date-media.html" . }}<div class="archive-caption">{{ if eq .kind "video" }}<span class="media-duration">{{ .duration }}-second film · original sound</span>{{ end }}<h3>{{ .title }}</h3><p>{{ .caption }}</p></div></article>{{ end }}</div>
-    <div class="album-more js-only"><button class="button dark" type="button" id="show-more-media">A few more memories {{ partial "date-icon.html" "down" }}</button><p>Nothing here needs finishing in one sitting.</p></div>
-    <details class="deleted-scene"><summary>And obviously, this man made the album.<span>{{ partial "date-icon.html" "plus" }}</span></summary><div class="ravi-scene"><img src="{{ "date/ravi-kishan.webp" | relURL }}" alt="Ravi Kishan singing Koteshwara" width="480" height="360" loading="lazy"><div><h3>Ravi Kishan. Naturally.</h3><p>I introduced one song. You sang it. Your friend sang it. An aunty thought someone had become devotional.</p><p>Your distribution network is getting out of hand.</p></div></div></details>
-  </section>
-
-  <section class="photo-game-section" id="play" aria-labelledby="pairs-title"><div class="section photo-game-inner"><div><h2 id="pairs-title">You remember<br><em>the little things.</em></h2><p>Four pairs from our camera roll.<br>Let's see whether I have been paying as much attention as you.</p><p class="match-status" id="match-status" aria-live="polite">Turn over two photos. Find their twins.</p><button class="text-button js-only" id="reset-pairs" type="button">Mix them up {{ partial "date-icon.html" "refresh" }}</button></div><div class="photo-pairs" aria-label="Photo matching game">{{ range $i, $id := slice "771" "901" "849" "873" "901" "873" "771" "849" }}<button class="pair-tile" type="button" disabled data-pair="{{ $id }}" aria-label="Photo {{ add $i 1 }}"><span class="pair-back" aria-hidden="true">{{ partial "date-icon.html" "star" }}</span><img src="{{ printf "date/media/%s-small.webp" $id | relURL }}" width="450" height="600" loading="lazy" alt="{{ if eq $id "771" }}The leaf{{ else if eq $id "901" }}The stickers{{ else if eq $id "849" }}The lunch bowl{{ else }}The horse{{ end }}"></button>{{ end }}</div><noscript><p>The four pairs are leaves, stickers, lunch bowls, and horses. The rest of the album and your letter are ready to enjoy.</p></noscript></div></section>
+  </details>
+  <nav class="chapter-nav" aria-label="Around the keepsake"><a href="#story">Our story</a><a href="#play">A little game</a><a href="#scenes">Chapter four</a><a href="#letter">Your note</a></nav>
+  <section class="dedication-spread section"><div class="pressed-leaf"><img src="{{ "date/media/771.webp" | relURL }}" alt="A gold and green leaf from one of your walks" width="825" height="1100" loading="lazy"><span>A leaf worth stopping for.</span></div><div><h2>For the girl<br><em>who notices.</em></h2><p>You like <em>Fluke</em>. I like that, out of all the ordinary things that could have happened this month, talking to you became one of them.</p><p>This is a place for the little things. The bench commentary. The questionable translations. The flowers I started photographing. The moments that are only small until they're ours.</p><p class="handwritten">Deep maroon. Pink and white edges.<br>Yes, I was listening.</p></div><figure class="small-portrait"><img src="{{ "date/media/977.webp" | relURL }}" alt="A close-up of Miss Dee smiling with her eyes closed" width="320" height="320" loading="lazy"><figcaption>This one stays.</figcaption></figure></section>
+  <section class="photo-game-section" id="play" aria-labelledby="pairs-title"><div class="section photo-game-inner"><div><h2 id="pairs-title">You remember<br><em>the little things.</em></h2><p>Four pairs from our camera roll.<br>Let's see whether I have been paying as much attention as you.</p><p class="match-status" id="match-status" aria-live="polite">Turn over two photos. Find their twins.</p><button class="text-button js-only" id="reset-pairs" type="button">Mix them up {{ partial "date-icon.html" "refresh" }}</button></div><div class="photo-pairs" aria-label="Photo matching game">{{ range $i, $id := slice "771" "901" "849" "873" "901" "873" "771" "849" }}<button class="pair-tile" type="button" disabled data-pair="{{ $id }}" aria-label="Photo {{ add $i 1 }}"><span class="pair-back" aria-hidden="true">{{ partial "date-icon.html" "star" }}</span><img src="{{ printf "date/%s" (index $.Site.Data.dee_media.items $id).thumbnail | relURL }}" width="300" height="300" loading="lazy" alt="{{ if eq $id "771" }}The leaf{{ else if eq $id "901" }}The stickers{{ else if eq $id "849" }}The lunch bowl{{ else }}The horse{{ end }}"></button>{{ end }}</div><noscript><p>The four pairs are leaves, stickers, lunch bowls, and horses. The rest of the album and your letter are ready to enjoy.</p></noscript></div></section>
   <section class="trivia-section" id="trivia" aria-labelledby="trivia-title">
     <div class="trivia-inner section">
       <div class="trivia-heading"><h2 id="trivia-title">One more round,<br><em>madam?</em></h2><p>Four questions from the lore.<br>I know what happens when you get competitive.</p><div class="sticker-preview" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M50 8 61 35 90 37 67 56 74 86 50 70 26 86 33 56 10 37 39 35Z"/></svg><span>STICKER<br>MATERIAL</span></div></div>
       <div class="quiz" id="quiz">
-        <p class="quiz-position" id="quiz-position">FROM THE LORE</p>
+        <p class="quiz-position" id="quiz-position">{{ len .Site.Data.miss_dee.quiz }} questions</p>
         {{ range $i, $q := .Site.Data.miss_dee.quiz }}
         <fieldset class="quiz-question" data-correct="{{ $q.correct }}" data-feedback="{{ $q.feedback }}"><legend>{{ $q.question }}</legend><div class="quiz-answers">{{ range $j, $answer := $q.answers }}<label><input type="radio" name="question-{{ $i }}" value="{{ $j }}"><span>{{ $answer }}</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 12 4 4 8-8"/></svg></label>{{ end }}</div></fieldset>
         {{ end }}
@@ -77,10 +59,6 @@
     <noscript><p>Here are a few ideas to talk about when we meet.</p></noscript><div class="scene-layout"><div class="scene-choices">{{ range $i, $scene := .Site.Data.miss_dee.scenes }}<button class="scene-choice" type="button" disabled aria-pressed="false" data-line="{{ .line }}"><span class="scene-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 12 4 4 8-8"/></svg></span><span><strong>{{ .title }}</strong><small>{{ .detail }}</small></span></button>{{ end }}</div><aside class="scene-ticket"><h3>Our<br><em>opening scene</em></h3><span class="ticket-topline">TWO PEOPLE · NO STRICT SCHEDULE</span><p id="scene-summary" aria-live="polite">A real hello first.<br>The rest, we figure out together.</p><div class="ticket-rule"></div><p class="ticket-footnote">These picks stay on this page.<br>Tell me your favourites when we talk.</p><span class="ticket-bottomline">RAGE ROOM OPTIONAL. YOU, THE POINT.</span></aside></div>
   </section>
 
-  <section class="intermission" aria-labelledby="intermission-title">
-    <div class="section intermission-inner"><figure class="lilies"><img src="{{ "date/lilies.webp" | relURL }}" width="700" height="1050" alt="A botanical illustration of deep maroon lilies with pink and ivory edges, tied with a rose ribbon" loading="lazy"><figcaption>A tiny digital version of the ones you've been looking for.</figcaption></figure><div class="intermission-copy"><h2 id="intermission-title">A little<br><em>intermission.</em><br>For the girl who notices.</h2><p>The shade of a flower. An interesting leaf. A line in a book. A tiny detail I mentioned weeks ago.</p><p>I like that you pay attention. I like the questions that come after. And the part of you that makes time for your grandma, the people you care about, and apparently every tree on the walking route.</p><p class="handwritten">Deep maroon. Pink and white edges.<br>Yes, I was listening.</p></div></div>
-  </section>
-
   <section class="section questions-section" aria-labelledby="questions-title"><div><h2 id="questions-title">For the girl with<br><em>one more question.</em></h2><p>Your curiosity does a lot of the heavy lifting.<br>My turn. Pick one for when we meet.</p></div><div class="question-card"><span class="question-counter" id="question-counter">A QUESTION WORTH ASKING</span><div id="question-deck">{{ range .Site.Data.miss_dee.questions }}<p class="conversation-question">{{ . }}</p>{{ end }}</div><button class="text-button js-only" id="draw-question" type="button">Give me another {{ partial "date-icon.html" "refresh" }}</button></div></section>
 
   <section class="section notes-section" aria-labelledby="notes-title"><div class="section-intro"><h2 id="notes-title">A few things<br><em>I wanted you to know.</em></h2><p>A very short presentation.<br>For once, the action items are on me.</p></div><div class="director-notes">
@@ -93,11 +71,11 @@
     <div class="finale-inner"><div class="keepsake-stamps" aria-label="Optional keepsake stamps"><span data-stamp-label="match">Little-things expert</span><span data-stamp-label="quiz">Lore enthusiast</span><span data-stamp-label="scene">Scene co-writer</span><span data-stamp-label="notes">Fine-print reader</span></div><p class="stamp-note" id="stamp-note" aria-live="polite">Four little stamps to collect. The ending is yours either way.</p>
     <h2 id="finale-title">The best part<br><em>isn't written yet.</em></h2><p>A month of sending each other little pieces of the day.<br>Chapter four? Let's see what a real hello does.</p>
     <details class="letter" id="letter"{{ if .Params.celebration }} open{{ end }}><summary><span class="letter-seal" aria-hidden="true">D</span><span>A note for you, Miss Dee</span><span class="letter-action">Open me</span></summary><div class="letter-paper"><p>Miss Dee,</p><p>Somewhere between the bench videos, the wildly different voice notes, and the photos of my extremely predictable lunch, talking to you became a part of the day I look forward to.</p><p>I like how your brain works. How you ask for the full picture. How you can make me laugh and then say something that makes me stop and think. The humour is excellent. The thought behind it is what gets me.</p><p>You called it effort, not prep. You were right. This is a little of mine.</p><p>I'm looking forward to hearing the laugh instead of imagining it. To letting you finish a story without accidentally replying to the wrong thread. To a day we don't need to over-script.</p><p>I'm glad we're doing this. Even if my in-person opening line is somehow worse than the first one.</p><p class="letter-signoff"><span data-see-you>See you tomorrow</span>, Miss Dee.<br><em>Your Absolute Menace</em></p></div></details>
-    <div class="final-ticket"><div><span>ADMIT TWO</span><strong>Miss Dee <i>&amp;</i> the Menace</strong><small>NEW YORK CITY · SEPTEMBER 27, 2026</small></div><span class="ticket-chapter">CHAPTER<br><b>4?</b><small>LET'S FIND OUT.</small></span></div>
+    <div class="final-ticket"><div><span>TO BE CONTINUED</span><strong>Miss Dee <i>&amp;</i> the Menace</strong><small>NEW YORK CITY · SEPTEMBER 27, 2026</small></div><span class="ticket-chapter">CHAPTER<br><b>4?</b><small>LET'S FIND OUT.</small></span></div>
     <p class="post-credits">P.S. The bench has been informed. It's taking this very maturely.</p></div>
   </section>
 </main>
-<dialog class="photo-viewer" id="photo-viewer" aria-labelledby="viewer-title"><form method="dialog"><button class="viewer-close" aria-label="Close full-size photo">Close {{ partial "date-icon.html" "plus" }}</button></form><img id="viewer-image" alt=""><div class="viewer-copy"><h2 id="viewer-title"></h2><p id="viewer-caption"></p></div></dialog>
-<footer class="page-footer"><span>Made with effort. And a suspicious amount of attention.</span><a href="#main">Back to our collection {{ partial "date-icon.html" "up" }}</a></footer>
+<dialog class="photo-viewer" id="photo-viewer" aria-labelledby="viewer-title"><form method="dialog"><button class="viewer-close" aria-label="Close full-size photo">Close {{ partial "date-icon.html" "plus" }}</button></form><img id="viewer-image" alt=""><nav class="viewer-navigation" aria-label="Browse full-size photos"><button type="button" id="viewer-previous">Previous</button><span id="viewer-position" aria-live="polite"></span><button type="button" id="viewer-next">Next {{ partial "date-icon.html" "right" }}</button></nav><div class="viewer-copy"><p id="viewer-context"></p><h2 id="viewer-title"></h2><p id="viewer-caption"></p></div></dialog>
+<footer class="page-footer"><span>Made with effort. And a suspicious amount of attention.</span><a href="#story">Back to the cover {{ partial "date-icon.html" "up" }}</a></footer>
 </body>
 </html>

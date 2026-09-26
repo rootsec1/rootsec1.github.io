@@ -1,19 +1,21 @@
-# Miss Dee: the living scrapbook
+# Miss Dee: a September, annotated
 
-Mode: Experience. The user rejected the low media coverage of the premiere and authorized the most appropriate theme. Build directly from the supplied material. Keep the first-meeting letter, flexible NYC plan, and mobile emphasis.
+Mode: Experience. The user rejected the randomly arranged album and explicitly authorized a replacement theme, suggested botanical/book imagery, requested a long story hidden by default, and retained the existing personal content, games and ending. Build directly from the real material, as previously chosen.
 
-## Direction contract
+THESIS: The photos make sense because they sit inside the conversation that produced them. A closed botanical book invites her into a chronological, affectionate account of September; three written chapters lead to an unwritten fourth in NYC.
 
-THESIS: Let the actual month speak: both faces, her narrated walks, their language practice, the recurring lunches, and the small things they sent each other. The prior four-photo, muted-video treatment failed the brief.
+OWN-WORLD: A forest-green botanical book, ivory paper, deep maroon flowers, warm brown ink, readable serif prose, and small sans-serif annotations. Use the existing real lily illustration and source media. The visitor handles a book rather than browsing a social-media gallery.
 
-OWN-WORLD: An ivory and rose photographic scrapbook, maroon lettering and binding, forest-green listening room, real photo prints and full-colour video. Retain the self-hosted serif/sans pairing. AMC becomes one shared joke within the album, rather than the whole page's identity.
+STORY: A dedication and real book cover. Open it to read dated scenes with their photos and recordings at the side. Chapter contents and Previous/Next controls keep a long story manageable on mobile. The matching game, lore, flexible plan, quiet notes and letter stay available outside the book. No game gates the story or ending.
 
-STORY: See the two people immediately; play three narrated films; hear the voice notes; browse a substantial contextualized camera roll; play with real-photo pairs and lore; imagine tomorrow; read the letter. Keep source media intact in meaning. No autoplay, one playback at a time, and mobile downloads on demand.
+FIRST VIEWPORT: The title 'Some things deserve keeping', a brief dedication, and a forest-green cover titled '3.9 years, give or take', with the deep maroon lilies. No wide portrait of her. The book is the main action; a direct letter link stays in the header. On phones the compact cover sits beside the title, with the dedication and opening action below. The complete book and action fit in the first viewport.
 
-FIRST VIEWPORT: An intimate greeting beside an overlapping collage of actual portraits and nature photographs. A direct link to films and listening, with visible media counts. On mobile, title and portraits share the opening screen; the first playable film follows the collage.
+SIGNATURE INTERACTION: Opening the cover reveals the paper reader. Turning a chapter changes its prose and associated media together, with a short directional page reveal. On mobile, scene text precedes the lead image or recording, with the rest of that exchange in a labelled horizontal photo strip. Native disclosure supplies the no-JavaScript book. Reduced motion keeps the same contents and immediate state changes.
 
-FORM: Living scrapbook with a listening room and browsable media collection. User authorized theme choice after rejecting the premiere's limited media coverage. Code-led implementation, no mockup round. Inherited exploration seed: assigned6, recorded in the prior committed brief. This revision keeps that visual system and reorganizes it around the media under the user's renewed design authority; no new seed roll or quality-board comparison was performed.
+FORM: A botanical correspondence book with dated scenes, three written chapters, and an unwritten chapter four. The user delegated the theme decision and explicitly suggested the book structure; no further design approval is required. Code-led, no image mockups. Impeccable direction seed 8d741aba assigned index 4; the user's botanical/storybook direction governs this redesign. No catalog challenger or external quality-board comparison was adopted.
 
-FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+FINISH: Complete responsive screenshots, fresh finish review, verdict, DESIGN.md and sidecar, asset provenance and browser verification.
 
-Retain /miss-dee/ and compatibility paths. September 27, 2026 is the first meeting. Games remain optional. No sexual copy, exact travel details, financial/work screenshots, contact numbers or raw message export. Preserve useful context around selected clips and audio; don't publish unreliable automatic transcripts as exact quotations. Reduced motion and script-free reading remain supported.
+Image constraints: remove attachment 879, the yellow-shirt person who is not the user. Crop her wider images to faces and crop horse photos to the horses in the actual shipping files, including thumbnails. Remove full-body animated sticker 876. No CSS-only hiding of original bodies. Preserve the user's photos. Delete old screenshots that expose removed compositions; do not rewrite shared repository history without authorization.
+
+Keep /miss-dee/ and compatibility routes, September 27, 2026 first meeting, date rollover, optional rage room, nonsexual copy, local-only interaction state, native playback on demand and one recording at a time. Raw source exports, contact details and sensitive disclosures remain outside the public site. Dates and dialogue must come from the supplied export; do not turn inferred dates into factual timestamps.

@@ -1,9 +1,11 @@
-# Living scrapbook review — September 26, 2026
+## verdict
 
-A fresh independent review followed the user's rejection of the sparse media treatment. The reviewer opened all seven required captures: full desktop/mobile, both opening screens, the listening section, the camera roll, and the letter.
+1. Resolved: the mobile and desktop quiz completion captures show the completion heading without the decorative eyebrow. Source hides #quiz-position on completion and restores the actual question count in showRound. The no-JavaScript label now states the data-derived question total. The focused parent-run checks cover completion, replay, and restored progress; the regression assertions remain in scripts/check-date.sh.
 
-The reviewer found the real-media coverage, visible portraits, hierarchy, photographic styling, mobile adaptation, contextual captions, and ungated ending matched the revised request. No additional visual changes were requested.
+No regressions from this fix were found. This ship verdict covers the scored fix, not a new review of the whole page.
 
-Two documentation findings were resolved: the brief now accurately records the genuine inherited exploration seed and the absence of a new roll/quality-board comparison; DESIGN.md and its sidecar now describe the current scrapbook. The final disposition was **ship**, with approval covering those two scored fixes.
+## remaining
 
-There was no approved comp or external quality-board comparison for this direct, source-led revision. Functional and accessibility evidence is documented in `docs/miss-dee/README.md` and `scripts/check-date.sh`.
+Clear.
+
+disposition: ship

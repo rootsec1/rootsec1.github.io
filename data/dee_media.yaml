@@ -1,201 +1,169 @@
-counts:
-  photos: 32
-  videos: 9
-  audio: 5
-featured:
-  - id: "800"
-    kind: video
-    source: media/800.mp4
-    duration: 24
-    width: 360
-    height: 640
-    thumbnail: media/800.webp
-    title: The bench theory, explained
-    caption: A top-five bench spot, autumn colours, and your live review. Please leave the commentary on.
-    alt: A wooded waterside deck and bench
-    captions: media/800.vtt
-  - id: "807"
-    kind: video
-    source: media/807.mp4
-    duration: 36
-    width: 360
-    height: 640
-    thumbnail: media/807.webp
-    title: My critically acclaimed narration
-    caption: You narrate beautiful walks. I read the cutlery packet. We all bring something to this.
-    alt: A compostable cutlery packet held above a lunch table
-    captions: media/807.vtt
-  - id: "834"
-    kind: video
-    source: media/834.mp4
-    duration: 9
-    width: 640
-    height: 360
-    thumbnail: media/834.webp
-    title: The sky you sent me
-    caption: Nine seconds of your evening. I still like getting the view from your side.
-    alt: Sunset above rooftops under a deep blue sky
-    captions: media/834.vtt
-voices:
-  - id: "757"
-    kind: audio
-    source: media/757.m4a
-    duration: 4
-    title: Four seconds. Approximately forty fellows.
-    caption: Your tongue-twister phase. I gave it 8.5/10 and compared it to rap. Brave of me to attempt grading this.
-    context:
-      "A rapid English tongue-twister repeating “a fellow”: one fellow meets another and asks what a fellow
-      means. The pace is the joke."
-  - id: "809"
-    kind: audio
-    source: media/809.m4a
-    duration: 5
-    title: Textbook Kannada, full marks for effort
-    caption: “Bahala janapriya vyakti.” The pronunciation department opened late that night.
-    context:
-      “Bahala janapriya vyakti” means a very popular person. This was the short Kannada phrase you tried in
-      the September 12 conversation.
-  - id: "814"
-    kind: audio
-    source: media/814.m4a
-    duration: 4
-    title: No grace marks, apparently
-    caption: You insisted on getting the Hudson Yards sentence right. I was already impressed that you tried.
-    context:
-      A Kannada practice sentence about coming to Hudson Yards tomorrow. You repeat the sentence from our chat.
-      Afterwards, you ask whether the praise is real and say you do not want grace marks.
-  - id: "824"
-    kind: audio
-    source: media/824.m4a
-    duration: 11
-    title: Your turn to set the homework
-    caption: I asked for a medium-level Telugu phrase. You delivered a whole situation.
-    context:
-      "The Telugu practice sentence, as you explained it in the next message: “That lady didn’t listen to me
-      and instead said she will call my mom.”"
-  - id: "906"
-    kind: audio
-    source: media/906.m4a
-    duration: 22
-    title: Packing, with pronunciation difficulties
-    caption: The Google-translation attempt, the restart, the “I have no idea”. Effort absolutely counted.
-    context:
-      A Kannada attempt at asking why packing is taking so long, with several pauses and restarts. In English
-      you add, “I have no idea” and “Yeah, I think.”
-archive:
-  - id: "873"
-    width: 768
-    height: 1024
+items:
+  "977":
+    id: "977"
     kind: photo
-    source: media/873.webp
-    thumbnail: media/873-small.webp
-    title: An established friendship
-    caption: I am clearly joining a very well-connected social circle.
-    alt: Miss Dee greeting a horse outside its stable
-  - id: "983"
-    width: 825
+    source: media/977.webp
+    thumbnail: media/977-small.webp
+    width: 320
+    height: 320
+    title: This one stays
+    caption: I quite like the sticker version of you too.
+    alt: A cut-out sticker of Miss Dee smiling with her eyes closed
+    fit: contain
+    thumbnail_width: 320
+  "1022":
+    id: "1022"
+    kind: photo
+    source: media/1022.webp
+    thumbnail: media/1022-small.webp
+    width: 320
+    height: 320
+    title: The sticker edition of me
+    caption: Available for replying when actual words become unnecessary.
+    alt: A cut-out sticker of Abhishek smiling
+    fit: contain
+    thumbnail_width: 320
+  "934":
+    id: "934"
+    kind: photo
+    source: media/934.webp
+    thumbnail: media/934-small.webp
+    width: 573
     height: 1100
+    title: A slightly clearer translation
+    caption: For once, the search query was doing a decent job.
+    alt: A Google translation of I do like you though into Kannada
+    fit: contain
+    thumbnail_width: 313
+  "985":
+    id: "985"
     kind: photo
-    source: media/983.webp
-    thumbnail: media/983-small.webp
-    title: Then I started taking flower photos
-    caption: Saw these on my way. Thought of you. You called it cute.
-    alt: A shopfront full of colourful flowers
-  - id: "801"
-    kind: video
-    source: media/801.mp4
-    duration: 12
-    width: 360
-    height: 640
-    thumbnail: media/801.webp
-    title: An actual benchmark
-    caption: The reveal. The pun. The extremely pleased delivery.
-    alt: A bench on a wooden deck beneath trees
-    captions: media/801.vtt
-  - id: "961"
-    width: 825
-    height: 1100
-    kind: photo
-    source: media/961.webp
-    thumbnail: media/961-small.webp
-    title: The Menace, in person
-    caption: Same person from the unnecessarily long replies.
-    alt: Abhishek smiling in a portrait
-  - id: "968"
+    source: media/985.webp
+    thumbnail: media/985-small.webp
     width: 506
     height: 1100
+    title: Afreen Afreen
+    caption: One of the songs that made it into our September.
+    alt: The Afreen Afreen Coke Studio song on a music player
+    fit: contain
+    thumbnail_width: 276
+  "938":
+    id: "938"
     kind: photo
-    source: media/968.webp
-    thumbnail: media/968-small.webp
-    title: Miss Dee, obviously
-    caption: The person behind all these very specific questions.
-    alt: Miss Dee looking to the side with a pen in her hand
-  - id: "901"
+    source: media/938.webp
+    thumbnail: media/938-small.webp
     width: 825
     height: 1100
+    title: The cookie has an opinion
+    caption: Your intuition leads the way tonight. Thank you, tiny paper advisor.
+    alt: A fortune-cookie slip reading Your intuition leads the way tonight
+    fit: contain
+    thumbnail_width: 450
+  "915":
+    id: "915"
     kind: photo
-    source: media/901.webp
-    thumbnail: media/901-small.webp
-    title: Actual sticker credentials
-    caption: “Which one do you want!!!” A surprisingly important question.
-    alt: Colourful star stickers resting in a hand
-  - id: "804"
-    kind: video
-    source: media/804.mp4
-    duration: 9
-    width: 360
-    height: 640
-    thumbnail: media/804.webp
-    title: The deer family report
-    caption: You stopped the scenery update for a very important wildlife announcement.
-    alt: A lake and wooded hillside
-    captions: media/804.vtt
-  - id: "771"
+    source: media/915.webp
+    thumbnail: media/915-small.webp
+    width: 506
+    height: 1100
+    title: Is olive green pastel?
+    caption: A question I apparently needed a search engine to answer.
+    alt: Search results asking whether olive green is a pastel colour
+    fit: contain
+    thumbnail_width: 276
+  "918":
+    id: "918"
+    kind: photo
+    source: media/918.webp
+    thumbnail: media/918-small.webp
     width: 825
     height: 1100
+    title: The beige candidate
+    caption: You said beige. Bring the olive or blue as backup. Actual useful advice.
+    alt: A light beige shirt held up in a living room
+    thumbnail_width: 450
+  "902":
+    id: "902"
     kind: photo
-    source: media/771.webp
-    thumbnail: media/771-small.webp
-    title: An important leaf update
-    caption: A perfectly reasonable thing to stop a walk for.
-    alt: A close view of a green and gold leaf
-  - id: "986"
+    source: media/902.webp
+    thumbnail: media/902-small.webp
     width: 825
     height: 1100
+    title: A very small walking companion
+    caption: Of course the tiny things got noticed too.
+    alt: A small patterned insect on the ground
+    thumbnail_width: 450
+  "880":
+    id: "880"
     kind: photo
-    source: media/986.webp
-    thumbnail: media/986-small.webp
-    title: Flowers, just because
-    caption: The camera roll was quietly becoming less about lunch.
-    alt: A small bouquet with red, pink and white flowers
-  - id: "802"
+    source: media/880-face.webp
+    thumbnail: media/880-face-small.webp
+    width: 150
+    height: 167
+    title: This expression says plenty
+    caption: For when a fifteen-mark answer would be excessive.
+    alt: Face-only reaction sticker of Miss Dee with a hand against her cheek
+    fit: contain
+    thumbnail_width: 150
+  "769":
+    id: "769"
+    kind: photo
+    source: media/769.webp
+    thumbnail: media/769-small.webp
     width: 825
     height: 1100
+    title: A small sweet interruption
+    caption: Some updates required photographic evidence before the first bite.
+    alt: A small sweet on a plate held above a laptop
+    thumbnail_width: 450
+  "719":
+    id: "719"
     kind: photo
-    source: media/802.webp
-    thumbnail: media/802-small.webp
-    title: You have seen this episode
-    caption: The lunch updates acquired a recognisable cast.
-    alt: A takeaway bowl with quinoa, vegetables and chickpeas
-  - id: "872"
-    width: 768
-    height: 1024
+    source: media/719.webp
+    thumbnail: media/719-small.webp
+    width: 1000
+    height: 895
+    title: A very confident playlist
+    caption: The confidence was already there. The soundtrack simply agreed.
+    alt: An anime playlist titled Nah, I'd Win
+    fit: contain
+    thumbnail_width: 480
+  "720":
+    id: "720"
     kind: photo
-    source: media/872.webp
-    thumbnail: media/872-small.webp
-    title: The horse got there first
-    caption: You did say you had already befriended the horses.
-    alt: Miss Dee standing beside a horse in its stable
-  - id: "774"
+    source: media/720.webp
+    thumbnail: media/720-small.webp
     width: 825
     height: 1100
+    title: A small evening update
+    caption: The sort of photo that says, here's what my evening looks like.
+    alt: A hand holding a drink in a living room
+    thumbnail_width: 450
+  "722":
+    id: "722"
     kind: photo
-    source: media/774.webp
-    thumbnail: media/774-small.webp
-    title: Tiny plant. Full attention.
-    caption: The flower department has a very small assistant.
-    alt: A small succulent held in front of colourful flowers
-  - id: "736"
+    source: media/722.webp
+    thumbnail: media/722-small.webp
+    width: 825
+    height: 1100
+    title: The other side of the window
+    caption: One more little piece of the day, sent across.
+    alt: A city view through a window at night
+    thumbnail_width: 450
+  "734":
+    id: "734"
+    kind: photo
+    source: media/734.webp
+    thumbnail: media/734-small.webp
+    width: 1000
+    height: 258
+    title: The recommendations have range
+    caption: Our viewing habits were never going to fit into one genre.
+    alt: Two video recommendations including Hyderabad for Sale
+    fit: contain
+    thumbnail_width: 480
+  "736":
+    id: "736"
     kind: video
     source: media/736.mp4
     duration: 3
@@ -206,52 +174,8 @@ archive:
     caption: Your first bench, with its original park background. Seniority respected.
     alt: A green park with a bench beside a lamppost
     captions: media/736.vtt
-  - id: "806"
-    width: 825
-    height: 1100
-    kind: photo
-    source: media/806.webp
-    thumbnail: media/806-small.webp
-    title: Your end-of-day report
-    caption: You send a sky. I get a little bit of your evening.
-    alt: An orange sunset above dark trees
-  - id: "895"
-    width: 825
-    height: 1100
-    kind: photo
-    source: media/895.webp
-    thumbnail: media/895-small.webp
-    title: A quieter frame
-    caption: Not every update needs a grand story.
-    alt: A yellow mug held against a patterned blanket
-  - id: "899"
-    width: 825
-    height: 1100
-    kind: photo
-    source: media/899.webp
-    thumbnail: media/899-small.webp
-    title: A little city, a little lunch
-    caption: A walking update with a snack attached.
-    alt: A wrap with a plaza and grand building in the background
-  - id: "991"
-    width: 825
-    height: 1100
-    kind: photo
-    source: media/991.webp
-    thumbnail: media/991-small.webp
-    title: Another member of the department
-    caption: Benches, tree hugs, horses, giraffes. Of course there is a cow.
-    alt: A shaggy Highland cow beside a wooded path
-  - id: "867"
-    width: 825
-    height: 1100
-    kind: photo
-    source: media/867.webp
-    thumbnail: media/867-small.webp
-    title: A small patch of peace
-    caption: The kind of view that makes a conversation slow down for a second.
-    alt: A green park beyond a black railing
-  - id: "738"
+  "738":
+    id: "738"
     kind: video
     source: media/738.mp4
     duration: 5
@@ -262,52 +186,8 @@ archive:
     caption: You said you had tons of videos. You were not exaggerating.
     alt: A quiet green park surrounded by trees
     captions: media/738.vtt
-  - id: "765"
-    width: 825
-    height: 1100
-    kind: photo
-    source: media/765.webp
-    thumbnail: media/765-small.webp
-    title: The bow situation
-    caption: Somehow even the packaging joined your ribbon agenda.
-    alt: A white bow tied around a wrapped parcel
-  - id: "808"
-    width: 825
-    height: 1100
-    kind: photo
-    source: media/808.webp
-    thumbnail: media/808-small.webp
-    title: A proper meal happened
-    caption: An unusually convincing answer to “what did you eat?”
-    alt: A meal served on a banana leaf
-  - id: "849"
-    width: 825
-    height: 1100
-    kind: photo
-    source: media/849.webp
-    thumbnail: media/849-small.webp
-    title: The highly predictable lunch
-    caption: If the photo looked familiar, that would be because it was lunch again.
-    alt: A quinoa bowl with eggs and vegetables
-  - id: "881"
-    width: 825
-    height: 1100
-    kind: photo
-    source: media/881.webp
-    thumbnail: media/881-small.webp
-    title: An evening from my side
-    caption: The little “this is what I am doing” updates started adding up.
-    alt: A game controller held in front of a television
-  - id: "921"
-    width: 825
-    height: 1100
-    kind: photo
-    source: media/921.webp
-    thumbnail: media/921-small.webp
-    title: The red room
-    caption: Saving some art commentary for a day we can wander together.
-    alt: A richly coloured painting in a gold frame
-  - id: "740"
+  "740":
+    id: "740"
     kind: video
     source: media/740.mp4
     duration: 8
@@ -318,25 +198,266 @@ archive:
     caption: Your little patches of quiet made their way into my day.
     alt: A leafy path beside a calm lake
     captions: media/740.vtt
-  - id: "922"
+  "751":
+    id: "751"
+    kind: photo
+    source: media/751.webp
+    thumbnail: media/751-small.webp
+    width: 1000
+    height: 750
+    title: Another sky worth sending
+    caption: We were very good at forwarding the sky to each other.
+    alt: Orange sunset beneath a deep blue sky
+    thumbnail_width: 480
+  "752":
+    id: "752"
+    kind: photo
+    source: media/752.webp
+    thumbnail: media/752-small.webp
+    width: 825
+    height: 1100
+    title: The poker update
+    caption: Evidence that I occasionally put my phone down. Briefly.
+    alt: Poker chips and people around a table
+    thumbnail_width: 450
+  "753":
+    id: "753"
+    kind: photo
+    source: media/753.webp
+    thumbnail: media/753-small.webp
+    width: 825
+    height: 1100
+    title: A very serious chip collection
+    caption: The poker equipment received its own photo update.
+    alt: An open case full of poker chips
+    thumbnail_width: 450
+  "755":
+    id: "755"
+    kind: photo
+    source: media/755.webp
+    thumbnail: media/755-small.webp
+    width: 825
+    height: 1100
+    title: Something on in the background
+    caption: And probably several messages in the foreground.
+    alt: A comedy panel playing on a living-room TV
+    thumbnail_width: 450
+  "756":
+    id: "756"
+    kind: photo
+    source: media/756.webp
+    thumbnail: media/756-small.webp
+    width: 825
+    height: 1100
+    title: Even the hand gestures made it
+    caption: An unnecessarily specific contribution to the conversation.
+    alt: A hand making a four-finger gesture
+    thumbnail_width: 450
+  "765":
+    id: "765"
     width: 825
     height: 1100
     kind: photo
-    source: media/922.webp
-    thumbnail: media/922-small.webp
-    title: And a little blue
-    caption: You mentioned museums and libraries. I remembered.
-    alt: A blue harbour painting in a gold frame
-  - id: "885"
+    source: media/765.webp
+    thumbnail: media/765-small.webp
+    title: Even the bathroom had a bow
+    caption: You found an actual bow and compared it to my reaction whenever you use the ribbon emoji.
+    alt: A white bow on a bathroom fixture
+    thumbnail_width: 450
+  "770":
+    id: "770"
+    kind: photo
+    source: media/770.webp
+    thumbnail: media/770-small.webp
+    width: 1000
+    height: 563
+    title: Nah, I'd win
+    caption: A healthy level of confidence for two people who keep challenging each other.
+    alt: An illustrated character saying Nah, I'd win
+    fit: contain
+    thumbnail_width: 480
+  "771":
+    id: "771"
     width: 825
     height: 1100
     kind: photo
-    source: media/885.webp
-    thumbnail: media/885-small.webp
-    title: A different dinner, for the record
-    caption: Submitting this before you accuse me of eating the exact same thing forever.
-    alt: Sushi and drinks on a table
-  - id: "838"
+    source: media/771.webp
+    thumbnail: media/771-small.webp
+    title: An important leaf update
+    caption: A perfectly reasonable thing to stop a walk for.
+    alt: A close view of a green and gold leaf
+    thumbnail_width: 450
+  "774":
+    id: "774"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/774.webp
+    thumbnail: media/774-small.webp
+    title: Tiny plant. Full attention.
+    caption: The flower department has a very small assistant.
+    alt: A small succulent held in front of colourful flowers
+    thumbnail_width: 450
+  "775":
+    id: "775"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/775.webp
+    thumbnail: media/775-small.webp
+    title: A very serious route inspection
+    caption: Walks appear to come with side quests.
+    alt: A green spiral playground slide
+    thumbnail_width: 450
+  "787":
+    id: "787"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/787.webp
+    thumbnail: media/787-small.webp
+    title: A change in the food programme
+    caption: Documented proof that every meal was not the same bowl.
+    alt: A bowl of colourful salad at a table
+    thumbnail_width: 450
+  "790":
+    id: "790"
+    kind: photo
+    source: media/790.webp
+    thumbnail: media/790-small.webp
+    width: 825
+    height: 1100
+    title: An elephant joined the chat
+    caption: The camera roll has quite a supporting cast.
+    alt: A colourful elephant mural inside a room
+    thumbnail_width: 450
+  "796":
+    id: "796"
+    kind: photo
+    source: media/796.webp
+    thumbnail: media/796-small.webp
+    width: 825
+    height: 1100
+    title: Before it became lunch
+    caption: The grocery update. We really did cover every stage.
+    alt: A hand holding a pack of chicken at a grocery store
+    thumbnail_width: 450
+  "797":
+    id: "797"
+    kind: photo
+    source: media/797.webp
+    thumbnail: media/797-small.webp
+    width: 933
+    height: 227
+    title: The usual, in writing
+    caption: Even my lunch order has a recognisable personality at this point.
+    alt: A lunch order listing a quinoa bowl and its toppings
+    fit: contain
+    thumbnail_width: 480
+  "798":
+    id: "798"
+    kind: photo
+    source: media/798.webp
+    thumbnail: media/798-small.webp
+    width: 825
+    height: 1100
+    title: Today's instructions
+    caption: The workout got a photo update too.
+    alt: A gym screen displaying exercises
+    fit: contain
+    thumbnail_width: 450
+  "801":
+    id: "801"
+    kind: video
+    source: media/801.mp4
+    duration: 12
+    width: 360
+    height: 640
+    thumbnail: media/801.webp
+    title: An actual benchmark
+    caption: The reveal. The pun. The extremely pleased delivery.
+    alt: A bench on a wooden deck beneath trees
+    captions: media/801.vtt
+  "802":
+    id: "802"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/802.webp
+    thumbnail: media/802-small.webp
+    title: You have seen this episode
+    caption: The lunch updates acquired a recognisable cast.
+    alt: A takeaway bowl with quinoa, vegetables and chickpeas
+    thumbnail_width: 450
+  "804":
+    id: "804"
+    kind: video
+    source: media/804.mp4
+    duration: 9
+    width: 360
+    height: 640
+    thumbnail: media/804.webp
+    title: The deer family report
+    caption: You stopped the scenery update for a very important wildlife announcement.
+    alt: A lake and wooded hillside
+    captions: media/804.vtt
+  "805":
+    id: "805"
+    kind: photo
+    source: media/805.webp
+    thumbnail: media/805-small.webp
+    width: 825
+    height: 1100
+    title: A treadmill dispatch
+    caption: One of the little gym updates between everything else.
+    alt: A treadmill console showing elapsed time
+    thumbnail_width: 450
+  "806":
+    id: "806"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/806.webp
+    thumbnail: media/806-small.webp
+    title: Your end-of-day report
+    caption: You send a sky. I get a little bit of your evening.
+    alt: An orange sunset above dark trees
+    thumbnail_width: 450
+  "808":
+    id: "808"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/808.webp
+    thumbnail: media/808-small.webp
+    title: A proper meal happened
+    caption: An unusually convincing answer to “what did you eat?”
+    alt: A meal served on a banana leaf
+    thumbnail_width: 450
+  "835":
+    id: "835"
+    kind: photo
+    source: media/835.webp
+    thumbnail: media/835-small.webp
+    width: 825
+    height: 1100
+    title: Back on the treadmill
+    caption: The ongoing side plot, with supporting evidence.
+    alt: Another treadmill console after a workout
+    thumbnail_width: 450
+  "837":
+    id: "837"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/837.webp
+    thumbnail: media/837-small.webp
+    title: Supporting beverage
+    caption: The recurring guest has arrived.
+    alt: A can of Diet Coke beside a meal
+    thumbnail_width: 450
+  "838":
+    id: "838"
     width: 825
     height: 1100
     kind: photo
@@ -345,7 +466,223 @@ archive:
     title: The plot doubles
     caption: The sequel nobody asked for. Photographed anyway.
     alt: Two Diet Coke cans on a table
-  - id: "914"
+    thumbnail_width: 450
+  "844":
+    id: "844"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/844.webp
+    thumbnail: media/844-small.webp
+    title: Lunch, elsewhere
+    caption: Occasionally the bowl gets a day off.
+    alt: A sandwich and a small fruit cup
+    thumbnail_width: 450
+  "846":
+    id: "846"
+    kind: photo
+    source: media/846.webp
+    thumbnail: media/846-small.webp
+    width: 506
+    height: 1100
+    title: The menu enters the conversation
+    caption: Important research. Potentially more useful than my other research.
+    alt: A restaurant menu showing biryani and rice dishes
+    fit: contain
+    thumbnail_width: 276
+  "847":
+    id: "847"
+    kind: photo
+    source: media/847.webp
+    thumbnail: media/847-small.webp
+    width: 506
+    height: 1100
+    title: The Ravi Kishan rabbit hole
+    caption: The search history does explain a few things.
+    alt: Search results for Ravi Kishan and a comedy show
+    fit: contain
+    thumbnail_width: 276
+  "848":
+    id: "848"
+    kind: photo
+    source: media/848.webp
+    thumbnail: media/848-small.webp
+    width: 825
+    height: 1100
+    title: The protein has arrived
+    caption: I appreciate how thoroughly this subplot was documented.
+    alt: Protein drinks and boxes on a table
+    thumbnail_width: 450
+  "849":
+    id: "849"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/849.webp
+    thumbnail: media/849-small.webp
+    title: The highly predictable lunch
+    caption: If the photo looked familiar, that would be because it was lunch again.
+    alt: A quinoa bowl with eggs and vegetables
+    thumbnail_width: 450
+  "856":
+    id: "856"
+    kind: photo
+    source: media/856.webp
+    thumbnail: media/856-small.webp
+    width: 825
+    height: 1100
+    title: Two very different purchases
+    caption: A phone accessory and another protein drink. A balanced update.
+    alt: A hand holding a phone accessory beside a protein drink
+    thumbnail_width: 450
+  "866":
+    id: "866"
+    kind: photo
+    source: media/866.webp
+    thumbnail: media/866-small.webp
+    width: 825
+    height: 1100
+    title: Even the snacks have protein
+    caption: At this point, the supporting cast has a nutritional theme.
+    alt: Two bags of roasted edamame snacks
+    thumbnail_width: 450
+  "867":
+    id: "867"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/867.webp
+    thumbnail: media/867-small.webp
+    title: A small patch of peace
+    caption: The kind of view that makes a conversation slow down for a second.
+    alt: A green park beyond a black railing
+    thumbnail_width: 450
+  "872":
+    id: "872"
+    width: 215
+    height: 195
+    kind: photo
+    source: media/872-horse.webp
+    thumbnail: media/872-horse-small.webp
+    title: The horse got there first
+    caption: Another hello through the stable fence.
+    alt: Close-up of a horse peering through its stable fence
+    fit: contain
+    thumbnail_width: 215
+  "873":
+    id: "873"
+    width: 305
+    height: 350
+    kind: photo
+    source: media/873-horse.webp
+    thumbnail: media/873-horse-small.webp
+    title: An established friendship
+    caption: The horse gets its own close-up. A very well-connected supporting cast.
+    alt: Close-up of a horse with a blue halter and a hand resting on its head
+    fit: contain
+    thumbnail_width: 305
+  "874":
+    id: "874"
+    kind: photo
+    source: media/874.webp
+    thumbnail: media/874-small.webp
+    width: 825
+    height: 1100
+    title: A hand and the usual black
+    caption: The wardrobe was making its position very clear.
+    alt: A hand against a piece of black clothing
+    thumbnail_width: 450
+  "881":
+    id: "881"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/881.webp
+    thumbnail: media/881-small.webp
+    title: An evening from my side
+    caption: The little “this is what I am doing” updates started adding up.
+    alt: A game controller held in front of a television
+    thumbnail_width: 450
+  "883":
+    id: "883"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/883.webp
+    thumbnail: media/883-small.webp
+    title: Lunch has renewed for another season
+    caption: Some character arcs take longer than others.
+    alt: A familiar takeaway bowl beside a protein drink
+    thumbnail_width: 450
+  "885":
+    id: "885"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/885.webp
+    thumbnail: media/885-small.webp
+    title: A different dinner, for the record
+    caption: Submitting this before you accuse me of eating the exact same thing forever.
+    alt: Sushi and drinks on a table
+    thumbnail_width: 450
+  "887":
+    id: "887"
+    kind: photo
+    source: media/887.webp
+    thumbnail: media/887-small.webp
+    width: 506
+    height: 1100
+    title: The driving soundtrack
+    caption: A whole playlist became part of the conversation.
+    alt: A screenshot of the Drive music playlist
+    fit: contain
+    thumbnail_width: 276
+  "895":
+    id: "895"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/895.webp
+    thumbnail: media/895-small.webp
+    title: A quieter frame
+    caption: Not every update needs a grand story.
+    alt: A yellow mug held against a patterned blanket
+    thumbnail_width: 450
+  "898":
+    id: "898"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/898.webp
+    thumbnail: media/898-small.webp
+    title: Yes, the bowl again
+    caption: Consistency. Or a very long-running bit. Hard to say.
+    alt: A takeaway bowl with eggs, chickpeas and vegetables
+    thumbnail_width: 450
+  "899":
+    id: "899"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/899.webp
+    thumbnail: media/899-small.webp
+    title: A little city, a little lunch
+    caption: A walking update with a snack attached.
+    alt: A wrap with a plaza and grand building in the background
+    thumbnail_width: 450
+  "901":
+    id: "901"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/901.webp
+    thumbnail: media/901-small.webp
+    title: Actual sticker credentials
+    caption: “Which one do you want!!!” A surprisingly important question.
+    alt: Colourful star stickers resting in a hand
+    thumbnail_width: 450
+  "914":
+    id: "914"
     width: 825
     height: 1100
     kind: photo
@@ -354,7 +691,9 @@ archive:
     title: The wardrobe entered the chat
     caption: Apparently “I own colours” required supporting evidence.
     alt: An olive-green shirt held up for a photo
-  - id: "916"
+    thumbnail_width: 450
+  "916":
+    id: "916"
     width: 825
     height: 1100
     kind: photo
@@ -363,7 +702,246 @@ archive:
     title: "Exhibit B: not black"
     caption: The wardrobe defence continues.
     alt: A dark blue shirt held up in a room
-  - id: "987"
+    thumbnail_width: 450
+  "917":
+    id: "917"
+    kind: photo
+    source: media/917.webp
+    thumbnail: media/917-small.webp
+    width: 825
+    height: 1100
+    title: The blue option, again
+    caption: The wardrobe consultation had multiple exhibits.
+    alt: A navy shirt held up in a living room
+    thumbnail_width: 450
+  "919":
+    id: "919"
+    kind: photo
+    source: media/919.webp
+    thumbnail: media/919-small.webp
+    width: 506
+    height: 1100
+    title: A second colour investigation
+    caption: I even asked the internet about beige. You were considerably more helpful.
+    alt: Search results about beige as a pastel colour
+    fit: contain
+    thumbnail_width: 276
+  "921":
+    id: "921"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/921.webp
+    thumbnail: media/921-small.webp
+    title: The red room
+    caption: Saving some art commentary for a day we can wander together.
+    alt: A richly coloured painting in a gold frame
+    thumbnail_width: 450
+  "922":
+    id: "922"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/922.webp
+    thumbnail: media/922-small.webp
+    title: And a little blue
+    caption: You mentioned museums and libraries. I remembered.
+    alt: A blue harbour painting in a gold frame
+    thumbnail_width: 450
+  "925":
+    id: "925"
+    kind: photo
+    source: media/925.webp
+    thumbnail: media/925-small.webp
+    width: 506
+    height: 1100
+    title: The dog called Jaden
+    caption: You had applied to adopt an older dog. I had to ask who Jaden was.
+    alt: An adoption-service email saying Jaden's profile was removed
+    fit: contain
+    thumbnail_width: 276
+  "927":
+    id: "927"
+    kind: photo
+    source: media/927.webp
+    thumbnail: media/927-small.webp
+    width: 506
+    height: 1100
+    title: A detour through YouTube
+    caption: The recommendations are their own little time capsule.
+    alt: A YouTube home screen with a House video playing
+    fit: contain
+    thumbnail_width: 276
+  "928":
+    id: "928"
+    kind: photo
+    source: media/928.webp
+    thumbnail: media/928-small.webp
+    width: 825
+    height: 1100
+    title: An evening with Friends
+    caption: Something to watch, something to eat, someone to text.
+    alt: Friends playing on a laptop beside dessert
+    thumbnail_width: 450
+  "932":
+    id: "932"
+    kind: photo
+    source: media/932.webp
+    thumbnail: media/932-small.webp
+    width: 825
+    height: 1100
+    title: A casino dispatch
+    caption: Another evening checked in from the camera roll.
+    alt: A slot machine with a person holding a phone nearby
+    thumbnail_width: 450
+  "933":
+    id: "933"
+    kind: photo
+    source: media/933.webp
+    thumbnail: media/933-small.webp
+    width: 506
+    height: 1100
+    title: The translation needed help
+    caption: Google offered a very restrained interpretation. We kept going.
+    alt: A Kannada translation attempt returning You are a likable guy
+    fit: contain
+    thumbnail_width: 276
+  "935":
+    id: "935"
+    kind: photo
+    source: media/935.webp
+    thumbnail: media/935-small.webp
+    width: 825
+    height: 1100
+    title: A familiar-looking delivery
+    caption: My name on the bag. The usual suspects in the bowl.
+    alt: A takeaway bowl beside a bag labelled Abhishek
+    thumbnail_width: 450
+  "936":
+    id: "936"
+    kind: photo
+    source: media/936.webp
+    thumbnail: media/936-small.webp
+    width: 825
+    height: 1100
+    title: The protein cinematic universe
+    caption: It had expanded to an entire warehouse display.
+    alt: Stacks of protein drink boxes at a warehouse store
+    thumbnail_width: 450
+  "937":
+    id: "937"
+    kind: photo
+    source: media/937.webp
+    thumbnail: media/937-small.webp
+    width: 825
+    height: 1100
+    title: Before the fortune
+    caption: A little snack with some unsolicited life advice inside.
+    alt: Two wrapped fortune cookies on a table
+    thumbnail_width: 450
+  "949":
+    id: "949"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/949.webp
+    thumbnail: media/949-small.webp
+    title: This is now an archive
+    caption: The camera roll has made its position very clear.
+    alt: Another photograph of the familiar lunch bowl
+    thumbnail_width: 450
+  "952":
+    id: "952"
+    kind: photo
+    source: media/952.webp
+    thumbnail: media/952-small.webp
+    width: 825
+    height: 1100
+    title: Still taking the protein seriously
+    caption: A recurring character deserves a recurring appearance.
+    alt: Two protein drinks and a snack bar on a desk
+    thumbnail_width: 450
+  "953":
+    id: "953"
+    kind: photo
+    source: media/953.webp
+    thumbnail: media/953-small.webp
+    width: 825
+    height: 1100
+    title: Another gym check-in
+    caption: The treadmill kept sending its regards.
+    alt: A treadmill console after another workout
+    thumbnail_width: 450
+  "956":
+    id: "956"
+    kind: photo
+    source: media/956.webp
+    thumbnail: media/956-small.webp
+    width: 825
+    height: 1100
+    title: The gym update with a face
+    caption: Occasionally, I contributed something other than a lunch bowl.
+    alt: Abhishek posing with a raised arm in a black shirt
+    thumbnail_width: 450
+  "961":
+    id: "961"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/961.webp
+    thumbnail: media/961-small.webp
+    title: The Menace, in person
+    caption: Same person from the unnecessarily long replies.
+    alt: Abhishek smiling in a portrait
+    thumbnail_width: 450
+  "964":
+    id: "964"
+    kind: photo
+    source: media/964.webp
+    thumbnail: media/964-small.webp
+    width: 76
+    height: 82
+    title: A reaction worth keeping
+    caption: Some replies arrive as a face. Fair enough.
+    alt: A small Idris Elba reaction image
+    fit: contain
+    thumbnail_width: 76
+  "968":
+    id: "968"
+    width: 305
+    height: 360
+    kind: photo
+    source: media/968-face.webp
+    thumbnail: media/968-face-small.webp
+    title: Miss Dee, obviously
+    caption: A look I am looking forward to seeing across an actual conversation.
+    alt: Close-up of Miss Dee looking to the side
+    fit: contain
+    thumbnail_width: 305
+  "983":
+    id: "983"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/983.webp
+    thumbnail: media/983-small.webp
+    title: Then I started taking flower photos
+    caption: Saw these on my way. Thought of you. You called it cute.
+    alt: A shopfront full of colourful flowers
+    thumbnail_width: 450
+  "986":
+    id: "986"
+    width: 825
+    height: 1100
+    kind: photo
+    source: media/986.webp
+    thumbnail: media/986-small.webp
+    title: Flowers, just because
+    caption: The camera roll was quietly becoming less about lunch.
+    alt: A small bouquet with red, pink and white flowers
+    thumbnail_width: 450
+  "987":
+    id: "987"
     kind: video
     source: media/987.mp4
     duration: 5
@@ -374,66 +952,280 @@ archive:
     caption: Another excellent location for doing absolutely nothing.
     alt: A bench under green trees beside a lake
     captions: media/987.vtt
-  - id: "844"
+  "988":
+    id: "988"
+    kind: photo
+    source: media/988.webp
+    thumbnail: media/988-small.webp
+    width: 825
+    height: 1100
+    title: A barrel, for the record
+    caption: Our photographic correspondence was remarkably thorough.
+    alt: A dark barrel beside a paved outdoor path
+    thumbnail_width: 450
+  "989":
+    id: "989"
+    kind: photo
+    source: media/989.webp
+    thumbnail: media/989-small.webp
+    width: 825
+    height: 1100
+    title: Tonight's feature
+    caption: Our actual cinema came with a sofa and a message thread.
+    alt: A living-room TV showing a film menu
+    thumbnail_width: 450
+  "990":
+    id: "990"
+    kind: photo
+    source: media/990.webp
+    thumbnail: media/990-small.webp
+    width: 825
+    height: 1100
+    title: The cow on the wall
+    caption: Important cow-related correspondence. See also the other cow photo.
+    alt: A framed black-and-white Highland cow photograph
+    thumbnail_width: 450
+  "991":
+    id: "991"
     width: 825
     height: 1100
     kind: photo
-    source: media/844.webp
-    thumbnail: media/844-small.webp
-    title: Lunch, elsewhere
-    caption: Occasionally the bowl gets a day off.
-    alt: A sandwich and a small fruit cup
-  - id: "883"
+    source: media/991.webp
+    thumbnail: media/991-small.webp
+    title: Another member of the department
+    caption: Benches, tree hugs, horses, giraffes. Of course there is a cow.
+    alt: A shaggy Highland cow beside a wooded path
+    thumbnail_width: 450
+  "992":
+    id: "992"
+    kind: photo
+    source: media/992.webp
+    thumbnail: media/992-small.webp
     width: 825
     height: 1100
+    title: The watch-along begins
+    caption: A photo of the screen still counts as live commentary.
+    alt: Friends playing on the living-room TV
+    thumbnail_width: 450
+  "993":
+    id: "993"
     kind: photo
-    source: media/883.webp
-    thumbnail: media/883-small.webp
-    title: Lunch has renewed for another season
-    caption: Some character arcs take longer than others.
-    alt: A familiar takeaway bowl beside a protein drink
-  - id: "898"
+    source: media/993.webp
+    thumbnail: media/993-small.webp
     width: 825
     height: 1100
+    title: An episode update
+    caption: The sofa stayed the same. The updates kept coming.
+    alt: Another moment from Friends on the TV
+    thumbnail_width: 450
+  "996":
+    id: "996"
     kind: photo
-    source: media/898.webp
-    thumbnail: media/898-small.webp
-    title: Yes, the bowl again
-    caption: Consistency. Or a very long-running bit. Hard to say.
-    alt: A takeaway bowl with eggs, chickpeas and vegetables
-  - id: "949"
+    source: media/996.webp
+    thumbnail: media/996-small.webp
     width: 825
     height: 1100
+    title: A dramatic pause
+    caption: A whole episode, delivered in little dispatches.
+    alt: A Friends scene with a woman seated at a desk on the TV
+    thumbnail_width: 450
+  "997":
+    id: "997"
     kind: photo
-    source: media/949.webp
-    thumbnail: media/949-small.webp
-    title: This is now an archive
-    caption: The camera roll has made its position very clear.
-    alt: Another photograph of the familiar lunch bowl
-  - id: "775"
+    source: media/997.webp
+    thumbnail: media/997-small.webp
+    width: 826
+    height: 1100
+    title: Another scene to report
+    caption: The camera roll remembers what we were watching.
+    alt: A Friends scene showing two people at a front door
+    thumbnail_width: 451
+  "998":
+    id: "998"
+    kind: photo
+    source: media/998.webp
+    thumbnail: media/998-small.webp
     width: 825
     height: 1100
+    title: The episode gets romantic
+    caption: The television was also busy developing a plot.
+    alt: A romantic scene playing on the living-room TV
+    thumbnail_width: 450
+  "999":
+    id: "999"
     kind: photo
-    source: media/775.webp
-    thumbnail: media/775-small.webp
-    title: A very serious route inspection
-    caption: Walks appear to come with side quests.
-    alt: A green spiral playground slide
-  - id: "837"
+    source: media/999.webp
+    thumbnail: media/999-small.webp
     width: 825
     height: 1100
+    title: Still watching
+    caption: At this point, the lamp deserves a credit too.
+    alt: A darker TV scene in the same living room
+    thumbnail_width: 450
+  "1000":
+    id: "1000"
     kind: photo
-    source: media/837.webp
-    thumbnail: media/837-small.webp
-    title: Supporting beverage
-    caption: The recurring guest has arrived.
-    alt: A can of Diet Coke beside a meal
-  - id: "787"
+    source: media/1000.webp
+    thumbnail: media/1000-small.webp
     width: 825
     height: 1100
+    title: One more scene
+    caption: A surprisingly well-documented evening in.
+    alt: A final Friends scene photographed on the TV
+    thumbnail_width: 450
+  "1002":
+    id: "1002"
     kind: photo
-    source: media/787.webp
-    thumbnail: media/787-small.webp
-    title: A change in the food programme
-    caption: Documented proof that every meal was not the same bowl.
-    alt: A bowl of colourful salad at a table
+    source: media/1002.webp
+    thumbnail: media/1002-small.webp
+    width: 825
+    height: 1100
+    title: A tiny world, built properly
+    caption: A little LEGO detour for the collection.
+    alt: A colourful LEGO display inside a store
+    thumbnail_width: 450
+  "1003":
+    id: "1003"
+    kind: photo
+    source: media/1003.webp
+    thumbnail: media/1003-small.webp
+    width: 825
+    height: 1100
+    title: Out in the middle of it
+    caption: Another glimpse of where the day had taken us.
+    alt: A busy indoor market beneath a high industrial ceiling
+    thumbnail_width: 450
+  "1004":
+    id: "1004"
+    kind: photo
+    source: media/1004.webp
+    thumbnail: media/1004-small.webp
+    width: 825
+    height: 1100
+    title: The meal report continues
+    caption: Please note the impressive commitment to keeping each other updated.
+    alt: A takeaway dish with curry leaves and a spoon
+    thumbnail_width: 450
+  "1006":
+    id: "1006"
+    kind: photo
+    source: media/1006.webp
+    thumbnail: media/1006-small.webp
+    width: 825
+    height: 1100
+    title: And a samosa, obviously
+    caption: Some photographs require very little explanation.
+    alt: A samosa and green chutney in a takeaway box
+    thumbnail_width: 450
+  "1012":
+    id: "1012"
+    kind: photo
+    source: media/1012.webp
+    thumbnail: media/1012-small.webp
+    width: 506
+    height: 1100
+    title: Even the weather joined in
+    caption: A weather-alert screenshot from the chat. September had opinions.
+    alt: A screenshot of a New York coastal flood warning
+    fit: contain
+    thumbnail_width: 276
+  "1017":
+    id: "1017"
+    kind: photo
+    source: media/1017.webp
+    thumbnail: media/1017-small.webp
+    width: 1000
+    height: 373
+    title: Rejected by the copy editor
+    caption: You sent the meme. I had several objections to its wording. Very romantic of me.
+    alt: A joke image with a pretend voice waveform and a compliment about being a disaster
+    fit: contain
+    thumbnail_width: 480
+  "800":
+    id: "800"
+    kind: video
+    source: media/800.mp4
+    duration: 24
+    width: 360
+    height: 640
+    thumbnail: media/800.webp
+    title: The bench theory, explained
+    caption: A top-five bench spot, autumn colours, and your live review. Please leave the commentary on.
+    alt: A wooded waterside deck and bench
+    captions: media/800.vtt
+  "807":
+    id: "807"
+    kind: video
+    source: media/807.mp4
+    duration: 36
+    width: 360
+    height: 640
+    thumbnail: media/807.webp
+    title: My critically acclaimed narration
+    caption: You narrate beautiful walks. I read the cutlery packet. We all bring something to this.
+    alt: A compostable cutlery packet held above a lunch table
+    captions: media/807.vtt
+  "834":
+    id: "834"
+    kind: video
+    source: media/834.mp4
+    duration: 9
+    width: 640
+    height: 360
+    thumbnail: media/834.webp
+    title: The sky you sent me
+    caption: Nine seconds of your evening. I still like getting the view from your side.
+    alt: Sunset above rooftops under a deep blue sky
+    captions: media/834.vtt
+  "757":
+    id: "757"
+    kind: audio
+    source: media/757.m4a
+    duration: 4
+    title: Four seconds. Approximately forty fellows.
+    caption:
+      Your tongue-twister phase. I gave it 8.5/10 and compared it to rap. Brave of me to attempt grading
+      this.
+    context:
+      "A rapid English tongue-twister repeating “a fellow”: one fellow meets another and asks what a fellow
+      means. The pace is the joke."
+  "809":
+    id: "809"
+    kind: audio
+    source: media/809.m4a
+    duration: 5
+    title: Textbook Kannada, full marks for effort
+    caption: “Bahala janapriya vyakti.” The pronunciation department opened late that night.
+    context:
+      “Bahala janapriya vyakti” means a very popular person. This was the short Kannada phrase you tried
+      in the September 12 conversation.
+  "814":
+    id: "814"
+    kind: audio
+    source: media/814.m4a
+    duration: 4
+    title: No grace marks, apparently
+    caption: You insisted on getting the Hudson Yards sentence right. I was already impressed that you tried.
+    context:
+      A Kannada practice sentence about coming to Hudson Yards tomorrow. You repeat the sentence from our
+      chat. Afterwards, you ask whether the praise is real and say you do not want grace marks.
+  "824":
+    id: "824"
+    kind: audio
+    source: media/824.m4a
+    duration: 11
+    title: Your turn to set the homework
+    caption: I asked for a medium-level Telugu phrase. You delivered a whole situation.
+    context:
+      "The Telugu practice sentence, as you explained it in the next message: “That lady didn’t listen to
+      me and instead said she will call my mom.”"
+  "906":
+    id: "906"
+    kind: audio
+    source: media/906.m4a
+    duration: 22
+    title: Packing, with pronunciation difficulties
+    caption: The Google-translation attempt, the restart, the “I have no idea”. Effort absolutely counted.
+    context:
+      A Kannada attempt at asking why packing is taking so long, with several pauses and restarts. In English
+      you add, “I have no idea” and “Yeah, I think.”
