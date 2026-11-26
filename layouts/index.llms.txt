@@ -4,7 +4,7 @@
 
 ## Profile and résumé
 {{ with site.GetPage "/about" }}
-- [Engineering experience]({{ .Permalink }}): {{ .Description }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
 {{- end }}
 - [Résumé (searchable PDF)]({{ "docs/AbhishekMurthy_Resume.pdf" | absURL }})
 {{- range site.Params.social }}
