@@ -1,0 +1,9 @@
+.avatar img {
+  width: clamp(14rem, 30vw, 20rem);
+}
+
+.centered .about p {
+  max-width: 53ch;
+  margin: 1.4rem auto;
+  text-wrap: pretty;
+}
