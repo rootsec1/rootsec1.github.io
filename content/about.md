@@ -1,39 +1,23 @@
 +++
-title = "Engineering experience"
-description = "Abhishek Murthy is a founding engineer at ProSights in New York. His work spans AI agents, financial document extraction, and supply chain systems at Blinkit."
+title = "about me"
+description = "about Abhishek Murthy"
 date = "2022-06-14"
-lastmod = "2026-11-26"
 aliases = ["about", "abhishek", "contact"]
 author = "Abhishek Murthy"
 +++
 
-I’m Abhishek Murthy, a founding engineer at ProSights (YC W24) in New York. I build software that helps financial analysts get data out of documents and use it in Excel.
+|        ![space-1.jpg](./setup.jpg)         |
+| :----------------------------------------: |
+| <b>because pictures speak a 1000 words</b> |
 
-[Read my résumé (PDF)](/docs/AbhishekMurthy_Resume.pdf) · [Latest résumé on Google Docs]({{< social-url "Resume" >}}) · [LinkedIn]({{< social-url "LinkedIn" >}}) · [GitHub]({{< social-url "Github" >}})
+\
+Hey, I am **Abhishek**
 
-## What I’ve built
+I am a software engineer by trade. I love experimenting with tech and building systems that make me, and other systems, faster. Over the years I've played around with backend servers, mobile & web apps, infrastructure tools, bug bounty programs, security exploits, ML models, document processing systems, workflow engines, and a bunch of weird weekend projects. I am passionate about self-driving car tech, robotics and building AGI.
 
-**ProSights.** I built Architect, a Python and PostgreSQL workflow engine that runs agents on Kubernetes. With Restate tracking each step, an analyst can rerun a failed step without repeating the entire workflow. I also led engineering for Recreate, which converts financial reports and presentations into Excel or JSON. It processes about 3,000 pages per minute with over 94% table-extraction accuracy. Routing pages to different models based on what they contained cut inference costs by 27%.
+Lately, a lot of my life has become extremely agentic. I use agents for reading codebases, planning changes, spinning up isolated worktrees, debugging CI, writing tests, reviewing diffs, generating blog drafts, and automating repetitive ops/workflow stuff. The interesting part to me is not just "using AI", it is designing the surrounding systems so agents can work with context, evidence, retries, evals, and clear failure boundaries. I like building tools that compound my own output and slowly remove the boring parts of software engineering from my day.
 
-**Ticketdude.** I co-founded an event ticketing company and built the Flutter app, React web app, and Django backend. I owned the path from payment to QR check-in. Tuning Django and MySQL cut the check-in API’s 90th-percentile latency by 29%.
-
-**Blinkit.** I built inventory replenishment software for a grocery delivery network handling over 500,000 orders a day. Later, I led the fintech engineering team. We cut financial report generation time by 25% by changing how we read DynamoDB and aggregated data in Redshift. [My first year at Blinkit, in the company’s engineering blog](https://blinkit.com/blog/first-12-months-blinkit-abhishek-m).
-
-**Tvast.** I built web and mobile tools for fuel-station operators at Shell. Managers used them to schedule staff and reconcile cash across shifts.
-
-I earned my Master of Engineering in Artificial Intelligence at Duke University, where I helped students deploy applications on AWS, Azure, and Google Cloud.
-
-## Engineering notes
-
-- [Durable OCR pipelines]({{< relref "posts/building-pdf-extraction-pipelines-that-survive-real-documents" >}}) covers how to retry one failed page of a PDF and keep the source coordinates for an extracted value.
-- [Building a search engine that fits in your L3 cache]({{< relref "posts/search-engine-fits-in-l3-cache" >}}) follows a ranked query through the index and explains where memory access costs more than scoring.
-- [The harness is the product]({{< relref "posts/the-harness-is-the-product" >}}) explains how I think about tool permissions, execution traces, and verifying an AI agent’s work.
-
-## Outside work
-
-I’m interested in self-driving cars, robotics, and building AGI. One of my weekend projects was [teaching a bot to drive in Need for Speed Rivals]({{< relref "posts/nfs-self-driving-car-bot" >}}).
-
-![My desk setup](./setup.jpg)
+Previously, I pursued Masters of Engineering in Artificial Intelligence at Duke University. Before that, I was building the tech for my startup [ticketdude](https://ticketdude.app/). I also worked as an SDE-2 at [blinkit](https://blinkit.com/) (built supply chain tech to enable 10-minute delivery in India) which later got acquired by [zomato](https://www.zomato.com/) (India's DoorDash). During my time there, I worked with multiple teams including Inventory, StoreOps, and Infrastructure. I eventually led the tech team for all things finance while I was there. More on that [here](https://blinkit.com/blog/first-12-months-blinkit-abhishek-m).
 
 I am a huge fan of [@elonmusk](https://twitter.com/elonmusk), [@sama](https://twitter.com/sama) and [@realgeorgehotz](https://twitter.com/realgeorgehotz). The [geohot archive](https://www.youtube.com/@geohotarchive) is a treasure trove. During undergrad I won numerous national and international hackathons multiple times such as the [Singapore India Hackathon](https://singaporeindiahackathon.com/) and [Smart India Hackathon](https://www.sih.gov.in/) with over **100K+** participants. I was also a [Google Developer Club Lead](https://developers.google.com/community/gdsc) as a part of which I led the Bangalore community and held several Android app development workshops across the country. I occasionally perform pen tests and vulnerability assessments on backend servers and mobile apps (frida ftw).
 

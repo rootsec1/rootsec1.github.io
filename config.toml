@@ -26,10 +26,11 @@ paginate = 30
 
 [params]
     author = "Abhishek Murthy"
-    info = "Founding Engineer at ProSights"
-    description = "Abhishek Murthy builds AI agents, document extraction systems, and backend infrastructure. Read about his engineering work at ProSights, Ticketdude, and Blinkit."
+    info = "SWE obsessed with AI"
+    description = "Abhishek Murthy’s personal blog about software engineering, AI agents, backend systems, and infrastructure."
+    keywords = "blog,developer,personal"
     avatarurl = "/images/abhishek-murthy.jpg"
-    images = ["/images/abhishek-murthy-social.png"]
+    images = ["/images/abhishek-murthy-profile-card.png"]
     enableTwemoji = true
     colorScheme = "auto"
     hidecolorschemetoggle = false
@@ -37,7 +38,7 @@ paginate = 30
     favicon_16 = "/images/favicon-16x16.png"
     favicon_32 = "/images/favicon-32x32.png"
     touchIcon = "/images/apple-touch-icon.png"
-    customCSS = ["css/pagination.css", "css/profile.css"]
+    customCSS = ["css/pagination.css"]
 
 [taxonomies]
     category = "categories"

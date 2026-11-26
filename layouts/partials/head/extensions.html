@@ -2,8 +2,8 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/png">
-  <meta property="og:image:alt" content="Abhishek Murthy, founding engineer at ProSights">
-  <meta name="twitter:image:alt" content="Abhishek Murthy, founding engineer at ProSights">
+  <meta property="og:image:alt" content="{{ site.Params.author }}, {{ site.Params.info }}">
+  <meta name="twitter:image:alt" content="{{ site.Params.author }}, {{ site.Params.info }}">
 {{- end }}
 {{- $about := site.GetPage "/about" }}
 {{- $author := dict "@type" "Person" "@id" (printf "%s#person" $about.Permalink)
@@ -11,10 +11,10 @@
 {{- if or .IsHome (eq . $about) }}
   {{- $person := merge $author (dict
     "alternateName" "rootsec1" "image" (site.Params.avatarurl | absURL)
-    "jobTitle" "Founding Engineer" "worksFor" (dict "@type" "Organization" "name" "ProSights")
+    "jobTitle" "Software Engineer"
     "sameAs" (apply (where site.Params.social "rel" "me") "index" "." "url")) }}
   {{- $profile := dict "@context" "https://schema.org" "@type" "ProfilePage"
-    "url" .Permalink "name" .Title "description" .Description "mainEntity" $person }}
+    "url" .Permalink "name" .Title "description" (.Description | default site.Params.description) "mainEntity" $person }}
   <script type="application/ld+json">{{ $profile | jsonify | safeJS }}</script>
 {{- else if and .IsPage (eq .Section "posts") (not .Params.externalLink) }}
   {{- $post := dict "@context" "https://schema.org" "@type" "BlogPosting"
