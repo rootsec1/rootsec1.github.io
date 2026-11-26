@@ -1,0 +1,22 @@
+# {{ site.Params.author }}
+
+> {{ site.Params.description }}
+
+## Profile and résumé
+{{ with site.GetPage "/about" }}
+- [Engineering experience]({{ .Permalink }}): {{ .Description }}
+{{- end }}
+- [Résumé (searchable PDF)]({{ "docs/AbhishekMurthy_Resume.pdf" | absURL }})
+{{- range site.Params.social }}
+{{- if or (eq .name "Resume") (eq .rel "me") }}
+- [{{ if eq .name "Resume" }}Latest résumé (Google Docs){{ else }}{{ .name }}{{ end }}]({{ .url }})
+{{- end }}
+{{- end }}
+
+## Engineering writing
+{{ range first 6 (where (where site.RegularPages "Section" "posts") "Params.externallink" "") }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{- end }}
+{{ with site.GetPage "/posts" }}
+- [All engineering posts]({{ .Permalink }})
+{{- end }}

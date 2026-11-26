@@ -1,0 +1,7 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {{ range where .Data.Pages "Type" "ne" "date" }}
+  <url><loc>{{ .Permalink }}</loc>{{ with .Lastmod }}<lastmod>{{ .Format "2006-01-02" }}</lastmod>{{ end }}</url>
+  {{ end }}
+  <url><loc>{{ "docs/AbhishekMurthy_Resume.pdf" | absURL }}</loc></url>
+</urlset>

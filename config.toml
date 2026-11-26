@@ -1,4 +1,4 @@
-baseURL = "https://rootsec1.github.io/"
+baseURL = "https://abhishekmurthy.com/"
 title = "Abhishek Murthy"
 theme = "hugo-coder"
 languageCode = "en-us"
@@ -6,21 +6,30 @@ defaultcontentlanguage = "en"
 contentDir = "content"
 pluralizelisttitles = false
 googleAnalytics = "G-2NZGH53V36"
+enableRobotsTXT = true
 
 paginate = 30
 
 [pagination]
     pagerSize = 30
 
+[outputFormats.LLMS]
+    mediaType = "text/plain"
+    baseName = "llms"
+    isPlainText = true
+
+[outputs]
+    home = ["HTML", "RSS", "LLMS"]
+
 [markup.highlight]
     style = "github-dark"
 
 [params]
     author = "Abhishek Murthy"
-    info = "SWE obsessed with AI"
-    description = "Abhishek's blog"
-    keywords = "blog,developer,personal"
-    avatarurl = "/images/avatar.png"
+    info = "Founding Engineer at ProSights"
+    description = "Abhishek Murthy builds AI agents, document extraction systems, and backend infrastructure. Read about his engineering work at ProSights, Ticketdude, and Blinkit."
+    avatarurl = "/images/abhishek-murthy.jpg"
+    images = ["/images/abhishek-murthy-social.png"]
     enableTwemoji = true
     colorScheme = "auto"
     hidecolorschemetoggle = false
@@ -28,7 +37,7 @@ paginate = 30
     favicon_16 = "/images/favicon-16x16.png"
     favicon_32 = "/images/favicon-32x32.png"
     touchIcon = "/images/apple-touch-icon.png"
-    customCSS = ["css/pagination.css"]
+    customCSS = ["css/pagination.css", "css/profile.css"]
 
 [taxonomies]
     category = "categories"
@@ -39,12 +48,14 @@ paginate = 30
 # Social links
 [[params.social]]
     name = "Github"
+    rel = "me"
     icon = "fa fa-github fa-2x"
     weight = 1
     target = "_blank"
     url = "https://github.com/rootsec1/"
 [[params.social]]
     name = "LinkedIn"
+    rel = "me"
     icon = "fa fa-linkedin fa-2x"
     weight = 2
     target = "_blank"
@@ -54,7 +65,7 @@ paginate = 30
     icon = "fa fa-file fa-2x"
     weight = 2
     target = "_blank"
-    url = "https://docs.google.com/document/d/115a7l-3BnOE0EeLgII3Ny6MNUeIxnQRiSHZf_BQDg0E/edit?usp=sharing"
+    url = "https://docs.google.com/document/d/115a7l-3BnOE0EeLgII3Ny6MNUeIxnQRiSHZf_BQDg0E/preview"
 [[params.social]]
     name = "BlinkIt"
     icon = "fa fa-globe fa-2x"
@@ -63,6 +74,7 @@ paginate = 30
     url = "https://blinkit.com/blog/first-12-months-blinkit-abhishek-m"
 [[params.social]]
     name = "Twitter"
+    rel = "me"
     icon = "fa fa-twitter fa-2x"
     weight = 4
     target = "_blank"
